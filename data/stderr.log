@@ -1,0 +1,987 @@
+
+24-04-2019 21-07-48: Starting game vs PythonBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+24-04-2019 21-09-01: Starting game vs OcraftBot
+
+24-04-2019 21-10-17: Starting game vs MavBot
+
+24-04-2019 21-10-17: Starting game vs MavBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+24-04-2019 21-39-21: Starting game vs MadBot
+
+24-04-2019 21-41-47: Starting game vs MadBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\sc2\main.py", line 198, in _play_game
+    player_id = await client.join_game(player.name, player.race, portconfig=portconfig, rgb_render_config=rgb_render_config)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\sc2\client.py", line 85, in join_game
+    result = await self._execute(join_game=req)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+25-04-2019 03-28-45: Starting game vs LucidBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 03-37-03: Starting game vs LucidBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 03-40-42: Starting game vs LucidBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 03-49-45: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 03-53-51: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 03-55-39: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 03-56-45: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 03-58-00: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 03-59-41: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 04-06-15: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 04-15-51: Starting game vs PythonBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 04-16-52: Starting game vs PythonBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 04-17-55: Starting game vs PythonBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 04-20-26: Starting game vs PythonBot
+
+25-04-2019 04-21-43: Starting game vs JackBot
+
+25-04-2019 04-25-36: Starting game vs JackBot
+
+25-04-2019 04-28-47: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 04-43-49: Starting game vs JackBot
+
+25-04-2019 04-44-49: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 04-52-24: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+25-04-2019 04-56-53: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+25-04-2019 05-01-07: Starting game vs JackBot
+
+25-04-2019 05-01-44: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+25-04-2019 05-17-05: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+25-04-2019 05-21-24: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 05-29-55: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 05-32-55: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 06-29-17: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 06-56-37: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+25-04-2019 07-04-13: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+25-04-2019 17-49-28: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py:33: RuntimeWarning: coroutine 'Client.send_debug' was never awaited
+  self._client.send_debug()
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 11-58-33: Starting game vs RoachRush
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py:29: RuntimeWarning: coroutine 'Client.send_debug' was never awaited
+  self._client.send_debug()
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 12-13-09: Starting game vs RoachRush
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py:29: RuntimeWarning: coroutine 'Client.send_debug' was never awaited
+  self._client.send_debug()
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 12-29-58: Starting game vs PythonBot
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    from mavBot import MavBot
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 166
+    if self.units(VOIDRAY).amount == 0 andself.units(ZEALOT).amount == 0 and len(self.known_enemy_units) > 0:
+                                             ^
+SyntaxError: invalid syntax
+
+26-04-2019 12-31-19: Starting game vs PythonBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 12-32-16: Starting game vs PythonBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 12-33-47: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 14-39-33: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 15-18-04: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 15-23-02: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 15-49-01: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 15-51-24: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 200, in _play_game
+    player_id = await client.join_game(player.name, player.race, portconfig=portconfig, rgb_render_config=rgb_render_config)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 85, in join_game
+    result = await self._execute(join_game=req)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 15-53-00: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 15-55-11: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 17-23-57: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 17-56-57: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 18-02-38: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 20-16-52: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 20-18-15: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 20-27-00: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 20-58-07: Starting game vs JackBot
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    from mavBot import MavBot
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 63
+    """if iteration == 1:
+                        ^
+SyntaxError: invalid syntax
+
+26-04-2019 20-59-28: Starting game vs JackBot
+Traceback (most recent call last):
+  File "run.py", line 7, in <module>
+    from mavBot import MavBot
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 190
+    ], realtime=False)
+                 ^
+SyntaxError: EOF while scanning triple-quoted string literal
+
+26-04-2019 21-00-53: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 21-02-54: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 21-06-05: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+26-04-2019 21-08-54: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 21-12-02: Starting game vs JackBot
+
+26-04-2019 21-12-40: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 22-56-39: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 135, in _play_game_ai
+    await ai.on_step(iteration)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 44, in on_step
+    await self.strategist.move_troops()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategist.py", line 13, in move_troops
+    await self.deff()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategist.py", line 57, in deff
+    abilities = await self.game.get_available_abilities(vr)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\bot_ai.py", line 135, in get_available_abilities
+    return await self._client.query_available_abilities(units, ignore_resource_requirements)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 264, in query_available_abilities
+    ignore_resource_requirements=ignore_resource_requirements,
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 74, in _execute
+    raise ProtocolError(f"{response.error}")
+sc2.protocol.ProtocolError: ['Not supported if game has already ended']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 174, in _play_game_ai
+    result = client._game_result[player_id]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 23-17-44: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 23-23-23: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-04-2019 23-28-03: Starting game vs JackBot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+27-04-2019 13-46-33: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+27-04-2019 13-58-00: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+27-04-2019 14-00-38: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 200, in _play_game
+    player_id = await client.join_game(player.name, player.race, portconfig=portconfig, rgb_render_config=rgb_render_config)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 85, in join_game
+    result = await self._execute(join_game=req)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+27-04-2019 14-01-41: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+27-04-2019 15-13-24: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 44, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 206, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 193, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 138, in step
+    result = await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 65, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 46, in __request
+    raise ConnectionAlreadyClosed("Cannot receive: Connection already closed.")
+sc2.protocol.ConnectionAlreadyClosed: Cannot receive: Connection already closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+27-04-2019 21-41-49: Starting game vs SharpenedEdge
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+
+27-04-2019 21-59-07: Starting game vs ThreeWayLover
+
+27-04-2019 22-00-27: Starting game vs ThreeWayLover
