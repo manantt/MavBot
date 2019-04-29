@@ -14,6 +14,7 @@ from train_manager import TrainManager
 from ability_manager import AbilityManager
 from worker_manager import WorkerManager
 from debug_manager import DebugManager
+from strategy_manager import StrategyManager
 
 """
 TODO:
@@ -42,6 +43,7 @@ class MavBot(sc2.BotAI):
 		self.ability_manager = AbilityManager(self)
 		self.worker_manager = WorkerManager(self)
 		self.debug_manager = DebugManager(self)
+		self.strategy_manager = StrategyManager(self)
 		self.debug = True
 
 	async def on_step(self, iteration):
