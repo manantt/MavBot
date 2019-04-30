@@ -13,6 +13,15 @@ class UnitManager:
 		self.off_group = Units([], game)
 		self.distance_to_deffend = 22
 		self.cachedUnits = {}
+		self.PRIORITY_TARGET_ORDER = [
+			STALKER, PHOENIX, WIDOWMINEBURROWED, WIDOWMINE, MARINE, THOR, HYDRALISK, CORRUPTOR, LIBERATOR, VIKING, BATTLECRUISER, CYCLONE,
+			PHOTONCANNON, MISSILETURRET, SPORECRAWLER,
+			VOIDRAY, CARRIER, TEMPEST, MOTHERSHIP, SENTRY, HIGHTEMPLAR, ARCHON, MUTALISK, QUEEN, INFESTOR, GHOST, 
+			PROBE, SCV, DRONE, OVERLORD,
+			ZERGLING, REAPER, 
+			HATCHERY, COMMANDCENTER, NEXUS
+		]
+
 
 	async def move_troops(self):
 		await self.set_off()
@@ -46,7 +55,7 @@ class UnitManager:
 			return self.game.main_base_ramp.top_center
 		else:
 			nexus = self.game.units(NEXUS).first
-			d = nexus.distance_to(self.game.game_info.map_center)
+			d = nexus.distance_to(self.game.game_info.map_center.towards(self.game.start_location, 30))
 			for n in self.game.units(NEXUS):
 				if n.distance_to(self.game.game_info.map_center) < d:
 					d = n.distance_to(self.game.game_info.map_center)
@@ -63,32 +72,48 @@ class UnitManager:
 
 	# send idle units to deffend
 	async def deff(self):
-		for vr in self.game.units(VOIDRAY).further_than(1, self.deffensive_position):
-			if vr not in self.off_group:
-				await self.game.do(vr.attack(self.deffensive_position))
-		for z in self.game.units(ZEALOT).further_than(1, self.deffensive_position):
-			if z not in self.off_group:
-				await self.game.do(z.attack(self.deffensive_position))
-		if self.game.units(VOIDRAY).amount == 0 and self.game.units(ZEALOT).amount == 0 and len(self.game.known_enemy_units) > 1:
-			for p in self.game.units(PROBE):
-				await self.game.do(p.attack(self.deffensive_position))
+		#deff_group = Units([], )
+		deff_group = self.game.units.filter(lambda unit: unit.type_id in {ZEALOT, VOIDRAY}).tags_not_in(self.off_group)
+		await self.attack_move(deff_group, self.deffensive_position, self.game.start_location)
 
 	async def att(self):
-		# TODO: move as one
-		target = None
-		if self.off_group.amount > 0:
-			first_unit = self.off_group.closest_to(self.posicion_ofensiva)
-			for enemy in self.game.known_enemy_units.closer_than(10, first_unit.position):
-				if not enemy.is_structure:
-					print(enemy.name)
-		for unit in self.off_group.further_than(1, self.posicion_ofensiva):
-			await self.game.do(unit.attack(self.posicion_ofensiva))
+		off_group = self.game.units.tags_in(self.off_group)
+		await self.attack_move(off_group, self.posicion_ofensiva, self.deffensive_position)
+
+	async def attack_move(self, units, attack_position, retreat_position):
+		if units.amount > 0:
+			combatients = units.filter(lambda e: e.shield > 0)
+			# retreat injured
+			injured = units.filter(lambda e: e.shield <= 0 and e.health < e.health_max/3)
+			for i in injured:
+				await self.game.do(i.move(retreat_position))
+			# closest ally to enemies
+			closest_distance = 9999999
+			if self.game.known_enemy_units.filter(lambda unit: unit.type_id in self.PRIORITY_TARGET_ORDER):
+				for unit in units: #closest_distance_to
+					dist = self.game.known_enemy_units.filter(lambda unit: unit.type_id in self.PRIORITY_TARGET_ORDER).closest_distance_to(unit)
+					if dist < closest_distance:
+						first_unit = unit
+				if first_unit:
+					#first_unit = self.game.units.closest_to(attack_position)
+					near_enemies = self.game.known_enemy_units.closer_than(12, first_unit.position)
+					for unit_type in self.PRIORITY_TARGET_ORDER:
+						enemy = near_enemies.filter(lambda u: u.type_id in {unit_type})
+						if enemy:
+							closest = enemy.closest_to(first_unit)
+							for unit in combatients:
+								await self.game.do(unit.attack(closest))
+							return
+				# todo: regroup ball
+			# default attack
+			for unit in combatients.further_than(1, attack_position):
+				await self.game.do(unit.attack(attack_position))
 
 	# new offensive group conditions
 	async def set_off(self):
-		if self.off_group.amount == 0 and self.game.units(VOIDRAY).amount >= 2:
+		if self.off_group.amount == 0 and self.game.units(VOIDRAY).amount >= 10:
 			for vr in self.game.units(VOIDRAY):
-				self.off_group.append(vr)
+				self.off_group.append(vr.tag)
 
 	# moves observers
 	async def scout(self):

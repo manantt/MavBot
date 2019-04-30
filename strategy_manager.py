@@ -16,4 +16,4 @@ class StrategyManager:
 		self.objetive_proves = [20, 64, 64]
 		self.objetive_zealots = [4, 4, 4]
 		self.objetive_observers = [0, 1, 2]
-		self.objetive_voidrays = [31, 31, 31
+		self.objetive_voidrays = [31, 31, 31]

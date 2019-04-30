@@ -68,7 +68,7 @@ class MavBot(sc2.BotAI):
 	async def on_unit_destroyed(self, unit_tag):
 		# removes units from offensive groups when destroyed
 		for unit in self.unit_manager.off_group:
-			if unit.tag == unit_tag:
+			if unit == unit_tag:
 				self.unit_manager.off_group.remove(unit)
 		# removes enemy units from cache
 		for unitType in self.unit_manager.cachedUnits:
@@ -84,7 +84,7 @@ if __name__ == '__main__':
 		"DigitalFrontier",
 		"Ephemeron",
 		"OldSunshine",
-		"Primus",
+		"PrimusQ9",
 		"Reminiscence",
 		"Sanglune",
 		"TheTimelessVoid",

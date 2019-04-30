@@ -41,12 +41,10 @@ class DebugManager:
 		self.game._client.debug_sphere_out(self.turn3d(self.game.unit_manager.deffensive_position), 1, Point3((132, 0, 66)))
 
 	def debug_offesinsive_group(self):
-		if self.game.unit_manager.off_group.amount > 0:
-			print("si")
-			first_unit = self.game.unit_manager.off_group.closest_to(self.game.unit_manager.posicion_ofensiva)
+		if self.game.units(VOIDRAY).amount > 0:
+			first_unit = self.game.units(VOIDRAY).closest_to(self.game.unit_manager.posicion_ofensiva)
 			self.game._client.debug_sphere_out(first_unit.position3d, 1, Point3((230, 30, 66)))
-			self.game._client.debug_sphere_out(first_unit.position3d, 10, Point3((132, 0, 66)))
-
+			self.game._client.debug_sphere_out(self.turn3d(first_unit.position), 15, Point3((132, 0, 66)))
 	def debug_deffense_area(self):
 		for nexus in self.game.units(NEXUS):
 			self.game._client.debug_sphere_out(self.turn3d(nexus.position), 20, Point3((132, 0, 66)))

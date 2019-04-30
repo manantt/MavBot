@@ -94,7 +94,7 @@ class BuildManager:
 	async def build_asimilator(self):
 		if self.should_build_asimilator():
 			for nexus in self.game.units(NEXUS).ready:
-				vespenes = self.game.state.vespene_geyser.closer_than(10.0, nexus)
+				vespenes = self.game.state.vespene_geyser.closer_than(13.0, nexus)
 				for vespene in vespenes:
 					worker = self.game.select_build_worker(vespene.position)
 					if worker is not None and not self.game.units(ASSIMILATOR).closer_than(1.0, vespene):
