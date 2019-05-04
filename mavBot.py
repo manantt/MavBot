@@ -1,11 +1,11 @@
-import psc2.sc2, random
+import sc2, random
 
-from psc2.sc2 import run_game, maps, Race, Difficulty, position
-from psc2.sc2.player import Bot, Computer
-from psc2.sc2.constants import *
-from psc2.sc2.position import Point2, Point3
-from psc2.sc2.ids.ability_id import AbilityId
-from psc2.sc2.ids.upgrade_id import UpgradeId
+from sc2 import run_game, maps, Race, Difficulty, position
+from sc2.player import Bot, Computer
+from sc2.constants import *
+from sc2.position import Point2, Point3
+from sc2.ids.ability_id import AbilityId
+from sc2.ids.upgrade_id import UpgradeId
 
 from unit_manager import UnitManager
 from upgrade_manager import UpgradeManager
@@ -29,7 +29,7 @@ TODO:
 - Deff workers against flying units
 """
 
-class MavBot(psc2.sc2.BotAI):
+class MavBot(sc2.BotAI):
 	def __init__(self):
 		self.unit_manager = UnitManager(self)
 		self.upgrade_manager = UpgradeManager(self)

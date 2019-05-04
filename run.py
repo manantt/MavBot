@@ -1,7 +1,7 @@
-import psc2.sc2, sys
+import sc2, sys
 from __init__ import run_ladder_game
-from psc2.sc2 import Race, Difficulty
-from psc2.sc2.player import Bot, Computer
+from sc2 import Race, Difficulty
+from sc2.player import Bot, Computer
 
 # Load bot
 from mavBot import MavBot
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     else:
         # Local game
         print("Starting local game...")
-        psc2.sc2.run_game(psc2.sc2.maps.get("Abyssal Reef LE"), [
+        sc2.run_game(sc2.maps.get("Abyssal Reef LE"), [
             bot,
             Computer(Race.Protoss, Difficulty.VeryHard)
         ], realtime=True)

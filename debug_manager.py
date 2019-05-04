@@ -1,7 +1,7 @@
-from psc2.sc2.units import Units
-from psc2.sc2.constants import *
-from psc2.sc2.cache import property_cache_forever, property_cache_once_per_frame
-from psc2.sc2.position import Point2, Point3
+from sc2.units import Units
+from sc2.constants import *
+from sc2.cache import property_cache_forever, property_cache_once_per_frame
+from sc2.position import Point2, Point3
 
 import random
 import cv2
