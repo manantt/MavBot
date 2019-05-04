@@ -1,5 +1,5 @@
-from sc2.units import Units
-from sc2.constants import *
+from psc2.sc2.units import Units
+from psc2.sc2.constants import *
 
 # TODO: train one sentry
 
@@ -21,7 +21,7 @@ class TrainManager:
 		if self.game.can_afford(PROBE):
 			num_nexus = self.game.units(NEXUS).amount
 			max_probes = min(self.max_probes, num_nexus * self.probes_per_nexus)
-			if self.game.units(PROBE).amount < self.max_probes:
+			if self.game.units(PROBE).amount < max_probes:
 				return True
 		return False
 

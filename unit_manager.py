@@ -1,6 +1,6 @@
-from sc2.units import Units
-from sc2.constants import *
-from sc2.cache import property_cache_once_per_frame
+from psc2.sc2.units import Units
+from psc2.sc2.constants import *
+from psc2.sc2.cache import property_cache_once_per_frame
 
 import random
 
@@ -10,13 +10,15 @@ import random
 class UnitManager:
 	def __init__(self, game):
 		self.game = game
-		self.off_group = Units([], game)
+		self.off_group = []
 		self.distance_to_deffend = 22
 		self.cachedUnits = {}
-		self.PRIORITY_TARGET_ORDER = [
+		self.HIGH_PRIORITY_TARGET_ORDER = [
 			STALKER, PHOENIX, WIDOWMINEBURROWED, WIDOWMINE, MARINE, THOR, HYDRALISK, CORRUPTOR, LIBERATOR, VIKING, BATTLECRUISER, CYCLONE,
 			PHOTONCANNON, MISSILETURRET, SPORECRAWLER,
-			VOIDRAY, CARRIER, TEMPEST, MOTHERSHIP, SENTRY, HIGHTEMPLAR, ARCHON, MUTALISK, QUEEN, INFESTOR, GHOST, 
+			VOIDRAY, CARRIER, TEMPEST, MOTHERSHIP, SENTRY, HIGHTEMPLAR, ARCHON, MUTALISK, QUEEN, INFESTOR, GHOST
+		]
+		self.LOW_PRIORITY_TARGET_ORDER = [
 			PROBE, SCV, DRONE, OVERLORD,
 			ZERGLING, REAPER, 
 			HATCHERY, COMMANDCENTER, NEXUS
@@ -39,7 +41,7 @@ class UnitManager:
 					self.cachedUnits[enemy.name].append(enemy.tag)
 
 	# deffensive position
-	@property_cache_once_per_frame
+	@property#_cache_once_per_frame
 	def deffensive_position(self):
 		# deffend enemy attack
 		enemyAttacking = False
@@ -57,13 +59,13 @@ class UnitManager:
 			nexus = self.game.units(NEXUS).first
 			d = nexus.distance_to(self.game.game_info.map_center.towards(self.game.start_location, 30))
 			for n in self.game.units(NEXUS):
-				if n.distance_to(self.game.game_info.map_center) < d:
-					d = n.distance_to(self.game.game_info.map_center)
+				if n.distance_to(self.game.game_info.map_center.towards(self.game.start_location, 30)) < d:
+					d = n.distance_to(self.game.game_info.map_center.towards(self.game.start_location, 30))
 					nexus = n
 			return nexus.position.towards(self.game.game_info.map_center, 10)
 
 	# posición hacia la que se quiere atacar
-	@property_cache_once_per_frame
+	@property#_cache_once_per_frame
 	def posicion_ofensiva(self):
 		if len(self.game.known_enemy_structures.exclude_type(CREEPTUMOR).exclude_type(CREEPTUMORQUEEN).exclude_type(CREEPTUMORMISSILE).exclude_type(CREEPTUMORBURROWED)) > 0 :
 			return self.game.known_enemy_structures.exclude_type(CREEPTUMOR).exclude_type(CREEPTUMORQUEEN).exclude_type(CREEPTUMORMISSILE).exclude_type(CREEPTUMORBURROWED).closest_to(self.game.start_location).position
@@ -83,35 +85,53 @@ class UnitManager:
 	async def attack_move(self, units, attack_position, retreat_position):
 		if units.amount > 0:
 			combatients = units.filter(lambda e: e.shield > 0)
-			# retreat injured
 			injured = units.filter(lambda e: e.shield <= 0 and e.health < e.health_max/3)
+			# retreat injured
 			for i in injured:
 				await self.game.do(i.move(retreat_position))
+			# if there are no combatients in the attack group disolve it
+			if combatients.amount == 0 and attack_position == self.posicion_ofensiva:
+				self.off_group = []
+				return
 			# closest ally to enemies
 			closest_distance = 9999999
-			if self.game.known_enemy_units.filter(lambda unit: unit.type_id in self.PRIORITY_TARGET_ORDER):
+			if self.game.known_enemy_units.filter(lambda unit: unit.type_id in self.HIGH_PRIORITY_TARGET_ORDER):
 				for unit in units: #closest_distance_to
-					dist = self.game.known_enemy_units.filter(lambda unit: unit.type_id in self.PRIORITY_TARGET_ORDER).closest_distance_to(unit)
+					dist = self.game.known_enemy_units.filter(lambda unit: unit.type_id in self.HIGH_PRIORITY_TARGET_ORDER).closest_distance_to(unit)
 					if dist < closest_distance:
 						first_unit = unit
 				if first_unit:
 					#first_unit = self.game.units.closest_to(attack_position)
 					near_enemies = self.game.known_enemy_units.closer_than(12, first_unit.position)
-					for unit_type in self.PRIORITY_TARGET_ORDER:
+					for unit_type in self.HIGH_PRIORITY_TARGET_ORDER:
 						enemy = near_enemies.filter(lambda u: u.type_id in {unit_type})
 						if enemy:
 							closest = enemy.closest_to(first_unit)
 							for unit in combatients:
+								#if unit.ground_range > 1 and unit.weapon_cooldown > 3:
+								#	closest_to_unit = near_enemies.closest_to(unit)
+								#	await self.game.do(unit.move(closest_to_unit.position.towards(unit.position, unit.ground_range)))
+								#else:
 								await self.game.do(unit.attack(closest))
 							return
-				# todo: regroup ball
+			# todo: regroup ball
+			if attack_position == self.posicion_ofensiva:
+				dispersion = 0
+				for unit in combatients:
+					dispersion += unit.distance_to(combatients.center)
+				dispersion = dispersion / combatients.amount
+				print(dispersion)
+				if dispersion > 2:
+					for unit in combatients:
+						await self.game.do(unit.attack(combatients.center))
+					return
 			# default attack
 			for unit in combatients.further_than(1, attack_position):
 				await self.game.do(unit.attack(attack_position))
 
 	# new offensive group conditions
 	async def set_off(self):
-		if self.off_group.amount == 0 and self.game.units(VOIDRAY).amount >= 10:
+		if len(self.off_group) == 0 and self.game.units(VOIDRAY).amount >= 12:
 			for vr in self.game.units(VOIDRAY):
 				self.off_group.append(vr.tag)
 

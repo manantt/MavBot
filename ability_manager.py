@@ -1,6 +1,6 @@
-from sc2.units import Units
-from sc2.constants import *
-from sc2.ids.ability_id import AbilityId
+from psc2.sc2.units import Units
+from psc2.sc2.constants import *
+from psc2.sc2.ids.ability_id import AbilityId
 import random
 
 # TODO: use sentry to scout

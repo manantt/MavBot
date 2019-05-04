@@ -1,5 +1,5 @@
-from sc2.units import Units
-from sc2.constants import *
+from psc2.sc2.units import Units
+from psc2.sc2.constants import *
 
 class WorkerManager:
 	def __init__(self, game):
