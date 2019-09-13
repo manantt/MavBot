@@ -97927,3 +97927,1255 @@ INFO:root:Result for player id: 1: Result.Victory
 Result.Victory  against opponent  63f791f9f1d1edc
 ERROR:asyncio:Unclosed client session
 client_session: <aiohttp.client.ClientSession object at 0x0000023D79A799E8>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+1050
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
+Result.Victory  against opponent  a9292d9c0e59590
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot(Race.Protoss, <mavBot.MavBot object at 0x00000246A75F5518>)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4346347521), None, False))
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot(Race.Protoss, <mavBot.MavBot object at 0x00000190B0C75518>)
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 2 - Bot(Race.Protoss, <mavBot.MavBot object at 0x0000013EF3275518>)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_GATEWAY, Unit(name='Probe', tag=4351590401), (152, 23), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_GATEWAY, Unit(name='Probe', tag=4347920385), (42, 115), False))
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4348706817), Unit(name='VespeneGeyser', tag=4297326593), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4349231105), Unit(name='VespeneGeyser', tag=4297064449), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4351590401), Unit(name='VespeneGeyser', tag=4299685889), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4350803969), Unit(name='VespeneGeyser', tag=4299948033), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4348182529), Unit(name='VespeneGeyser', tag=4297326593), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4351590401), Unit(name='VespeneGeyser', tag=4299685889), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4351328257), (158, 23), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4358668289), (45, 120), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotSupported: 2>] (action: UnitCommand(AbilityId.PROTOSSBUILD_CYBERNETICSCORE, Unit(name='Probe', tag=4350279681), (150, 23), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_CYBERNETICSCORE, Unit(name='Probe', tag=4351590401), (150, 23), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4346347521), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotSupported: 2>] (action: UnitCommand(AbilityId.PROTOSSBUILD_NEXUS, Unit(name='Probe', tag=4356571137), (70, 117), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughVespene: 10>] (action: UnitCommand(AbilityId.PROTOSSBUILD_STARGATE, Unit(name='Probe', tag=4359454721), (149, 23), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughEnergy: 17>] (action: UnitCommand(AbilityId.EFFECT_CHRONOBOOSTENERGYCOST, Unit(name='Nexus', tag=4346347521), Unit(name='Nexus', tag=4346347521), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4348706817), (43, 120), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_NEXUS, Unit(name='Probe', tag=4351328257), (129, 31), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4362338305), None, False))
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4354998273), Unit(name='VespeneGeyser', tag=4305190913), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4354998273), Unit(name='VespeneGeyser', tag=4305190913), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4362338305), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.STARGATETRAIN_VOIDRAY, Unit(name='Stargate', tag=4362076161), None, False))
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4352638977), Unit(name='VespeneGeyser', tag=4302569473), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4352638977), Unit(name='VespeneGeyser', tag=4302569473), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4352638977), Unit(name='VespeneGeyser', tag=4302307329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4362338305), None, False))
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4351328257), Unit(name='VespeneGeyser', tag=4302569473), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4351328257), Unit(name='VespeneGeyser', tag=4302569473), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.STARGATETRAIN_VOIDRAY, Unit(name='Stargate', tag=4368629761), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.STARGATETRAIN_VOIDRAY, Unit(name='Stargate', tag=4367319041), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4364959745), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4374134785), (43, 116), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4362338305), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.STARGATETRAIN_VOIDRAY, Unit(name='Stargate', tag=4368105473), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.STARGATETRAIN_VOIDRAY, Unit(name='Stargate', tag=4362076161), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4359454721), (154, 25), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.RESEARCH_PROTOSSAIRWEAPONS, Unit(name='CyberneticsCore', tag=4360503297), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.RESEARCH_PROTOSSAIRWEAPONS, Unit(name='CyberneticsCore', tag=4360241153), None, False))
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4354998273), Unit(name='VespeneGeyser', tag=4307812353), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4374396929), Unit(name='VespeneGeyser', tag=4310171649), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4386717697), Unit(name='VespeneGeyser', tag=4307550209), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4386979841), Unit(name='VespeneGeyser', tag=4307550209), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4348182529), Unit(name='VespeneGeyser', tag=4312793089), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4359716865), Unit(name='VespeneGeyser', tag=4313055233), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4358144001), Unit(name='VespeneGeyser', tag=4312793089), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4349493249), Unit(name='VespeneGeyser', tag=4313055233), False)
+5.970549841153228
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4385669121), Unit(name='VespeneGeyser', tag=4313055233), False)
+5.774637337115273
+4.99381522125127
+4.398022845724912
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4349493249), Unit(name='VespeneGeyser', tag=4313055233), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4351066113), Unit(name='VespeneGeyser', tag=4315676673), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4354736129), Unit(name='VespeneGeyser', tag=4315414529), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4370989057), Unit(name='VespeneGeyser', tag=4315414529), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4396679169), Unit(name='VespeneGeyser', tag=4315414529), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4394844161), Unit(name='VespeneGeyser', tag=4315414529), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4381999105), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4381999105), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4381999105), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4381999105), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4381999105), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4381999105), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4397203457), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4399562753), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4383834113), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4396154881), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4379639809), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4374921217), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4377280513), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4377280513), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4377280513), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4394057729), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4394057729), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4394057729), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4396417025), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4396417025), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4396417025), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4397203457), (161.5, 21.5), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4394057729), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4394057729), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4394057729), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4396417025), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4396417025), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4396417025), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4396417025), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4396417025), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4396417025), False))
+3.7442693078027567
+3.2111423303939888
+2.631099127076237
+2.089433339260493
+1.530516773576071
+1.333299389235921
+1.5892492893487393
+1.8343942298673441
+2.053940809547249
+1.3365990336879825
+0.9982118679180992
+1.269943788829098
+1.5626930222280428
+1.816496826108379
+2.0501151289544377
+1.2389029980969353
+0.93994248872415
+1.1895630975804663
+1.3960693237115118
+1.498873483230896
+1.6116257745125513
+1.6818555735315839
+1.7386650053657349
+1.782757291283626
+1.7956185188945917
+1.8009972445199247
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4396417025), (78.45122252877776, 88.43550824076272), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4367843329), Unit(name='VoidRay', tag=4369154049), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4384620545), Unit(name='VoidRay', tag=4369154049), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4379901953), Unit(name='VoidRay', tag=4369154049), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4369154049), (161.5, 21.5), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4385144833), Unit(name='VoidRay', tag=4369154049), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4379639809), (161.5, 21.5), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4385144833), Unit(name='VoidRay', tag=4379639809), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4397727745), Unit(name='VoidRay', tag=4379639809), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4367843329), Unit(name='VoidRay', tag=4379639809), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4379901953), Unit(name='VoidRay', tag=4379639809), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4384620545), Unit(name='VoidRay', tag=4379639809), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4384620545), Unit(name='VoidRay', tag=4399562753), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4385144833), Unit(name='VoidRay', tag=4399562753), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4379901953), Unit(name='VoidRay', tag=4399562753), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4397727745), Unit(name='VoidRay', tag=4399562753), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4361551873), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4365221889), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4363124737), Unit(name='VoidRay', tag=4379901953), False))
+0.7462318805999574
+0.7730362398077502
+0.8222961428343543
+6.190225642050535
+6.132785499277772
+5.716698926123263
+5.301307394029386
+4.911889194920201
+4.502636813561389
+3.960447289392186
+3.0615802049625658
+2.1710328521163076
+1.9202284872555442
+1.6743578594495603
+1.4579699044973349
+1.3128146448378308
+1.325243477744906
+1.2848297054807036
+1.101426936042736
+1.0673171488346236
+1.3446667879331875
+1.5547003791818321
+1.5169726192620925
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4367843329), Unit(name='VoidRay', tag=4399562754), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4388552706), (161.5, 21.5), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+1.6880761616356912
+1.7333555461667414
+1.7333555461667414
+1.675533174437402
+1.4526416300002154
+1.4428260614435506
+1.4179325513205059
+1.4159087933274985
+1.410345589311934
+1.501820724966673
+1.517005433090296
+1.5170054330902956
+1.517005433090296
+1.517005433090296
+1.5170054330902956
+1.517005433090296
+1.517005433090296
+1.517005433090296
+1.5170054330902956
+1.517005433090296
+1.517005433090296
+1.517005433090296
+1.517005433090296
+1.5170054330902956
+1.5170054330902956
+1.5170054330902956
+1.515719667418007
+1.5054277810941443
+1.5334743115172256
+1.494520433422515
+1.4685734693129362
+1.4161529553749104
+1.1416540692227921
+1.054716856105606
+1.06952458408812
+1.1292653239708428
+1.2094958036517494
+1.108236099510053
+1.1901020236660416
+1.2492559204412637
+1.2796617720258017
+1.364413194479945
+1.338230693802978
+1.270674253946115
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4384620545), Unit(name='VoidRay', tag=4388552706), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4397727745), Unit(name='VoidRay', tag=4388552706), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4367843329), Unit(name='VoidRay', tag=4388552706), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4298113026), Unit(name='VoidRay', tag=4388552706), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4379901953), Unit(name='VoidRay', tag=4388552706), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4385144833), Unit(name='VoidRay', tag=4388552706), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4387241986), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4367843329), Unit(name='VoidRay', tag=4361551875), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4379901953), Unit(name='VoidRay', tag=4361551875), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4361551875), (161.5, 21.5), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='Zealot', tag=4387241986), (161.5, 21.5), False))
+0.7002614827761671
+0.6796954085394716
+0.6752825916318225
+0.6727856527569464
+0.669249258576145
+0.6712187983188822
+0.6697653057841861
+0.6843499019767508
+0.8371144908870713
+0.9842174887378305
+1.0789119417758564
+3.282741148080913
+3.5791361394337784
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4367843329), Unit(name='VoidRay', tag=4388290562), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4298113026), Unit(name='VoidRay', tag=4388290562), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4385144833), Unit(name='VoidRay', tag=4388290562), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4384620545), Unit(name='VoidRay', tag=4388290562), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4379901953), Unit(name='VoidRay', tag=4388290562), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4397727745), Unit(name='VoidRay', tag=4388290562), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4373348354), Unit(name='VoidRay', tag=4298113026), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4373348354), Unit(name='VoidRay', tag=4298113026), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4373348354), Unit(name='VoidRay', tag=4298113026), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4373348354), Unit(name='VoidRay', tag=4298113026), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4373348354), Unit(name='VoidRay', tag=4298113026), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4373348354), Unit(name='VoidRay', tag=4298113026), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4373348354), Unit(name='VoidRay', tag=4298113026), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4373348354), Unit(name='VoidRay', tag=4298113026), False))
+1.2594026223099808
+1.360675588564516
+1.1084194850664841
+1.222092276291386
+1.1795142539565786
+0.9257777064791389
+1.0083018446082643
+1.3565179144988984
+0.8241827113572701
+0.9224089258402671
+1.147467500109108
+1.0486759212246406
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4298113026), (78.45122252877776, 88.43550824076272), False))
+1.2377582911969562
+1.4629419849966556
+1.6081075615289098
+1.7431291154879822
+1.7431291154879822
+1.7431291154879822
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4387766273), Unit(name='VespeneGeyser', tag=4318035969), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4350541826), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4385144833), False))
+0.9284475644365873
+0.9319108105164673
+1.1840673131202026
+1.3886584784685176
+1.5073077427757062
+1.5092162107606442
+1.5092522817707597
+1.5249060831439682
+1.651819650246276
+1.6204805037999024
+1.5822961354827512
+1.5812176579289425
+1.5820253766171724
+1.5850084264082416
+1.5787932954906423
+1.540178139126371
+1.5291021235194084
+1.5216198770455596
+1.5302239553172545
+1.5390797422119706
+1.539955948388976
+1.5420650464134265
+1.4246834254463872
+1.264842960614121
+1.130646619917929
+1.311148539512622
+1.1717558504092092
+1.2053506522676716
+1.0862865733222065
+1.051567171107215
+1.1320853762825993
+1.1984247310920715
+1.2822425276914853
+1.2838596873586252
+1.0719993533244583
+1.162377525766304
+1.493324472221093
+1.4462634124589493
+1.0602533018843951
+1.3904885552698851
+1.4882482207507808
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4384620545), Unit(name='VoidRay', tag=4295229442), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4397727745), Unit(name='VoidRay', tag=4295229442), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4385144833), Unit(name='VoidRay', tag=4295229442), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4367843329), Unit(name='VoidRay', tag=4295229442), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4379901953), Unit(name='VoidRay', tag=4295229442), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4367843329), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4367843329), (78.45122252877776, 88.43550824076272), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4397727745), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4385144833), Unit(name='VoidRay', tag=4350541827), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4384620545), Unit(name='VoidRay', tag=4350541827), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4295491587), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='Zealot', tag=4295491587), (161.5, 21.5), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughEnergy: 17>] (action: UnitCommand(AbilityId.EFFECT_CHRONOBOOSTENERGYCOST, Unit(name='Nexus', tag=4349755393), Unit(name='Stargate', tag=4362076161), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4392747009), Unit(name='VespeneGeyser', tag=4315414529), False))
+0.696213531209462
+0.7506532704876346
+0.7528249962206209
+1.0569216367015264
+1.0924774748686765
+1.0841073669046464
+1.087995023502369
+1.481104100220839
+1.395452649191095
+1.3873120087119601
+1.3196518641426616
+0.7279394755539605
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4369678337), Unit(name='VespeneGeyser', tag=8816230422), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4369678337), Unit(name='VespeneGeyser', tag=8870166605), False))
+0.8231348094398285
+0.8680657297344871
+0.9771222599310265
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4397727745), (78.45122252877776, 88.43550824076272), False))
+0.5726273991289491
+0.5807315986023575
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4401135617), Unit(name='VespeneGeyser', tag=4331405313), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4351590401), Unit(name='VespeneGeyser', tag=4315414529), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4361027586), Unit(name='VespeneGeyser', tag=4315414529), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+0.5931836193216696
+0.16230865304369957
+0.1396510517435866
+0.1590842989838384
+0.37793207291040026
+0.6063986082957593
+0.6394401168218978
+0.7677731635655181
+0.852174349288437
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4371513345), Unit(name='VespeneGeyser', tag=4325376001), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4397203461), Unit(name='VoidRay', tag=4384620545), False))
+0.9806742747370828
+1.027146313456764
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4386455553), Unit(name='VespeneGeyser', tag=4325376001), False)
+1.0361817331394994
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4397989889), Unit(name='VespeneGeyser', tag=4325900289), False)
+0.9765445267881877
+1.0684369205541917
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4377018369), Unit(name='VespeneGeyser', tag=4325376001), False)
+1.054628063558144
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4401135617), Unit(name='VespeneGeyser', tag=4325900289), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4390125569), None, False))
+1.056978986187424
+1.1411629069271232
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4395368449), Unit(name='VespeneGeyser', tag=4325376001), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+1.1888853524792282
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4348182529), Unit(name='VespeneGeyser', tag=4325900289), False)
+1.1888853524792282
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4359716865), Unit(name='VespeneGeyser', tag=4325900289), False)
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4372299779), Unit(name='VespeneGeyser', tag=4315414529), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4382523394), Unit(name='VespeneGeyser', tag=4315414529), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4390125569), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4375183361), Unit(name='VespeneGeyser', tag=4302569473), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='VoidRay', tag=4382523395), (161.5, 21.5), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4384620545), False))
+1.1888853524792282
+1.1882654684502807
+1.1882654684502807
+1.1882654684502807
+1.1882654684502807
+1.1882654684502807
+1.1882654684502807
+1.1882654684502807
+1.1882654684502807
+1.210439943718583
+1.3000070719271049
+1.3000070719271046
+1.3000070719271049
+1.3312155384340867
+1.2144669466091036
+0.7598612598929139
+0.8151537212475742
+0.8601402616679946
+0.8699062720462151
+0.8665454085151847
+0.938647786568927
+1.03171697171721
+1.086246983845501
+1.0439793761548304
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4379901953), Unit(name='VoidRay', tag=4382523395), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4384620545), Unit(name='VoidRay', tag=4382523395), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='VoidRay', tag=4385144833), Unit(name='VoidRay', tag=4382523395), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4370989058), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4364959747), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4359979009), Unit(name='VespeneGeyser', tag=4302569473), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4359979009), Unit(name='VespeneGeyser', tag=4302569473), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4297850882), Unit(name='VespeneGeyser', tag=4302569473), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4357881858), Unit(name='VespeneGeyser', tag=4302569473), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.GATEWAYTRAIN_ZEALOT, Unit(name='Gateway', tag=4355260417), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4378591233), Unit(name='VespeneGeyser', tag=4302569473), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4364959747), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4379901953), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotSupported: 2>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotSupported: 2>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_GATEWAY, Unit(name='Probe', tag=4350279681), (148, 23), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+0.6293124242938559
+0.8430733450047313
+1.1042076707953326
+1.908312799893246
+2.6582803217267674
+2.658280321726767
+2.658280321726767
+2.6582803217267674
+2.6582803217267674
+2.658280321726767
+2.658280321726767
+2.6582803217267674
+2.6582803217267674
+2.6582803217267674
+2.6729935387888824
+2.677428802976363
+2.733654639900044
+2.73385082880567
+2.021862610000475
+1.3777131455754177
+0.9307316623436613
+0.8520511018389015
+1.122913458749956
+1.122913458749956
+1.122913458749956
+1.122913458749956
+1.122913458749956
+1.122913458749956
+1.122913458749956
+1.122913458749956
+1.122913458749956
+1.122913458749956
+1.122913458749956
+1.1221666083087516
+1.1221666083087516
+1.1225852596069368
+1.1902072254790026
+1.1881303796819431
+1.1757043691874556
+1.1832573767502697
+1.1832573767502697
+1.0576176208487038
+0.8563367984594489
+0.7623133232367679
+0.8381307695542444
+2.1111642905703385
+2.0495366833080135
+1.3565763041078764
+2.013360992179829
+2.0758133154889338
+1.3756845324917155
+1.4508019613060206
+2.414413077229086
+2.839627093485418
+1.5852843847825102
+1.8211113239956926
+2.712501432807279
+2.712501432807279
+2.712501432807279
+2.712501432807279
+2.712501432807279
+2.712501432807279
+2.6998132411759257
+2.0296877043468613
+1.5039914405680623
+1.3912956655997375
+1.2481718253332243
+1.2481718253332243
+1.2481718253332243
+1.2481718253332243
+1.1821507559559306
+1.440457347539034
+1.8083529125799054
+2.137011920850171
+1.6369225114502068
+0.8329368515433995
+1.0890179621881595
+0.6157607593537052
+1.0532603549869244
+1.0543722116445615
+1.0543722116445615
+1.04634005257087
+0.916910387592201
+1.1805152058959099
+1.3583757260191114
+1.3485724293627939
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotSupported: 2>] (action: UnitCommand(AbilityId.PROTOSSBUILD_NEXUS, Unit(name='Probe', tag=4375969793), (129, 31), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4396417027), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4385144833), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='Zealot', tag=4396417027), (161.5, 21.5), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.MustTargetGroundUnits: 113>] (action: UnitCommand(AbilityId.ATTACK, Unit(name='Zealot', tag=4298375170), Unit(name='VoidRay', tag=4384620545), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.Error: 3>] (action: UnitCommand(AbilityId.MOVE, Unit(name='Zealot', tag=4298375170), (161.5, 21.5), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_GATEWAY, Unit(name='Probe', tag=4378591234), (151, 25), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4359454721), (154, 23), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4368891906), (156, 25), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4366794753), (158, 25), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4298375171), (156, 25), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.NEXUSTRAIN_PROBE, Unit(name='Nexus', tag=4349755393), None, False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4397203462), (156, 27), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4352376833), (156, 25), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4381474818), (156, 23), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4377542657), (156, 25), False))
+ERROR:sc2.bot_ai:Error: [<ActionResult.NotEnoughMinerals: 9>] (action: UnitCommand(AbilityId.PROTOSSBUILD_PYLON, Unit(name='Probe', tag=4357881860), (156, 25), False))
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Defeat
+3215
+INFO:root:Result for player 2 - Bot(Race.Protoss, <mavBot.MavBot object at 0x0000013EF3275518>): Defeat
+Result.Defeat  against opponent  b36bc7ce94edc67
+0.9020048097396597
+0.9863471258164727
+0.9863471258164727
+0.9863471258164727
+2.2002623810988955
+0.8527728310383923
+1.4548957653745944
+2.529357701415896
+2.0723907971194646
+2.5497375898467793
+1.3817931647421224
+2.5497375898467793
+2.0501285724616505
+2.54973758984678
+1.7561104441387168
+2.5497375898467793
+2.2497969545948346
+2.54973758984678
+1.975592172339608
+2.246027625397167
+2.6695149874459583
+2.321427892770526
+2.2806083496749268
+2.321427892770526
+1.812314306522811
+2.321427892770526
+2.9259840586377113
+2.321427892770526
+2.7857734685979048
+2.321427892770526
+2.50856556594153
+2.321427892770526
+2.2745644348853418
+2.321427892770526
+2.1414888929447007
+2.321427892770526
+1.816069493056483
+2.321427892770526
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+2.24914904832052
+1.5070061398929882
+1.1313300143206642
+1.2174710977636982
+1.1797577483546247
+1.1557508682280633
+1.1557508682280633
+1.150416645227228
+1.1221123991216155
+1.1534806076667181
+1.1534806076667181
+1.1534806076667181
+1.1534806076667181
+1.1497185243421735
+1.148728688117198
+1.1439166368374643
+1.13743133832906
+1.13743133832906
+1.1301994937181128
+1.1184923771014352
+1.1184923771014352
+1.1184923771014352
+1.1112958018527812
+1.1049587222790718
+1.1013653084440511
+1.1013653084440513
+1.1013653084440511
+1.1013653084440511
+1.1013653084440513
+1.092569341644064
+1.0040893715485695
+0.7959775419194792
+0.9852491707061927
+1.1491099589540206
+1.1491099589540206
+1.1491099589540206
+0.6338072336627414
+0.49532621193119847
+2.137540668863138
+0.46354204299966256
+2.2024426196314617
+0.6905783743526251
+2.2160848217625877
+0.9615296225685555
+2.346211040443823
+0.9615296225685556
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot(Race.Protoss, <mavBot.MavBot object at 0x000001A5B1685550>)
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 2 - Bot(Race.Protoss, <mavBot.MavBot object at 0x0000021ECC575518>)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4367843329), Unit(name='VespeneGeyser', tag=4314365953), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4368629761), Unit(name='VespeneGeyser', tag=4334551041), False)
+ERROR:sc2.main:AI step threw an error
+Traceback (most recent call last):
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\main.py", line 150, in _play_game_ai
+    await ai.on_step(iteration)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 51, in on_step
+    await self.build_manager.build()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\build_manager.py", line 20, in build
+    await self.build_nexus()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\build_manager.py", line 114, in build_nexus
+    await self.game.expand_now()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\bot_ai.py", line 264, in expand_now
+    location = await self.get_next_expansion()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\bot_ai.py", line 273, in get_next_expansion
+    for el in self.expansion_locations:
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\cache.py", line 22, in inner
+    setattr(self, property_cache, f(self))
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\bot_ai.py", line 214, in expansion_locations
+    result = min(possible_points, key=lambda point: sum(point.distance_to(resource) for resource in resources))
+ValueError: min() arg is an empty sequence
+ERROR:sc2.main:resigning due to previous error
+Result.Defeat
+2969
+INFO:root:Result for player 1 - Bot(Race.Protoss, <mavBot.MavBot object at 0x000001A5B1685550>): Defeat
+Result.Defeat  against opponent  b36bc7ce94edc67
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+2658
+INFO:root:Result for player 2 - Bot(Race.Protoss, <mavBot.MavBot object at 0x0000021ECC575518>): Victory
+Result.Victory  against opponent  b36bc7ce94edc67
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 2 - Bot(Race.Protoss, <mavBot.MavBot object at 0x0000026833975550>)
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot(Race.Protoss, <mavBot.MavBot object at 0x000002AD3BE85550>)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4367843329), Unit(name='VespeneGeyser', tag=4314365953), False)
+WARNING:sc2.bot_ai:Cannot afford action UnitCommand(AbilityId.PROTOSSBUILD_ASSIMILATOR, Unit(name='Probe', tag=4363911169), Unit(name='VespeneGeyser', tag=4321443841), False)
+ERROR:sc2.main:AI step threw an error
+Traceback (most recent call last):
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\main.py", line 150, in _play_game_ai
+    await ai.on_step(iteration)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 51, in on_step
+    await self.build_manager.build()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\build_manager.py", line 20, in build
+    await self.build_nexus()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\build_manager.py", line 114, in build_nexus
+    await self.game.expand_now()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\bot_ai.py", line 264, in expand_now
+    location = await self.get_next_expansion()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\bot_ai.py", line 273, in get_next_expansion
+    for el in self.expansion_locations:
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\cache.py", line 22, in inner
+    setattr(self, property_cache, f(self))
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\bot_ai.py", line 214, in expansion_locations
+    result = min(possible_points, key=lambda point: sum(point.distance_to(resource) for resource in resources))
+ValueError: min() arg is an empty sequence
+ERROR:sc2.main:resigning due to previous error
+Result.Defeat
+2970
+INFO:root:Result for player 1 - Bot(Race.Protoss, <mavBot.MavBot object at 0x000002AD3BE85550>): Defeat
+Result.Defeat  against opponent  b36bc7ce94edc67
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+2653
+INFO:root:Result for player 2 - Bot(Race.Protoss, <mavBot.MavBot object at 0x0000026833975550>): Victory
+Result.Victory  against opponent  b36bc7ce94edc67

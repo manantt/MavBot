@@ -1,7 +1,10 @@
 from sc2.units import Units
+from sc2.position import Point2, Point3
+from sc2.unit import Unit
 from sc2.constants import *
 from sc2.cache import property_cache_once_per_frame
 
+from typing import Optional, Union  # mypy type checking
 import random
 
 # TODO: improve deffensive positions
@@ -14,7 +17,7 @@ class UnitManager:
 		self.distance_to_deffend = 22
 		self.cachedUnits = {}
 		self.HIGH_PRIORITY_TARGET_ORDER = [
-			STALKER, PHOENIX, WIDOWMINEBURROWED, WIDOWMINE, MARINE, THOR, HYDRALISK, CORRUPTOR, LIBERATOR, VIKING, BATTLECRUISER, CYCLONE,
+			STALKER, PHOENIX, WIDOWMINEBURROWED, WIDOWMINE, CYCLONE, MARINE, THOR, HYDRALISK, CORRUPTOR, LIBERATOR, VIKING, BATTLECRUISER, 
 			PHOTONCANNON, MISSILETURRET, SPORECRAWLER,
 			VOIDRAY, CARRIER, TEMPEST, MOTHERSHIP, SENTRY, HIGHTEMPLAR, ARCHON, MUTALISK, QUEEN, INFESTOR, GHOST
 		]
@@ -23,7 +26,6 @@ class UnitManager:
 			ZERGLING, REAPER, 
 			HATCHERY, COMMANDCENTER, NEXUS
 		]
-
 
 	async def move_troops(self):
 		await self.set_off()
@@ -108,19 +110,19 @@ class UnitManager:
 						if enemy:
 							closest = enemy.closest_to(first_unit)
 							for unit in combatients:
+								# kite
 								#if unit.ground_range > 1 and unit.weapon_cooldown > 3:
 								#	closest_to_unit = near_enemies.closest_to(unit)
 								#	await self.game.do(unit.move(closest_to_unit.position.towards(unit.position, unit.ground_range)))
 								#else:
 								await self.game.do(unit.attack(closest))
 							return
-			# todo: regroup ball
+			# regroup ball
 			if attack_position == self.posicion_ofensiva:
 				dispersion = 0
 				for unit in combatients:
 					dispersion += unit.distance_to(combatients.center)
 				dispersion = dispersion / combatients.amount
-				print(dispersion)
 				if dispersion > 2:
 					for unit in combatients:
 						await self.game.do(unit.attack(combatients.center))
@@ -147,3 +149,26 @@ class UnitManager:
 					if positions_to_scout:
 						move_to = random.choice(positions_to_scout).position
 						await self.game.do(scout.move(move_to))
+
+	# returns how much does a enemy ground unit have to surround a wall to reach the ally unit position
+	# for example, it returns 2 if the path it must walk is the double of the straight line distance between them
+	async def terrain_adventage(self, ally_unit: Union[Unit, Point2], enemy_unit: Union[Unit, Point2]) -> float:
+		startp = enemy_unit
+		if isinstance(startp, Unit):
+			startp = startp.position
+		finp = ally_unit
+		if isinstance(finp, Unit):
+			finp = finp.position
+		return await self.game._client.query_pathing(startp, finp)
+
+	# closest position where ally unit have an advantage against the enemy due to terrain limitations
+	# advantage_type: 1=enemy can not attack, 2=only enemy first line can attack, 3=enemy is just in range, only enemy first unit can attack
+	def closest_advantaged_terrain(
+		self, ally_unit: Unit, enemy_unit: Unit, min_terrain_advantage=1.5, advantage_type=2, 
+		walk_throug_enemies=False, max_distance=15
+	) -> Optional[Point2]:
+		if ally_unit.ground_range < enemy_unit.range or enemy_unit.is_flying:
+			return None
+		# 1- find closest terrain wall that is closer to ally unit than to enemy unit
+		# 2- move the point terrain-perpendicularly backwards a distance equals to enemy range
+		return Point2([100, 100])

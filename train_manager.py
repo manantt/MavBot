@@ -32,7 +32,7 @@ class TrainManager:
 
 	def should_train_zealot(self):
 		# TODO: pending zealots should be considered in amount
-		if self.game.can_afford(ZEALOT) and self.game.units(ZEALOT).amount < 4:
+		if self.game.can_afford(ZEALOT) and self.game.units(ZEALOT).amount < 2:
 			return True
 		return False
 
