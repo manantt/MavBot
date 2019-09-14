@@ -17,9 +17,15 @@ class UnitManager:
 		self.distance_to_deffend = 22
 		self.cachedUnits = {}
 		self.HIGH_PRIORITY_TARGET_ORDER = [
-			STALKER, PHOENIX, WIDOWMINEBURROWED, WIDOWMINE, CYCLONE, MARINE, THOR, HYDRALISK, CORRUPTOR, LIBERATOR, VIKING, BATTLECRUISER, 
+			STALKER, PHOENIX, LIBERATOR, VIKING, BATTLECRUISER, 
+			WIDOWMINEBURROWED, WIDOWMINE, CYCLONE, MARINE, THOR, 
+			HYDRALISK, CORRUPTOR, 
+
 			PHOTONCANNON, MISSILETURRET, SPORECRAWLER,
-			VOIDRAY, CARRIER, TEMPEST, MOTHERSHIP, SENTRY, HIGHTEMPLAR, ARCHON, MUTALISK, QUEEN, INFESTOR, GHOST
+
+			VOIDRAY, CARRIER, TEMPEST, MOTHERSHIP, HIGHTEMPLAR, ARCHON, SENTRY, 
+			GHOST,
+			MUTALISK, QUEEN, INFESTOR
 		]
 		self.LOW_PRIORITY_TARGET_ORDER = [
 			PROBE, SCV, DRONE, OVERLORD,
@@ -84,49 +90,53 @@ class UnitManager:
 		off_group = self.game.units.tags_in(self.off_group)
 		await self.attack_move(off_group, self.posicion_ofensiva, self.deffensive_position)
 
-	async def attack_move(self, units, attack_position, retreat_position):
+	async def attack_move(self, units, attack_position, retreat_position, do_ball=False):
 		if units.amount > 0:
-			combatients = units.filter(lambda e: e.shield > 0)
+			combatients = units.filter(lambda e: e.shield > 0 or e.health >= e.health_max/3)
 			injured = units.filter(lambda e: e.shield <= 0 and e.health < e.health_max/3)
+			print("units: "+str(units.amount)+" combatients: "+str(combatients.amount)+" injured: "+str(injured.amount))
 			# retreat injured
 			for i in injured:
-				await self.game.do(i.move(retreat_position))
+				if i.ground_range > 1 and i.weapon_cooldown > 3:
+					self.game.combined_actions.append(i.move(retreat_position))
+				else:
+					self.game.combined_actions.append(i.attack(retreat_position))
 			# if there are no combatients in the attack group disolve it
 			if combatients.amount == 0 and attack_position == self.posicion_ofensiva:
 				self.off_group = []
-				return
-			# closest ally to enemies
+				pass
+			# find best objetive
 			closest_distance = 9999999
 			if self.game.known_enemy_units.filter(lambda unit: unit.type_id in self.HIGH_PRIORITY_TARGET_ORDER):
-				for unit in units: #closest_distance_to
+				for unit in units: 
 					dist = self.game.known_enemy_units.filter(lambda unit: unit.type_id in self.HIGH_PRIORITY_TARGET_ORDER).closest_distance_to(unit)
 					if dist < closest_distance:
 						first_unit = unit
-				if first_unit:
-					#first_unit = self.game.units.closest_to(attack_position)
-					near_enemies = self.game.known_enemy_units.closer_than(12, first_unit.position)
+				if first_unit: #closest ally to enemies
+					near_enemies = self.game.known_enemy_units.closer_than(20, first_unit.position)
 					for unit_type in self.HIGH_PRIORITY_TARGET_ORDER:
 						enemy = near_enemies.filter(lambda u: u.type_id in {unit_type})
 						if enemy:
 							closest = enemy.closest_to(first_unit)
 							for unit in combatients:
-								# kite
-								#if unit.ground_range > 1 and unit.weapon_cooldown > 3:
-								#	closest_to_unit = near_enemies.closest_to(unit)
-								#	await self.game.do(unit.move(closest_to_unit.position.towards(unit.position, unit.ground_range)))
-								#else:
 								await self.game.do(unit.attack(closest))
-							return
+							pass
 			# regroup ball
-			if attack_position == self.posicion_ofensiva:
+			if attack_position == self.posicion_ofensiva or True:
 				dispersion = 0
-				for unit in combatients:
-					dispersion += unit.distance_to(combatients.center)
-				dispersion = dispersion / combatients.amount
-				if dispersion > 2:
-					for unit in combatients:
-						await self.game.do(unit.attack(combatients.center))
-					return
+				vr_combatients = combatients.filter(lambda u: u.type_id in {VOIDRAY})
+				if vr_combatients.amount:
+					for unit in vr_combatients:
+						dispersion += unit.distance_to(vr_combatients.center)
+					dispersion = dispersion / vr_combatients.amount
+					if dispersion > 2:
+						for unit in vr_combatients:
+							# kite to regroup
+							if unit.ground_range > 1 and unit.weapon_cooldown > 3:
+								await self.game.do(unit.move(vr_combatients.center))
+							else:
+								await self.game.do(unit.attack(vr_combatients.center))
+						return
 			# default attack
 			for unit in combatients.further_than(1, attack_position):
 				await self.game.do(unit.attack(attack_position))
@@ -139,8 +149,23 @@ class UnitManager:
 
 	# moves observers
 	async def scout(self):
-		if len(self.game.units(OBSERVER)) > 0:
-			for scout in self.game.units(OBSERVER):
+		idle_observers = self.game.units(OBSERVER)
+		# give vision to combatients
+		off_units = self.game.units.tags_in(self.off_group)
+		if len(off_units) and idle_observers.amount and self.game.strategy_manager.cloack_units_detected:
+			off_scout_position = off_units.center
+			off_observer = idle_observers.closest_to(off_scout_position)
+			await self.game.do(off_observer.move(off_scout_position))
+			idle_observers.remove(off_observer)
+		deff_units = self.game.units.filter(lambda unit: unit.type_id in {VOIDRAY}).tags_not_in(self.off_group)
+		if len(deff_units) and idle_observers.amount and self.game.strategy_manager.cloack_units_detected:
+			deff_scout_position = deff_units.center
+			deff_observer = idle_observers.closest_to(deff_scout_position)
+			await self.game.do(deff_observer.move(deff_scout_position))
+			idle_observers.remove(deff_observer)
+		# look for new enemy expansions
+		if idle_observers.amount:
+			for scout in idle_observers:
 				if scout.is_idle:
 					positions_to_scout = Units([], self.game)
 					for p in self.game.expansion_locations:

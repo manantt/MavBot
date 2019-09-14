@@ -13,10 +13,10 @@ class BuildManager:
 		await self.build_pylon()
 		#await self.build_forge()
 		#await self.build_cannon()
+		await self.build_roboticsfacility()
 		await self.build_gateway()
 		await self.build_cyberneticscore()
 		await self.build_stargate()
-		await self.build_roboticsfacility()
 		await self.build_nexus()
 		await self.build_asimilator()
 
@@ -63,7 +63,7 @@ class BuildManager:
 	def should_build_roboticsfacility(self):
 		if self.game.units(PYLON).ready.exists and self.game.units(CYBERNETICSCORE).ready.exists:
 			if self.game.can_afford(ROBOTICSFACILITY) and not self.game.already_pending(ROBOTICSFACILITY):
-				if self.game.units(ROBOTICSFACILITY).amount < 1 and not self.game.already_pending(ROBOTICSFACILITY) and self.game.units(VOIDRAY).amount > 10:
+				if self.game.units(ROBOTICSFACILITY).amount < 1 and not self.game.already_pending(ROBOTICSFACILITY) and (self.game.units(VOIDRAY).amount > 10 or self.game.strategy_manager.cloack_units_detected):
 					return True
 		return False
 

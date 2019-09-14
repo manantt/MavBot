@@ -1603,3 +1603,141 @@ Traceback (most recent call last):
   File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 207, in MavBot
     @property_cache_forever
 NameError: name 'property_cache_forever' is not defined
+
+13-09-2019 16-35-29: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:52: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\cache.py:57: DeprecationWarning: noqueue will be removed soon, please use is_idle instead
+  self.cache[f.__name__] = f(self)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+13-09-2019 16-40-18: Starting game vs ALIbot
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:52: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+13-09-2019 16-43-58: Starting game vs ALIbot
+
+13-09-2019 20-37-02: Starting game vs AdditionalPylons
+
+13-09-2019 20-47-42: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:52: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\cache.py:57: DeprecationWarning: noqueue will be removed soon, please use is_idle instead
+  self.cache[f.__name__] = f(self)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+13-09-2019 20-50-32: Starting game vs AdditionalPylons
+
+13-09-2019 21-31-27: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+13-09-2019 21-34-23: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+13-09-2019 21-35-41: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:54: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\cache.py:57: DeprecationWarning: noqueue will be removed soon, please use is_idle instead
+  self.cache[f.__name__] = f(self)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\upgrade_manager.py:22: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  return not self.game.already_pending_upgrade(UpgradeId.PROTOSSAIRWEAPONSLEVEL1) and self.game.units(CYBERNETICSCORE).ready.noqueue.amount and self.game.can_afford(UpgradeId.PROTOSSAIRWEAPONSLEVEL1)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+13-09-2019 21-41-04: Starting game vs AdditionalPylons
+
+14-09-2019 00-51-43: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:54: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\cache.py:57: DeprecationWarning: noqueue will be removed soon, please use is_idle instead
+  self.cache[f.__name__] = f(self)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\upgrade_manager.py:22: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  return not self.game.already_pending_upgrade(UpgradeId.PROTOSSAIRWEAPONSLEVEL1) and self.game.units(CYBERNETICSCORE).ready.noqueue.amount and self.game.can_afford(UpgradeId.PROTOSSAIRWEAPONSLEVEL1)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\unit_manager.py:160: DeprecationWarning: Keyword argument 'game_data' in Units function '__init__' is deprecated.
+  positions_to_scout = Units([], self.game)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\unit_manager.py:160: DeprecationWarning: You can safely remove it from your Units objects initializations.
+  positions_to_scout = Units([], self.game)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+14-09-2019 01-10-17: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:54: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\cache.py:57: DeprecationWarning: noqueue will be removed soon, please use is_idle instead
+  self.cache[f.__name__] = f(self)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+14-09-2019 01-14-26: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:54: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\cache.py:57: DeprecationWarning: noqueue will be removed soon, please use is_idle instead
+  self.cache[f.__name__] = f(self)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\upgrade_manager.py:22: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  return not self.game.already_pending_upgrade(UpgradeId.PROTOSSAIRWEAPONSLEVEL1) and self.game.units(CYBERNETICSCORE).ready.noqueue.amount and self.game.can_afford(UpgradeId.PROTOSSAIRWEAPONSLEVEL1)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+14-09-2019 01-17-22: Starting game vs AdditionalPylons
+
+14-09-2019 01-43-12: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:54: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\sc2\cache.py:57: DeprecationWarning: noqueue will be removed soon, please use is_idle instead
+  self.cache[f.__name__] = f(self)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+14-09-2019 01-48-17: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:54: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+14-09-2019 01-49-42: Starting game vs AdditionalPylons
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\train_manager.py:54: DeprecationWarning: noqueue will be removed soon, please use idle instead
+  for sg in self.game.units(STARGATE).ready.noqueue:
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+
+14-09-2019 01-53-50: Starting game vs AdditionalPylons
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000025B1EF13C18>
+
+14-09-2019 01-55-14: Starting game vs AdditionalPylons
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001E7B893A588>

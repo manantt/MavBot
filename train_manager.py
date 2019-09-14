@@ -11,10 +11,10 @@ class TrainManager:
 
 	# troop train priority order
 	async def train_troops(self):
+		await self.train_observer()
 		await self.train_voidray()
 		await self.train_zealot()
 		await self.train_probe()
-		await self.train_observer()
 
 	# train conditions
 	def should_train_probe(self):
@@ -37,8 +37,10 @@ class TrainManager:
 		return False
 
 	def should_train_observer(self):
-		if self.game.can_afford(OBSERVER):
-			if self.game.units(OBSERVER).amount < 2 and self.game.units(ROBOTICSFACILITY).ready.noqueue.amount > 0:
+		if self.game.can_afford(OBSERVER) and self.game.units(ROBOTICSFACILITY).ready.noqueue.amount > 0:
+			if self.game.units(OBSERVER).amount < 2:
+				return True
+			if self.game.strategy_manager.cloack_units_detected and self.game.units(OBSERVER).amount < 4:
 				return True
 		return False
 
