@@ -322,7 +322,9 @@ class BotAI(DistanceCalculation):
 
         if not location:
             location = await self.get_next_expansion()
-
+        if not location:
+            logger.warning(f"Trying to expand_now() but bot is out of locations to expand to")
+            return
         await self.build(building, near=location, max_distance=max_distance, random_alternative=False, placement_step=1)
 
     async def get_next_expansion(self) -> Optional[Point2]:

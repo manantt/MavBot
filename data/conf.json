@@ -1,0 +1,8 @@
+{
+	"default": {
+		"wall_promary": false,
+		"wall_natural": false,
+		"cannon_in_minerals": false,
+		"rush_observers": false,
+	} 
+}

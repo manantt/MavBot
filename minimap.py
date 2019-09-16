@@ -222,7 +222,7 @@ class Minimap:
     def add_psi(self, map_data):
         psi = map_data.copy()
 
-        for psi_provider in self.game.units(PYLON):
+        for psi_provider in self.game.structures(PYLON):
             psi_center = psi_provider.position
             psi_radius = 6.5
             cv2.circle(
@@ -340,7 +340,7 @@ class Minimap:
                 )
 
     def add_enemies(self, map_data):
-        for unit in self.game.known_enemy_units:
+        for unit in self.game.enemy_units:
             if unit.is_structure:
                 cv2.rectangle(
                     map_data,

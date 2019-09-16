@@ -7,13 +7,6 @@ from sc2.position import Point2, Point3
 from sc2.ids.ability_id import AbilityId
 from sc2.ids.upgrade_id import UpgradeId
 
-# for expansion_locations
-from sc2.cache import property_cache_forever
-from sc2.units import Units
-from typing import Dict
-import itertools
-import math
-
 from unit_manager import UnitManager
 from upgrade_manager import UpgradeManager
 from build_manager import BuildManager
@@ -60,8 +53,9 @@ class MavBot(sc2.BotAI):
         await self.build_manager.build()
         await self.unit_manager.move_troops()
         await self.ability_manager.use_abilities()
-        await self.upgrade_manager.research_upgrades()
+        self.upgrade_manager.research_upgrades()
         await self._do_actions(self.combined_actions)
+        self.combined_actions.clear()
         #await self.debug_manager.draw_debug()
 
 
@@ -100,7 +94,7 @@ if __name__ == "__main__":
         [  # random.choice(mapsS8)), [
             Bot(Race.Protoss, MavBot()),
             Computer(
-                Race.Zerg, Difficulty.VeryHard
+                Race.Zerg, Difficulty.CheatInsane
             ),  # VeryHard CheatVision CheatMoney CheatInsane
         ],
         realtime=False,

@@ -27,7 +27,7 @@ class DebugManager:
     # get the heightmap offset.
     @property_cache_forever
     def height_offset(self):
-        nexus = self.game.units(NEXUS).ready.random
+        nexus = self.game.townhalls().ready.random
         if nexus:
             return self.getHeight(nexus.position) - nexus.position3d.z - 1
         else:
@@ -88,7 +88,7 @@ class DebugManager:
             )
 
     def debug_deffense_area(self):
-        for nexus in self.game.units(NEXUS):
+        for nexus in self.game.townhalls():
             self.game._client.debug_sphere_out(
                 self.turn3d(nexus.position), 20, Point3((132, 0, 66))
             )

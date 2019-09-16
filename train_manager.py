@@ -19,7 +19,7 @@ class TrainManager:
 	# train conditions
 	def should_train_probe(self):
 		if self.game.can_afford(PROBE):
-			num_nexus = self.game.units(NEXUS).amount
+			num_nexus = self.game.townhalls().amount
 			max_probes = min(self.max_probes, num_nexus * self.probes_per_nexus)
 			if self.game.units(PROBE).amount < max_probes:
 				return True
@@ -37,7 +37,7 @@ class TrainManager:
 		return False
 
 	def should_train_observer(self):
-		if self.game.can_afford(OBSERVER) and self.game.units(ROBOTICSFACILITY).ready.noqueue.amount > 0:
+		if self.game.can_afford(OBSERVER) and self.game.structures(ROBOTICSFACILITY).ready.idle.amount > 0:
 			if self.game.units(OBSERVER).amount < 2:
 				return True
 			if self.game.strategy_manager.cloack_units_detected and self.game.units(OBSERVER).amount < 4:
@@ -46,22 +46,22 @@ class TrainManager:
 
 	# train methods
 	async def train_probe(self):
-		for nexus in self.game.units(NEXUS).ready.noqueue:
+		for nexus in self.game.townhalls().ready.idle:
 			if self.should_train_probe():
-				await self.game.do(nexus.train(PROBE))
+				self.game.do(nexus.train(PROBE))
 
 	async def train_voidray(self):
-		for sg in self.game.units(STARGATE).ready.noqueue:
+		for sg in self.game.structures(STARGATE).ready.idle:
 			if self.should_train_voidray():
-				await self.game.do(sg.train(VOIDRAY))
+				self.game.do(sg.train(VOIDRAY))
 
 	async def train_zealot(self):
-		for gw in self.game.units(GATEWAY).ready.noqueue:
+		for gw in self.game.structures(GATEWAY).ready.idle:
 			if self.should_train_zealot():
-				await self.game.do(gw.train(ZEALOT))
+				self.game.do(gw.train(ZEALOT))
 
 	async def train_observer(self):
 		if self.should_train_observer():
-			robotic = self.game.units(ROBOTICSFACILITY).ready.noqueue.first
+			robotic = self.game.structures(ROBOTICSFACILITY).ready.idle.first
 			if robotic:
-				await self.game.do(robotic.train(OBSERVER))
+				self.game.do(robotic.train(OBSERVER))

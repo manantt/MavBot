@@ -37,5 +37,5 @@ class StrategyManager:
 		self.objetive_voidrays = [31, 31, 31]"""
 
 	def do_strat(self):
-		if not self.cloack_units_detected and self.game.known_enemy_units.filter(lambda unit: unit.is_cloaked).amount:
+		if not self.cloack_units_detected and self.game.enemy_units.filter(lambda unit: unit.is_cloaked).amount:
 			self.cloack_units_detected = True
