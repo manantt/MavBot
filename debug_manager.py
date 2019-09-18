@@ -16,13 +16,22 @@ class DebugManager:
         #self.minimap = Minimap(game)
 
     async def draw_debug(self):
+        pass
         #self.minimap.draw_map()
-        self.debug_score()
-        self.debug_units()
-        self.debug_deffensive_position()
-        self.debug_offesinsive_group()
-        self.debug_deffense_area()
-        await self.game._client.send_debug()
+        #self.debug_score()
+        #self.debug_units()
+        #self.debug_deffensive_position()
+        #self.debug_offesinsive_group()
+        #self.debug_deffense_area()
+        #await self.game._client._send_debug()
+
+    def draw_rect(self, p):
+        h2 = self.game.get_terrain_z_height(p)
+        pos = Point3((p.x, p.y, h2))
+        p0 = Point3((pos.x - 0.25, pos.y - 0.25, pos.z + 0.25))
+        p1 = Point3((pos.x + 0.25, pos.y + 0.25, pos.z - 0.25))
+        color = Point3((255, 0, 0))
+        self.game._client.debug_box_out(p0, p1, color=color)
 
     # get the heightmap offset.
     @property_cache_forever

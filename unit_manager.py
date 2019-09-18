@@ -15,23 +15,77 @@ class UnitManager:
 	def __init__(self, game):
 		self.game = game
 		self.off_group = []
+		self.off_group2 = []
 		self.distance_to_deffend = 22
 		self.cachedUnits = {}
-		self.HIGH_PRIORITY_TARGET_ORDER = [
-			STALKER, PHOENIX, LIBERATOR, VIKING, BATTLECRUISER, 
-			WIDOWMINEBURROWED, WIDOWMINE, CYCLONE, MARINE, THOR, 
-			HYDRALISK, CORRUPTOR, 
+		self.PRIORITY_TARGET_ORDER = [
+			#protoss
+			# can attack air
+			#damaged, in range
+			{'unitid':MOTHERSHIP, 'range':10, 'hp':0.5}, 
+			{'unitid':VOIDRAY, 'range':10, 'hp':0.5}, 
+			{'unitid':CARRIER, 'range':10, 'hp':0.5}, 
+			{'unitid':TEMPEST, 'range':10, 'hp':0.5}, 
+			{'unitid':STALKER, 'range':10, 'hp':0.5}, 
+			{'unitid':PHOENIX, 'range':10, 'hp':0.5}, 
+			{'unitid':HIGHTEMPLAR, 'range':10, 'hp':0.5}, 
+			{'unitid':ARCHON, 'range':10, 'hp':0.5}, 
+			{'unitid':PHOTONCANNON, 'range':10, 'hp':0.5}, 
+			{'unitid':SENTRY, 'range':10, 'hp':0.5}, 
+			#full hp, in range
+			{'unitid':STALKER, 'range':8, 'hp':1}, 
+			{'unitid':PHOENIX, 'range':8, 'hp':1}, 
+			{'unitid':VOIDRAY, 'range':8, 'hp':1}, 
+			{'unitid':CARRIER, 'range':8, 'hp':1}, 
+			{'unitid':TEMPEST, 'range':8, 'hp':1}, 
+			{'unitid':MOTHERSHIP, 'range':8, 'hp':1}, 
+			{'unitid':HIGHTEMPLAR, 'range':8, 'hp':1}, 
+			{'unitid':PHOTONCANNON, 'range':8, 'hp':1}, 
+			{'unitid':ARCHON, 'range':8, 'hp':1}, 
+			{'unitid':SENTRY, 'range':8, 'hp':1}, 
+			#full hp, not in range
+			{'unitid':STALKER, 'range':20, 'hp':1}, 
+			{'unitid':PHOENIX, 'range':20, 'hp':1}, 
+			{'unitid':VOIDRAY, 'range':20, 'hp':1}, 
+			{'unitid':CARRIER, 'range':20, 'hp':1}, 
+			{'unitid':TEMPEST, 'range':20, 'hp':1}, 
+			{'unitid':MOTHERSHIP, 'range':20, 'hp':1}, 
+			{'unitid':HIGHTEMPLAR, 'range':20, 'hp':1}, 
+			{'unitid':ARCHON, 'range':20, 'hp':1}, 
+			{'unitid':PHOTONCANNON, 'range':20, 'hp':1}, 
+			{'unitid':SENTRY, 'range':20, 'hp':1}, 
+			
+			# cannot attack air
+			{'unitid':OBSERVER, 'range':20, 'hp':1},
+			{'unitid':WARPPRISM, 'range':20, 'hp':1},
+			{'unitid':DRONE, 'range':20, 'hp':1},
+			{'unitid':DARKTEMPLAR, 'range':20, 'hp':1},
+			{'unitid':ORACLE, 'range':20, 'hp':1},
+			{'unitid':COLOSSUS, 'range':20, 'hp':1},
+			{'unitid':DISRUPTOR, 'range':20, 'hp':1},
+			{'unitid':IMMORTAL, 'range':20, 'hp':1},
+			{'unitid':ADEPT, 'range':20, 'hp':1},
+			{'unitid':ZEALOT, 'range':20, 'hp':1},
+			{'unitid':NEXUS, 'range':20, 'hp':1},
+			{'unitid':PYLON, 'range':20, 'hp':1}
 
-			PHOTONCANNON, MISSILETURRET, SPORECRAWLER,
+			{'unitid':DRONE, 'range':50, 'hp':1},
 
-			VOIDRAY, CARRIER, TEMPEST, MOTHERSHIP, HIGHTEMPLAR, ARCHON, SENTRY, 
-			GHOST,
-			MUTALISK, QUEEN, INFESTOR
-		]
-		self.LOW_PRIORITY_TARGET_ORDER = [
-			PROBE, SCV, DRONE, OVERLORD,
-			ZERGLING, REAPER, 
-			HATCHERY, COMMANDCENTER, NEXUS
+			#terran
+			#LIBERATOR, 
+			#VIKING, 
+			#BATTLECRUISER, 
+			#WIDOWMINEBURROWED, WIDOWMINE, CYCLONE, MARINE, THOR, 
+			#zerg
+			#MUTALISK, HYDRALISK, CORRUPTOR, 
+
+			#MISSILETURRET, SPORECRAWLER,
+
+			#GHOST,
+			#QUEEN, INFESTOR,
+			#PROBE, SCV, OVERLORD,
+			#ZERGLING, REAPER, 
+			#HATCHERY, COMMANDCENTER
 		]
 
 	async def move_troops(self):
@@ -84,12 +138,14 @@ class UnitManager:
 	# send idle units to deffend
 	async def deff(self):
 		#deff_group = Units([], )
-		deff_group = self.game.units.filter(lambda unit: unit.type_id in {ZEALOT, VOIDRAY}).tags_not_in(self.off_group)
+		deff_group = self.game.units.filter(lambda unit: unit.type_id in {ZEALOT, VOIDRAY, MOTHERSHIP}).tags_not_in(self.off_group)
 		await self.attack_move(deff_group, self.deffensive_position, self.game.start_location)
 
 	async def att(self):
 		off_group = self.game.units.tags_in(self.off_group)
 		await self.attack_move(off_group, self.posicion_ofensiva, self.deffensive_position)
+		off_group2 = self.game.units.tags_in(self.off_group2)
+		await self.attack_move(off_group2, self.posicion_ofensiva, self.deffensive_position)
 
 	async def attack_move(self, units, attack_position, retreat_position, do_ball=False):
 		if units.amount:
@@ -108,39 +164,48 @@ class UnitManager:
 				return
 			# find best objetive
 			closest_distance = 9999999
-			if self.game.enemy_units.filter(lambda unit: unit.type_id in self.HIGH_PRIORITY_TARGET_ORDER):
-				for unit in units: 
-					dist = self.game.enemy_units.filter(lambda unit: unit.type_id in self.HIGH_PRIORITY_TARGET_ORDER).closest_distance_to(unit)
-					if dist < closest_distance:
-						first_unit = unit
-				if first_unit: #closest ally to enemies
-					near_enemies = self.game.enemy_units.closer_than(20, first_unit.position)
-					for unit_type in self.HIGH_PRIORITY_TARGET_ORDER:
-						enemy = near_enemies.filter(lambda u: u.type_id in {unit_type})
-						if enemy:
-							closest = enemy.closest_to(first_unit)
+			if self.game.enemy_units and self.game.enemy_units.closer_than(20, combatients.center.position).amount:
+				if self.game.units(MOTHERSHIP).amount:
+					ball_center = self.game.units(MOTHERSHIP).first
+				else:
+					ball_center = combatients.center
+				#for unit in units: 
+				#	dist = self.game.enemy_units.filter(lambda unit: unit.type_id in self.PRIORITY_TARGET_ORDER).closest_distance_to(unit)
+				#	if dist < closest_distance:
+				#		ball_center = unit
+				if ball_center: #closest ally to enemies
+					for priority in self.PRIORITY_TARGET_ORDER:
+						unit_type = priority['unitid']
+						attrange = priority['range']
+						minhp = priority['hp']
+						enemies = self.game.enemy_units.closer_than(attrange, ball_center.position)
+						enemies = enemies.filter(lambda u: u.type_id in {unit_type})
+						enemies = enemies.filter(lambda u: u.health_max+u.shield_max == 0 or (u.health + u.shield)/(u.health_max+u.shield_max) <= minhp)
+						if enemies:
+							closest = enemies.closest_to(ball_center)
+							print(closest)
 							for unit in combatients:
 								self.game.combined_actions.append(unit.attack(closest))
-								if unit.type_id in {VOIDRAY}:
+								if unit.type_id in {VOIDRAY} and closest.is_armored:
 									self.game.combined_actions.append(unit(AbilityId.EFFECT_VOIDRAYPRISMATICALIGNMENT))
-
 							return
-			# regroup ball
-			vr_combatients = combatients.filter(lambda u: u.type_id in {VOIDRAY})
-			if attack_position == self.posicion_ofensiva or vr_combatients.amount >= 5:
-				dispersion = 0
-				if vr_combatients.amount:
-					for unit in vr_combatients:
-						dispersion += unit.distance_to(vr_combatients.center)
-					dispersion = dispersion / vr_combatients.amount
-					if dispersion > 2:
-						for unit in vr_combatients:
-							# kite to regroup
-							if unit.ground_range > 1 and unit.weapon_cooldown > 3:
-								self.game.combined_actions.append(unit.move(vr_combatients.center))
-							else:
-								self.game.combined_actions.append(unit.attack(vr_combatients.center))
-						return
+			else:
+				# regroup ball
+				ball_combatients = combatients.filter(lambda u: u.type_id in {VOIDRAY, MOTHERSHIP})
+				if attack_position == self.posicion_ofensiva or ball_combatients.amount >= 5:
+					dispersion = 0
+					if ball_combatients.amount:
+						for unit in ball_combatients:
+							dispersion += unit.distance_to(ball_combatients.center)
+						dispersion = dispersion / ball_combatients.amount
+						if dispersion > 2:
+							for unit in ball_combatients:
+								# kite to regroup
+								if unit.ground_range > 1 and unit.weapon_cooldown > 3:
+									self.game.combined_actions.append(unit.move(ball_combatients.center))
+								else:
+									self.game.combined_actions.append(unit.attack(ball_combatients.center))
+							return
 			# default attack
 			if combatients.amount:
 				for unit in combatients.further_than(1, attack_position):
@@ -148,9 +213,18 @@ class UnitManager:
 
 	# new offensive group conditions
 	async def set_off(self):
-		if len(self.off_group) == 0 and self.game.units(VOIDRAY).amount >= 12:
-			for vr in self.game.units(VOIDRAY):
+		# group 1
+		if len(self.off_group) == 0 and self.game.units(VOIDRAY).tags_not_in(self.off_group2).amount >= 10:
+			for vr in self.game.units(VOIDRAY).tags_not_in(self.off_group2):
 				self.off_group.append(vr.tag)
+			for ms in self.game.units(MOTHERSHIP).tags_not_in(self.off_group2):
+				self.off_group.append(ms.tag)
+		#group 2
+		if len(self.off_group2) == 0 and self.game.units(VOIDRAY).tags_not_in(self.off_group).amount >= 10:
+			for vr in self.game.units(VOIDRAY).tags_not_in(self.off_group):
+				self.off_group2.append(vr.tag)
+			for ms in self.game.units(MOTHERSHIP).tags_not_in(self.off_group):
+				self.off_group2.append(ms.tag)
 
 	# moves observers
 	async def scout(self):
@@ -191,7 +265,11 @@ class UnitManager:
 		finp = ally_unit
 		if isinstance(finp, Unit):
 			finp = finp.position
-		return await self.game._client.query_pathing(startp, finp)
+		path_distance = await self.game._client.query_pathing(startp, finp)
+		if path_distance is None:
+			path_distance = float('inf')
+		distance = startp.distance_to_point2(finp)
+		return path_distance / distance - 1
 
 	# closest position where ally unit have an advantage over the enemy due to terrain limitations
 	def closest_advantaged_terrain(

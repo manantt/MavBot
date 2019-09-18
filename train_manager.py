@@ -12,6 +12,7 @@ class TrainManager:
 	# troop train priority order
 	async def train_troops(self):
 		await self.train_observer()
+		await self.train_mothership()
 		await self.train_voidray()
 		await self.train_zealot()
 		await self.train_probe()
@@ -27,12 +28,21 @@ class TrainManager:
 
 	def should_train_voidray(self):
 		if self.game.can_afford(VOIDRAY):
-			return True
+			if self.game.units(VOIDRAY).amount < 3:
+				return True
+			if self.game.units(MOTHERSHIP).amount:
+				return True
+			if self.game.structures(FLEETBEACON).amount and self.game.already_pending(MOTHERSHIP):
+				return True
 		return False
 
 	def should_train_zealot(self):
-		# TODO: pending zealots should be considered in amount
-		if self.game.can_afford(ZEALOT) and self.game.units(ZEALOT).amount < 2:
+		if self.game.can_afford(ZEALOT) and self.game.units(ZEALOT).amount < 2 and not self.game.already_pending(ZEALOT):
+			return True
+		return False
+
+	def should_train_mothership(self):
+		if self.game.can_afford(MOTHERSHIP) and not self.game.units(MOTHERSHIP).amount:
 			return True
 		return False
 
@@ -65,3 +75,9 @@ class TrainManager:
 			robotic = self.game.structures(ROBOTICSFACILITY).ready.idle.first
 			if robotic:
 				self.game.do(robotic.train(OBSERVER))
+
+	async def train_mothership(self):
+		if self.should_train_mothership():
+			nexus = self.game.structures(NEXUS).ready.closest_to(self.game.unit_manager.deffensive_position)
+			if nexus:
+				self.game.do(nexus.train(MOTHERSHIP))

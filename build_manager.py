@@ -14,6 +14,7 @@ class BuildManager:
 		#await self.build_forge()
 		#await self.build_cannon()
 		await self.build_roboticsfacility()
+		await self.build_fleetbeacon()
 		await self.build_gateway()
 		await self.build_cyberneticscore()
 		await self.build_stargate()
@@ -56,7 +57,7 @@ class BuildManager:
 	def should_build_stargate(self):
 		if self.game.structures(PYLON).ready.exists and self.game.structures(CYBERNETICSCORE).ready.exists:
 			if self.game.can_afford(STARGATE) and not self.game.already_pending(STARGATE):
-				if (self.game.structures(STARGATE).amount < 1) or (self.game.structures(STARGATE).amount < 3 and self.game.units(VOIDRAY).amount > 1 and not self.game.already_pending(STARGATE)) or self.game.minerals > 300 * self.game.structures(STARGATE).amount:
+				if (self.game.structures(STARGATE).amount < 1) or (self.game.structures(STARGATE).amount < 2 and self.game.units(VOIDRAY).amount > 1 and not self.game.already_pending(STARGATE)) or (self.game.minerals > 300 * self.game.structures(STARGATE).amount and self.game.vespene > 400):
 					return True
 		return False
 
@@ -76,6 +77,12 @@ class BuildManager:
 	def should_build_asimilator(self):
 		if self.game.can_afford(ASSIMILATOR) and self.game.structures(GATEWAY).exists:
 			return True
+		return False
+
+	def should_build_fleetbeacon(self):
+		if self.game.structures(PYLON).ready.exists and self.game.structures(STARGATE).ready.exists and self.game.units(VOIDRAY).amount >= 3:
+			if self.game.can_afford(FLEETBEACON) and not self.game.already_pending(FLEETBEACON) and not self.game.structures(FLEETBEACON).amount:
+				return True
 		return False
 
 	# build methods
@@ -108,6 +115,10 @@ class BuildManager:
 	async def build_roboticsfacility(self):
 		if self.should_build_roboticsfacility():
 			await self.game.build(ROBOTICSFACILITY, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 4))
+
+	async def build_fleetbeacon(self):
+		if self.should_build_fleetbeacon():
+			await self.game.build(FLEETBEACON, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 1))
 
 	async def build_nexus(self):
 		if await self.should_build_nexus():

@@ -13,10 +13,10 @@ from build_manager import BuildManager
 from train_manager import TrainManager
 from ability_manager import AbilityManager
 from worker_manager import WorkerManager
-#from debug_manager import DebugManager
+from debug_manager import DebugManager
 from strategy_manager import StrategyManager
 
-# import keras
+# v1.2.3
 
 """
 TODO:
@@ -38,7 +38,7 @@ class MavBot(sc2.BotAI):
         self.train_manager = TrainManager(self)
         self.ability_manager = AbilityManager(self)
         self.worker_manager = WorkerManager(self)
-        #self.debug_manager = DebugManager(self)
+        self.debug_manager = DebugManager(self)
         self.strategy_manager = StrategyManager(self)
         self.debug = False
         self.combined_actions = [];
@@ -56,11 +56,17 @@ class MavBot(sc2.BotAI):
         self.upgrade_manager.research_upgrades()
         await self._do_actions(self.combined_actions)
         self.combined_actions.clear()
-        #await self.debug_manager.draw_debug()
-
+        await self.debug_manager.draw_debug()
 
     async def on_1st_step(self):
+        for u in self.units():
+            print((u.health + u.shield)/(u.health_max+u.shield_max))
         pass
+        print(self.start_location)
+        print(self.enemy_start_locations[0])
+        p1 = self.start_location.towards(self.game_info.map_center, 5)
+        p2 = self.start_location.towards(self.game_info.map_center, 25)
+        print(await self.unit_manager.terrain_adventage(p1, p2))
 
     async def on_10_step(self):
         await self.worker_manager.manage_workers()
@@ -94,7 +100,7 @@ if __name__ == "__main__":
         [  # random.choice(mapsS8)), [
             Bot(Race.Protoss, MavBot()),
             Computer(
-                Race.Zerg, Difficulty.CheatInsane
+                Race.Protoss, Difficulty.VeryHard
             ),  # VeryHard CheatVision CheatMoney CheatInsane
         ],
         realtime=False,

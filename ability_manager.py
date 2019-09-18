@@ -20,13 +20,20 @@ class AbilityManager:
 			if AbilityId.EFFECT_CHRONOBOOSTENERGYCOST in abilities:
 				nexuses = self.game.townhalls().ready
 				stargates = self.game.structures(STARGATE).ready
-				if len(stargates) > 0:
-					random_building = random.choice(stargates)
-				else:
-					if not self.game.structures(PYLON).amount == 0:
-						random_building = random.choice(nexuses)
+				random_building = None
+				for nexus in nexuses:
+					if not nexus.has_buff(BuffId.CHRONOBOOSTENERGYCOST):
+						for order in nexus.orders:
+							if order.ability == NEXUSTRAINMOTHERSHIP_MOTHERSHIP:
+								random_building = nexus
+				if not random_building:
+					if len(stargates) > 0:
+						random_building = random.choice(stargates)
 					else:
-						return
+						if not self.game.structures(PYLON).amount == 0:
+							random_building = random.choice(nexuses)
+						else:
+							return
 				if not random_building.has_buff(BuffId.CHRONOBOOSTENERGYCOST):
 					if not random_building.is_idle:
 						self.game.do(nexus(AbilityId.EFFECT_CHRONOBOOSTENERGYCOST, random_building))
