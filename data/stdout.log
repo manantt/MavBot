@@ -1,1427 +1,1772 @@
 Starting ladder game...
 INFO:sc2.protocol:Client status changed to Status.in_game (was None)
 INFO:root:Player 1 - Bot MavBot(Protoss)
-0
-(38.5, 133.5)
-(153.5, 22.5)
-0.6186279296875004
+(142.5, 33.5)
+(33.5, 138.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(137.0, 38.0)
+---------
+UnitTypeId.PYLON
+(52.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(46.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(47.0, 131.0)
+---------
+UnitTypeId.PYLON
+(46.0, 135.0)
+---------
+UnitTypeId.NEXUS
+(144.5, 58.5)
+---------
+UnitTypeId.PYLON
+(146.0, 26.0)
+---------
+UnitTypeId.PHOTONCANNON
+(144.0, 30.0)
+---------
 ERROR:asyncio:Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x0000018F8FADA8D0>
+client_session: <aiohttp.client.ClientSession object at 0x000001DA369F51D0>
 INFO:sc2.protocol:Cannot receive: Connection already closed.
 Starting ladder game...
 INFO:sc2.protocol:Client status changed to Status.in_game (was None)
 INFO:root:Player 1 - Bot MavBot(Protoss)
-0
 (29.5, 138.5)
 (130.5, 21.5)
 0.6164794921875005
+UnitTypeId.PYLON
+(34.0, 133.0)
+---------
+UnitTypeId.PYLON
+(112.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(118.0, 29.0)
+---------
+UnitTypeId.PYLON
+(118.0, 31.0)
+---------
 INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
-Result.Victory
-44102
-INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
-Result.Victory  against opponent  b36bc7ce94edc67
 ERROR:asyncio:Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x000002275CBCC630>
+client_session: <aiohttp.client.ClientSession object at 0x000002303E42F860>
 Starting ladder game...
 INFO:sc2.protocol:Client status changed to Status.in_game (was None)
 INFO:root:Player 1 - Bot MavBot(Protoss)
-0
+(130.5, 21.5)
+(29.5, 138.5)
+0.6164672851562505
+UnitTypeId.PYLON
+(126.0, 27.0)
+---------
+UnitTypeId.PYLON
+(48.0, 130.0)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Defeat
+1800
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Defeat
+Result.Defeat  against opponent  6226d04fa72789c
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001CC69A96208>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(29.5, 138.5)
+(130.5, 21.5)
+0.6164794921875005
+UnitTypeId.PYLON
+(34.0, 133.0)
+---------
+UnitTypeId.PYLON
+(112.0, 30.0)
+---------
+UnitTypeId.PYLON
+(118.0, 31.0)
+---------
+UnitTypeId.PYLON
+(121.0, 24.0)
+---------
+UnitTypeId.PYLON
+(128.0, 27.0)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001E3844461D0>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(130.5, 21.5)
+(29.5, 138.5)
+0.6164672851562505
+UnitTypeId.PYLON
+(126.0, 27.0)
+---------
+UnitTypeId.PYLON
+(48.0, 130.0)
+---------
+UnitTypeId.PHOTONCANNON
+(42.0, 128.0)
+---------
+UnitTypeId.PHOTONCANNON
+(42.0, 130.0)
+---------
+UnitTypeId.PYLON
+(43.0, 132.0)
+---------
+UnitTypeId.PHOTONCANNON
+(38.0, 135.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000020F802F9198>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(130.5, 21.5)
+(29.5, 138.5)
+0.6164672851562505
+UnitTypeId.PYLON
+(126.0, 27.0)
+---------
+UnitTypeId.PYLON
+(48.0, 130.0)
+---------
+UnitTypeId.PHOTONCANNON
+(42.0, 128.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B9137081D0>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(130.5, 21.5)
+(29.5, 138.5)
+0.6164672851562505
+UnitTypeId.PYLON
+(126.0, 27.0)
+---------
+UnitTypeId.PYLON
+(48.0, 130.0)
+---------
+UnitTypeId.PHOTONCANNON
+(42.0, 128.0)
+---------
+UnitTypeId.PHOTONCANNON
+(42.0, 130.0)
+---------
+UnitTypeId.PYLON
+(43.0, 132.0)
+---------
+UnitTypeId.PHOTONCANNON
+(38.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(37.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(37.0, 131.0)
+---------
+UnitTypeId.PYLON
+(37.0, 129.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 128.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 130.0)
+---------
+UnitTypeId.PHOTONCANNON
+(32.0, 132.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 128.0)
+---------
+UnitTypeId.PHOTONCANNON
+(33.0, 134.0)
+---------
+UnitTypeId.PYLON
+(34.0, 136.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 130.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.NEXUS
+(130.5, 48.5)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(31.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 140.0)
+---------
+UnitTypeId.PHOTONCANNON
+(28.0, 138.0)
+---------
+UnitTypeId.PHOTONCANNON
+(28.0, 136.0)
+---------
+UnitTypeId.PHOTONCANNON
+(28.0, 134.0)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+8823
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
+Result.Victory  against opponent  6226d04fa72789c
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002454CEA81D0>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(29.5, 138.5)
+(130.5, 21.5)
+0.6164794921875005
+UnitTypeId.PYLON
+(34.0, 133.0)
+---------
+UnitTypeId.PYLON
+(112.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(118.0, 29.0)
+---------
+UnitTypeId.PYLON
+(118.0, 31.0)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(123.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(122.0, 26.0)
+---------
+UnitTypeId.PYLON
+(121.0, 24.0)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 19.0)
+---------
+UnitTypeId.PHOTONCANNON
+(126.0, 20.0)
+---------
+UnitTypeId.PHOTONCANNON
+(127.0, 22.0)
+---------
+UnitTypeId.PHOTONCANNON
+(127.0, 24.0)
+---------
+UnitTypeId.NEXUS
+(29.5, 111.5)
+---------
+UnitTypeId.NEXUS
+(61.5, 134.5)
+---------
+UnitTypeId.PYLON
+(57.0, 144.0)
+---------
+UnitTypeId.PHOTONCANNON
+(62.0, 142.0)
+---------
+UnitTypeId.PYLON
+(25.0, 114.0)
+---------
+UnitTypeId.PHOTONCANNON
+(27.0, 116.0)
+---------
+UnitTypeId.PYLON
+(24.0, 145.0)
+---------
+UnitTypeId.PHOTONCANNON
+(26.0, 143.0)
+---------
+UnitTypeId.PYLON
+(64.0, 128.0)
+---------
+UnitTypeId.PYLON
+(35.0, 108.0)
+---------
+UnitTypeId.NEXUS
+(91.5, 111.5)
+---------
+UnitTypeId.PYLON
+(94.0, 121.0)
+---------
+UnitTypeId.PYLON
+(36.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(95.0, 115.0)
+---------
+UnitTypeId.PYLON
+(89.0, 105.0)
+---------
+UnitTypeId.PYLON
+(30.0, 129.0)
+---------
+UnitTypeId.NEXUS
+(28.5, 73.5)
+---------
+UnitTypeId.PYLON
+(19.0, 74.0)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+22759
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
+Result.Victory  against opponent  6226d04fa72789c
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001FA90F16400>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
 (33.5, 138.5)
 (142.5, 33.5)
 -1.2207031250044409e-05
-INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
-Result.Victory
-39294
-INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
-Result.Victory  against opponent  b36bc7ce94edc67
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(130.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.NEXUS
+(31.5, 113.5)
+---------
 ERROR:asyncio:Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x0000017C7F18F6A0>
+client_session: <aiohttp.client.ClientSession object at 0x0000019E905B15F8>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
 Starting ladder game...
 INFO:sc2.protocol:Client status changed to Status.in_game (was None)
 INFO:root:Player 1 - Bot MavBot(Protoss)
-0
+(33.5, 138.5)
+(142.5, 33.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(130.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 39.0)
+---------
+UnitTypeId.PYLON
+(136.0, 41.0)
+---------
+UnitTypeId.NEXUS
+(31.5, 113.5)
+---------
+UnitTypeId.PHOTONCANNON
+(142.0, 40.0)
+---------
+UnitTypeId.PHOTONCANNON
+(141.0, 38.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 36.0)
+---------
+UnitTypeId.PHOTONCANNON
+(138.0, 35.0)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+4387
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
+Result.Victory  against opponent  6226d04fa72789c
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002CB74D74470>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(33.5, 138.5)
+(142.5, 33.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(130.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 39.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000020D51483898>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(142.5, 33.5)
+(33.5, 138.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(137.0, 38.0)
+---------
+UnitTypeId.PYLON
+(52.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(46.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(47.0, 131.0)
+---------
+ERROR:sc2.main:AI step threw an error
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 160, in _play_game_ai
+    await ai.on_step(iteration)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 50, in on_step
+    await self.strategy_manager.do_strat()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py", line 218, in do_strat
+    await self.do_cannon_rush()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py", line 288, in do_cannon_rush
+    if probe.distance_to(self.cannon_rush_worker_position > 2):
+TypeError: '>' not supported between instances of 'Point2' and 'int'
+ERROR:sc2.main:Error: '>' not supported between instances of 'Point2' and 'int'
+ERROR:sc2.main:Resigning due to previous error
+Result.Defeat
+1770
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Defeat
+Result.Defeat  against opponent  6226d04fa72789c
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001987F8237F0>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(33.5, 138.5)
+(142.5, 33.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(130.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 39.0)
+---------
+UnitTypeId.NEXUS
+(31.5, 113.5)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000148F2835828>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(142.5, 33.5)
+(33.5, 138.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(137.0, 38.0)
+---------
+UnitTypeId.PYLON
+(52.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(46.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(47.0, 131.0)
+---------
+UnitTypeId.PYLON
+(46.0, 135.0)
+---------
+UnitTypeId.NEXUS
+(144.5, 58.5)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001A0638CB7B8>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(142.5, 33.5)
+(33.5, 138.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(137.0, 38.0)
+---------
+UnitTypeId.PYLON
+(52.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(46.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(47.0, 131.0)
+---------
+UnitTypeId.PYLON
+(46.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(40.0, 137.0)
+---------
+UnitTypeId.PHOTONCANNON
+(40.0, 135.0)
+---------
+UnitTypeId.NEXUS
+(144.5, 58.5)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000017BEDFFC860>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(142.5, 33.5)
+(33.5, 138.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(137.0, 38.0)
+---------
+UnitTypeId.PYLON
+(52.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(46.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(47.0, 131.0)
+---------
+ERROR:sc2.main:AI step threw an error
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 160, in _play_game_ai
+    await ai.on_step(iteration)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 50, in on_step
+    await self.strategy_manager.do_strat()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py", line 218, in do_strat
+    await self.do_cannon_rush()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py", line 288, in do_cannon_rush
+    if self.units(PHOTONCANNON).amount:
+AttributeError: 'StrategyManager' object has no attribute 'units'
+ERROR:sc2.main:Error: 'StrategyManager' object has no attribute 'units'
+ERROR:sc2.main:Resigning due to previous error
+Result.Defeat
+1750
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Defeat
+Result.Defeat  against opponent  6226d04fa72789c
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000210927F5780>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(33.5, 138.5)
+(142.5, 33.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(130.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 37.0)
+---------
+UnitTypeId.NEXUS
+(31.5, 113.5)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000021E0F155860>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(142.5, 33.5)
+(33.5, 138.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(137.0, 38.0)
+---------
+UnitTypeId.PYLON
+(52.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(46.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(47.0, 131.0)
+---------
+UnitTypeId.PYLON
+(46.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(40.0, 137.0)
+---------
+UnitTypeId.PHOTONCANNON
+(40.0, 135.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002B6697547F0>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(33.5, 138.5)
+(142.5, 33.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(130.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.NEXUS
+(31.5, 113.5)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001BA6F244860>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(33.5, 138.5)
+(142.5, 33.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(130.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 39.0)
+---------
+UnitTypeId.NEXUS
+(31.5, 113.5)
+---------
+UnitTypeId.PYLON
+(24.0, 119.0)
+---------
+UnitTypeId.PHOTONCANNON
+(27.0, 116.0)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+6810
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
+Result.Victory  against opponent  6226d04fa72789c
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F674B54780>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(33.5, 138.5)
+(142.5, 33.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(130.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000016BBE664908>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(33.5, 138.5)
+(142.5, 33.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001CB296B4898>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(29.5, 138.5)
+(130.5, 21.5)
+0.6164794921875005
+UnitTypeId.PYLON
+(34.0, 133.0)
+---------
+UnitTypeId.PYLON
+(112.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(118.0, 29.0)
+---------
+UnitTypeId.NEXUS
+(29.5, 111.5)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B4918EE828>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(29.5, 138.5)
+(130.5, 21.5)
+0.6164794921875005
+UnitTypeId.PYLON
+(34.0, 133.0)
+---------
+UnitTypeId.PYLON
+(112.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(118.0, 29.0)
+---------
+UnitTypeId.PYLON
+(118.0, 31.0)
+---------
+UnitTypeId.NEXUS
+(29.5, 111.5)
+---------
+UnitTypeId.PYLON
+(112.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(118.0, 29.0)
+---------
+UnitTypeId.PYLON
+(118.0, 31.0)
+---------
+UnitTypeId.NEXUS
+(29.5, 111.5)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(123.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(122.0, 26.0)
+---------
+UnitTypeId.PHOTONCANNON
+(123.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(123.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(123.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(122.0, 26.0)
+---------
+UnitTypeId.PHOTONCANNON
+(123.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(123.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(122.0, 26.0)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(123.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(122.0, 26.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(124.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PYLON
+(112.0, 30.0)
+---------
+UnitTypeId.PYLON
+(35.0, 108.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000027078B5C7B8>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(29.5, 138.5)
+(130.5, 21.5)
+0.6164794921875005
+UnitTypeId.PYLON
+(34.0, 133.0)
+---------
+UnitTypeId.PYLON
+(112.0, 30.0)
+---------
+UnitTypeId.PHOTONCANNON
+(117.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(118.0, 29.0)
+---------
+UnitTypeId.NEXUS
+(29.5, 111.5)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+2075
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
+Result.Victory  against opponent  93e41c6e20911b9
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001C9B31CF860>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(130.5, 21.5)
+(29.5, 138.5)
+0.6164672851562505
+UnitTypeId.PYLON
+(126.0, 27.0)
+---------
+UnitTypeId.PYLON
+(48.0, 130.0)
+---------
+UnitTypeId.PHOTONCANNON
+(42.0, 128.0)
+---------
+UnitTypeId.PHOTONCANNON
+(42.0, 130.0)
+---------
+UnitTypeId.PYLON
+(43.0, 132.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F14976F908>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(130.5, 21.5)
+(29.5, 138.5)
+0.6164672851562505
+UnitTypeId.PYLON
+(126.0, 27.0)
+---------
+UnitTypeId.PYLON
+(48.0, 130.0)
+---------
+UnitTypeId.PHOTONCANNON
+(42.0, 128.0)
+---------
+UnitTypeId.PHOTONCANNON
+(42.0, 130.0)
+---------
+UnitTypeId.PYLON
+(43.0, 132.0)
+---------
+UnitTypeId.NEXUS
+(130.5, 48.5)
+---------
+UnitTypeId.PYLON
+(48.0, 130.0)
+---------
+UnitTypeId.PYLON
+(48.0, 130.0)
+---------
+UnitTypeId.PYLON
+(126.0, 27.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000161E3ECE898>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(33.5, 138.5)
+(142.5, 33.5)
+-1.2207031250044409e-05
+UnitTypeId.PYLON
+(39.0, 134.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.NEXUS
+(31.5, 113.5)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.NEXUS
+(32.5, 85.5)
+---------
+UnitTypeId.PYLON
+(28.0, 144.0)
+---------
+UnitTypeId.PHOTONCANNON
+(30.0, 142.0)
+---------
+UnitTypeId.PYLON
+(23.0, 87.0)
+---------
+UnitTypeId.PHOTONCANNON
+(29.0, 87.0)
+---------
+UnitTypeId.PYLON
+(22.0, 117.0)
+---------
+UnitTypeId.PHOTONCANNON
+(23.0, 120.0)
+---------
+UnitTypeId.NEXUS
+(58.5, 111.5)
+---------
+UnitTypeId.PYLON
+(54.0, 115.0)
+---------
+UnitTypeId.PHOTONCANNON
+(56.0, 115.0)
+---------
+UnitTypeId.PYLON
+(37.0, 134.0)
+---------
+UnitTypeId.NEXUS
+(29.5, 53.5)
+---------
+UnitTypeId.PYLON
+(21.0, 50.0)
+---------
+Unknown unit: UnitTypeId.PHOENIX
+UnitTypeId.NEXUS
+(73.5, 138.5)
+---------
+UnitTypeId.PHOTONCANNON
+(25.0, 51.0)
+---------
+UnitTypeId.NEXUS
+(68.5, 42.5)
+---------
+UnitTypeId.NEXUS
+(47.5, 28.5)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.PYLON
+(124.0, 37.0)
+---------
+UnitTypeId.NEXUS
+(107.5, 129.5)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 39.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 41.0)
+---------
+UnitTypeId.PYLON
+(130.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 35.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 37.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 39.0)
+---------
+UnitTypeId.NEXUS
+(117.5, 60.5)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+34225
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
+Result.Victory  against opponent  93e41c6e20911b9
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001D37F18E898>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
 (38.5, 133.5)
 (153.5, 22.5)
 0.6186279296875004
+UnitTypeId.PYLON
+(44.0, 129.0)
+---------
+UnitTypeId.PYLON
+(134.0, 25.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 26.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 24.0)
+---------
+UnitTypeId.PYLON
+(140.0, 22.0)
+---------
 INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
 Result.Victory
-21126
+1930
 INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
-Result.Victory  against opponent  93e41c6e20911b9
+Result.Victory  against opponent  85fd4bc655b3d9a
 ERROR:asyncio:Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x000002486F04D668>
+client_session: <aiohttp.client.ClientSession object at 0x000001CAAC1ECE48>
 Starting ladder game...
 INFO:sc2.protocol:Client status changed to Status.in_game (was None)
 INFO:root:Player 1 - Bot MavBot(Protoss)
-1.0
-1.0
-1.0
-1.0
-1.0
-1.0
-1.0
-1.0
-1.0
-1.0
-1.0
-1.0
+(38.5, 133.5)
+(153.5, 22.5)
+0.6186279296875004
+UnitTypeId.PYLON
+(44.0, 129.0)
+---------
+UnitTypeId.PYLON
+(134.0, 25.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 26.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 24.0)
+---------
+UnitTypeId.PYLON
+(140.0, 22.0)
+---------
+UnitTypeId.PYLON
+(42.0, 129.0)
+---------
+ERROR:sc2.main:AI step threw an error
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 160, in _play_game_ai
+    await ai.on_step(iteration)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 50, in on_step
+    await self.strategy_manager.do_strat()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py", line 207, in do_strat
+    await self.do_cannon_rush()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py", line 234, in do_cannon_rush
+    self.cannon_rush_worker = self.game.units(PROBE).random.tag
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\units.py", line 113, in random
+    assert self, "Units object is empty"
+AssertionError: Units object is empty
+ERROR:sc2.main:Error: Units object is empty
+ERROR:sc2.main:Resigning due to previous error
+Result.Defeat
+3310
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Defeat
+Result.Defeat  against opponent  a9292d9c0e59590
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000028C4C391E48>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
 (153.5, 22.5)
 (38.5, 133.5)
 0.6186523437499987
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4392222721)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Observer', tag=4393533441)
-Unit(name='Adept', tag=4382261249)
-Unit(name='Adept', tag=4382261249)
-Unit(name='Adept', tag=4382261249)
-Unit(name='Adept', tag=4382261249)
-Unit(name='Adept', tag=4382261249)
-Unit(name='Observer', tag=4408999937)
-Unit(name='Observer', tag=4408999937)
-Unit(name='Observer', tag=4408999937)
-Unit(name='Observer', tag=4408999937)
-Unit(name='Observer', tag=4408999937)
-Unit(name='Observer', tag=4408999937)
-Unit(name='Observer', tag=4411097089)
-Unit(name='Observer', tag=4411097089)
-Unit(name='Observer', tag=4411097089)
-Unit(name='Observer', tag=4411097089)
-Unit(name='Observer', tag=4411097089)
-Unit(name='Observer', tag=4411097089)
-Unit(name='Observer', tag=4411097089)
-Unit(name='Observer', tag=4411097089)
-Unit(name='Observer', tag=4411097089)
-Unit(name='VoidRay', tag=4365221890)
-Unit(name='Phoenix', tag=4388028418)
-Unit(name='Phoenix', tag=4388028418)
-Unit(name='Phoenix', tag=4410572802)
-Unit(name='Phoenix', tag=4410572802)
-Unit(name='Phoenix', tag=4410572802)
-Unit(name='Phoenix', tag=4410572802)
-Unit(name='Stalker', tag=4393271297)
-Unit(name='Stalker', tag=4393271297)
-Unit(name='Stalker', tag=4393271297)
-Unit(name='Stalker', tag=4393271297)
-Unit(name='Phoenix', tag=4410572802)
-Unit(name='Phoenix', tag=4410572802)
-Unit(name='Stalker', tag=4390125569)
-Unit(name='Stalker', tag=4390125569)
-Unit(name='Stalker', tag=4388290561)
-Unit(name='Stalker', tag=4390125569)
-Unit(name='Phoenix', tag=4388028418)
-Unit(name='Phoenix', tag=4388028418)
-Unit(name='Phoenix', tag=4388028418)
-Unit(name='Phoenix', tag=4388028418)
-Unit(name='Phoenix', tag=4408999938)
-Unit(name='Phoenix', tag=4408999938)
-Unit(name='Phoenix', tag=4408999938)
-Unit(name='Phoenix', tag=4408999938)
-Unit(name='Stalker', tag=4390125569)
-Unit(name='Stalker', tag=4390125569)
-Unit(name='Stalker', tag=4388290561)
-Unit(name='VoidRay', tag=4365221890)
-Unit(name='VoidRay', tag=4365221890)
-Unit(name='VoidRay', tag=4365221890)
-Unit(name='VoidRay', tag=4365221890)
-Unit(name='Stalker', tag=4388290561)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4407164929)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Tempest', tag=4392222722)
-Unit(name='Observer', tag=4419223553)
-Unit(name='Observer', tag=4419223553)
-Unit(name='Observer', tag=4419223553)
-Unit(name='Observer', tag=4419223553)
-Unit(name='Observer', tag=4419223553)
-Unit(name='Observer', tag=4419223553)
-Unit(name='Observer', tag=4419223553)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Phoenix', tag=4390125570)
-Unit(name='Phoenix', tag=4390125570)
-Unit(name='Stalker', tag=4388290561)
-Unit(name='Stalker', tag=4388290561)
-Unit(name='Phoenix', tag=4390125570)
-Unit(name='Phoenix', tag=4390125570)
-Unit(name='Stalker', tag=4388290561)
-Unit(name='Stalker', tag=4388290561)
-Unit(name='Phoenix', tag=4365221893)
-Unit(name='Phoenix', tag=4417126401)
-Unit(name='Phoenix', tag=4417126401)
-Unit(name='Phoenix', tag=4365221893)
-Unit(name='Phoenix', tag=4422107137)
-Unit(name='Phoenix', tag=4365221893)
-Unit(name='Phoenix', tag=4365221893)
-Unit(name='VoidRay', tag=4393271304)
-Unit(name='VoidRay', tag=4393271304)
-Unit(name='VoidRay', tag=4422369281)
-Unit(name='VoidRay', tag=4422369281)
-Unit(name='VoidRay', tag=4392222723)
-Unit(name='VoidRay', tag=4425515009)
-Unit(name='VoidRay', tag=4425515009)
-Unit(name='Adept', tag=4397989889)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Phoenix', tag=4427087878)
-Unit(name='Phoenix', tag=4427087878)
-Unit(name='Phoenix', tag=4427087878)
-Unit(name='Phoenix', tag=4427087878)
-Unit(name='Phoenix', tag=4427087878)
-Unit(name='Phoenix', tag=4427087878)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4393271309)
-Unit(name='Observer', tag=4393271309)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='Phoenix', tag=4299685897)
-Unit(name='Phoenix', tag=4299685897)
-Unit(name='Phoenix', tag=4299685897)
-Unit(name='Phoenix', tag=4299685897)
-Unit(name='Phoenix', tag=4299685897)
-Unit(name='Phoenix', tag=4299685897)
-Unit(name='Phoenix', tag=4299685897)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='VoidRay', tag=4422369287)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Phoenix', tag=4421582855)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4413456385)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Tempest', tag=4401922049)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='Observer', tag=4420009989)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4420796432)
-Unit(name='VoidRay', tag=4401922050)
-Unit(name='VoidRay', tag=4401922050)
-Unit(name='VoidRay', tag=4401922050)
-Unit(name='VoidRay', tag=4401922050)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='VoidRay', tag=4401922050)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Adept', tag=4397989890)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='Adept', tag=4421582859)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Adept', tag=4421582859)
-Unit(name='Zealot', tag=4379901953)
-Unit(name='Adept', tag=4421582859)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='Adept', tag=4421582859)
-Unit(name='Zealot', tag=4362600450)
-Unit(name='Adept', tag=4421582859)
-Unit(name='Zealot', tag=4362600450)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4392222724)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4362600450)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4346085379)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4346085379)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4346085379)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4346085379)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4377280513)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4377280513)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4366794754)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4421320707)
-Unit(name='VoidRay', tag=4349231106)
-Unit(name='Zealot', tag=4422369288)
-Unit(name='Zealot', tag=4422369288)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Zealot', tag=4422369288)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Adept', tag=4421582859)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='VoidRay', tag=4364697602)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='Phoenix', tag=4368629762)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4315152387)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4343201796)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4364697604)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4364697604)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4364697604)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Zealot', tag=4364697604)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='VoidRay', tag=4341104642)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='Phoenix', tag=4348968962)
-Unit(name='VoidRay', tag=4341104643)
-Unit(name='VoidRay', tag=4341104643)
-Unit(name='VoidRay', tag=4341104643)
-Unit(name='VoidRay', tag=4310695940)
-Unit(name='VoidRay', tag=4310695940)
-Unit(name='Adept', tag=4347658243)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4347658243)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4347658243)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='VoidRay', tag=4321181698)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Observer', tag=4315676674)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Observer', tag=4315676674)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Observer', tag=4315676674)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Observer', tag=4315676674)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Observer', tag=4315676674)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Observer', tag=4315676674)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Observer', tag=4315676674)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Observer', tag=4315676674)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Observer', tag=4315676674)
-Unit(name='Adept', tag=4347658243)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4335075333)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='Adept', tag=4341104644)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='Zealot', tag=4352638983)
-Unit(name='Zealot', tag=4352638983)
-Unit(name='Zealot', tag=4352638983)
-Unit(name='Zealot', tag=4352638983)
-Unit(name='Adept', tag=4424204294)
-Unit(name='Adept', tag=4424204294)
-Unit(name='VoidRay', tag=4385669128)
-Unit(name='VoidRay', tag=4385669128)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='VoidRay', tag=4377542659)
-Unit(name='Adept', tag=4424204294)
-Unit(name='Adept', tag=4424204294)
-Unit(name='Adept', tag=4424204294)
-Unit(name='Observer', tag=4391436294)
-Unit(name='Observer', tag=4391436294)
-Unit(name='Observer', tag=4391436294)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='Phoenix', tag=4389601282)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4352901134)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4349755405)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4315676681)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4414767120)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4315676682)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4402708482)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='VoidRay', tag=4415815684)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='Observer', tag=4414504962)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
-Unit(name='VoidRay', tag=4403494914)
+UnitTypeId.PYLON
+(148.0, 27.0)
+---------
+UnitTypeId.PYLON
+(58.0, 131.0)
+---------
+UnitTypeId.PHOTONCANNON
+(52.0, 131.0)
+---------
+UnitTypeId.PHOTONCANNON
+(52.0, 129.0)
+---------
 INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
 Result.Victory
-31826
+3225
 INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
-Result.Victory  against opponent  93e41c6e20911b9
+Result.Victory  against opponent  2a9c3f76f46edce
 ERROR:asyncio:Unclosed client session
-client_session: <aiohttp.client.ClientSession object at 0x0000026DFECC2668>
+client_session: <aiohttp.client.ClientSession object at 0x00000239C9221DD8>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(153.5, 22.5)
+(38.5, 133.5)
+0.6186523437499987
+UnitTypeId.PYLON
+(148.0, 27.0)
+---------
+UnitTypeId.PYLON
+(58.0, 131.0)
+---------
+UnitTypeId.PHOTONCANNON
+(52.0, 131.0)
+---------
+UnitTypeId.PHOTONCANNON
+(52.0, 129.0)
+---------
+UnitTypeId.PHOTONCANNON
+(52.0, 131.0)
+---------
+UnitTypeId.PYLON
+(58.0, 131.0)
+---------
+UnitTypeId.PHOTONCANNON
+(52.0, 131.0)
+---------
+UnitTypeId.PHOTONCANNON
+(52.0, 129.0)
+---------
+UnitTypeId.PHOTONCANNON
+(52.0, 129.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000217AE3E1E10>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(34.5, 26.5)
+(149.5, 141.5)
+0.38389892578124996
+UnitTypeId.PYLON
+(39.0, 31.0)
+---------
+UnitTypeId.PYLON
+(134.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(137.0, 138.0)
+---------
+UnitTypeId.PYLON
+(139.0, 137.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(137.0, 138.0)
+---------
+UnitTypeId.PHOTONCANNON
+(144.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 135.0)
+---------
+ERROR:sc2.main:AI step threw an error
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 160, in _play_game_ai
+    await ai.on_step(iteration)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 50, in on_step
+    await self.strategy_manager.do_strat()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py", line 361, in do_strat
+    await self.do_cannon_rush()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py", line 388, in do_cannon_rush
+    self.cannon_rush_worker = self.game.units(PROBE).random.tag
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\units.py", line 113, in random
+    assert self, "Units object is empty"
+AssertionError: Units object is empty
+ERROR:sc2.main:Error: Units object is empty
+ERROR:sc2.main:Resigning due to previous error
+Result.Defeat
+2050
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Defeat
+Result.Defeat  against opponent  2a9c3f76f46edce
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001E825285128>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(34.5, 26.5)
+(149.5, 141.5)
+0.38389892578124996
+UnitTypeId.PYLON
+(39.0, 31.0)
+---------
+UnitTypeId.PYLON
+(134.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(140.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(137.0, 138.0)
+---------
+UnitTypeId.PYLON
+(139.0, 137.0)
+---------
+UnitTypeId.PHOTONCANNON
+(144.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(144.0, 141.0)
+---------
+UnitTypeId.PHOTONCANNON
+(145.0, 139.0)
+---------
+UnitTypeId.PHOTONCANNON
+(142.0, 142.0)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+7590
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
+Result.Victory  against opponent  6226d04fa72789c
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000205EFC82F60>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(144.5, 29.5)
+(47.5, 134.5)
+0.941503906249999
+UnitTypeId.PYLON
+(140.0, 35.0)
+---------
+UnitTypeId.PYLON
+(70.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(64.0, 137.0)
+---------
+UnitTypeId.PHOTONCANNON
+(64.0, 133.0)
+---------
+UnitTypeId.PYLON
+(64.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 137.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 135.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000024664B42F98>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(144.5, 29.5)
+(47.5, 134.5)
+0.941503906249999
+UnitTypeId.PYLON
+(140.0, 35.0)
+---------
+UnitTypeId.PYLON
+(70.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(64.0, 137.0)
+---------
+UnitTypeId.PHOTONCANNON
+(64.0, 133.0)
+---------
+UnitTypeId.PYLON
+(64.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 137.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 133.0)
+---------
+UnitTypeId.PHOTONCANNON
+(58.0, 135.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000025A397F2F98>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(47.5, 134.5)
+(144.5, 29.5)
+0.9414306640625003
+UnitTypeId.PYLON
+(52.0, 129.0)
+---------
+UnitTypeId.PYLON
+(124.0, 25.0)
+---------
+UnitTypeId.PHOTONCANNON
+(130.0, 25.0)
+---------
+UnitTypeId.PHOTONCANNON
+(129.0, 29.0)
+---------
+UnitTypeId.PYLON
+(130.0, 27.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 28.0)
+---------
+UnitTypeId.PHOTONCANNON
+(136.0, 26.0)
+---------
+UnitTypeId.PHOTONCANNON
+(135.0, 30.0)
+---------
+UnitTypeId.NEXUS
+(44.5, 109.5)
+---------
+UnitTypeId.PYLON
+(35.0, 111.0)
+---------
+UnitTypeId.PHOTONCANNON
+(40.0, 112.0)
+---------
+UnitTypeId.PYLON
+(40.0, 142.0)
+---------
+UnitTypeId.PHOTONCANNON
+(44.0, 139.0)
+---------
+UnitTypeId.NEXUS
+(70.5, 112.5)
+---------
+UnitTypeId.PYLON
+(65.0, 119.0)
+---------
+UnitTypeId.PHOTONCANNON
+(67.0, 117.0)
+---------
+UnitTypeId.PYLON
+(75.0, 107.0)
+---------
+UnitTypeId.NEXUS
+(43.5, 81.5)
+---------
+UnitTypeId.PYLON
+(40.0, 81.0)
+---------
+UnitTypeId.PYLON
+(51.0, 106.0)
+---------
+UnitTypeId.PHOTONCANNON
+(40.0, 83.0)
+---------
+UnitTypeId.PYLON
+(53.0, 108.0)
+---------
+UnitTypeId.PYLON
+(49.0, 106.0)
+---------
+UnitTypeId.PYLON
+(77.0, 107.0)
+---------
+UnitTypeId.NEXUS
+(92.5, 135.5)
+---------
+UnitTypeId.PYLON
+(90.0, 143.0)
+---------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+22103
+INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
+Result.Victory  against opponent  6226d04fa72789c
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000223D8A3D048>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(47.5, 134.5)
+(144.5, 29.5)
+0.9414306640625003
+UnitTypeId.PYLON
+(52.0, 129.0)
+---------
+UnitTypeId.PYLON
+(124.0, 25.0)
+---------
+UnitTypeId.PYLON
+(124.0, 25.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F4B55B2EB8>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - Bot MavBot(Protoss)
+(144.5, 29.5)
+(47.5, 134.5)
+0.941503906249999
+UnitTypeId.PYLON
+(140.0, 35.0)
+---------
+UnitTypeId.PYLON
+(70.0, 135.0)
+---------
+UnitTypeId.PHOTONCANNON
+(64.0, 137.0)
+---------
+UnitTypeId.PHOTONCANNON
+(64.0, 133.0)
+---------
+UnitTypeId.PYLON
+(64.0, 135.0)
+---------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000022AFFB72F28>
+INFO:sc2.protocol:Cannot receive: Connection already closed.

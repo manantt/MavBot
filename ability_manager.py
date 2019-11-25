@@ -24,7 +24,7 @@ class AbilityManager:
 				for nexus in nexuses:
 					if not nexus.has_buff(BuffId.CHRONOBOOSTENERGYCOST):
 						for order in nexus.orders:
-							if order.ability == NEXUSTRAINMOTHERSHIP_MOTHERSHIP:
+							if order.ability.id == NEXUSTRAINMOTHERSHIP_MOTHERSHIP:
 								random_building = nexus
 				if not random_building:
 					if len(stargates) > 0:

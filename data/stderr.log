@@ -1,12 +1,13 @@
-
-18-09-2019 18-15-22: Starting game vs AdditionalPylons
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
-C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000018F8FADA8D0>
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001DA369F51D0>
   **kwargs)
 ResourceWarning: Enable tracemalloc to get the object allocation traceback
 C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
@@ -49,54 +50,1447 @@ Traceback (most recent call last):
     except ConnectionAlreadyClosed:
 NameError: name 'ConnectionAlreadyClosed' is not defined
 
-18-09-2019 21-46-44: Starting game vs ALIbot
+26-09-2019 21-05-53: Starting game vs MicroMachine
 
-18-09-2019 21-48-34: Starting game vs ALIbot
+26-09-2019 21-06-02: Starting game vs MicroMachine
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
   ws_connection.close()
 RuntimeWarning: Enable tracemalloc to get the object allocation traceback
-C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000002275CBCC630>
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 160, in _play_game_ai
+    await ai.on_step(iteration)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 55, in on_step
+    await self.ability_manager.use_abilities()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\ability_manager.py", line 14, in use_abilities
+    await self.use_chronoboost()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\ability_manager.py", line 19, in use_chronoboost
+    abilities = await self.game.get_available_abilities(nexus)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\bot_ai.py", line 301, in get_available_abilities
+    return await self._client.query_available_abilities(units, ignore_resource_requirements)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 286, in query_available_abilities
+    ignore_resource_requirements=ignore_resource_requirements,
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 76, in _execute
+    raise ProtocolError(f"{response.error}")
+sc2.protocol.ProtocolError: ['Not supported if game has already ended']
 
-18-09-2019 22-02-28: Starting game vs ALIbot
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 203, in _play_game_ai
+    result = client._game_result[player_id]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000002303E42F860>
+
+26-09-2019 21-11-14: Starting game vs MicroMachine
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
   ws_connection.close()
 RuntimeWarning: Enable tracemalloc to get the object allocation traceback
-C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000017C7F18F6A0>
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001CC69A96208>
 
-18-09-2019 22-14-30: Starting game vs ALIbot
-
-18-09-2019 22-15-30: Starting game vs AdditionalPylons
+26-09-2019 21-14-42: Starting game vs MicroMachine
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
   ws_connection.close()
 RuntimeWarning: Enable tracemalloc to get the object allocation traceback
-C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000002486F04D668>
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 225, in _play_game_ai
+    await ai.on_end(client._game_result[player_id])
+TypeError: 'NoneType' object is not subscriptable
 
-19-09-2019 00-03-30: Starting game vs AdditionalPylons
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001E3844461D0>
+
+26-09-2019 21-20-32: Starting game vs MicroMachine
+
+26-09-2019 21-24-28: Starting game vs MicroMachine
+
+26-09-2019 21-24-37: Starting game vs MicroMachine
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
 C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
   return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000020F802F9198>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
 C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
   ws_connection.close()
 RuntimeWarning: Enable tracemalloc to get the object allocation traceback
-C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000026DFECC2668>
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 21-29-14: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001B9137081D0>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 21-34-26: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000002454CEA81D0>
+
+26-09-2019 21-46-37: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001FA90F16400>
+
+26-09-2019 22-05-13: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000019E905B15F8>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-08-03: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000002CB74D74470>
+
+26-09-2019 22-10-37: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000020D51483898>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-13-18: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001987F8237F0>
+
+26-09-2019 22-14-46: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x00000148F2835828>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-16-31: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001A0638CB7B8>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-19-03: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000017BEDFFC860>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-21-39: Starting game vs MicroMachine
+
+26-09-2019 22-21-48: Starting game vs MicroMachine
+
+26-09-2019 22-23-39: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x00000210927F5780>
+
+26-09-2019 22-24-48: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000021E0F155860>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-26-55: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000002B6697547F0>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-29-13: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001BA6F244860>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-32-20: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001F674B54780>
+
+26-09-2019 22-38-50: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000016BBE664908>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-41-03: Starting game vs AdditionalPylons
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001CB296B4898>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-42-17: Starting game vs AdditionalPylons
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001B4918EE828>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-43-56: Starting game vs AdditionalPylons
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000027078B5C7B8>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-51-28: Starting game vs AdditionalPylons
+
+26-09-2019 22-51-57: Starting game vs AdditionalPylons
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001C9B31CF860>
+
+26-09-2019 22-55-22: Starting game vs AdditionalPylons
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001F14976F908>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 22-57-40: Starting game vs AdditionalPylons
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x00000161E3ECE898>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+26-09-2019 23-00-52: Starting game vs AdditionalPylons
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:263: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001D37F18E898>
+
+01-10-2019 15-58-38: Starting game vs ANIbot
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:252: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001CAAC1ECE48>
+
+01-10-2019 16-00-27: Starting game vs MadAI
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:252: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000028C4C391E48>
+
+01-10-2019 16-02-07: Starting game vs MadBot
+
+01-10-2019 16-03-05: Starting game vs MadBot
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:252: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x00000239C9221DD8>
+
+01-10-2019 16-04-18: Starting game vs MadBot
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:252: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x00000217AE3E1E10>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+02-10-2019 15-53-50: Starting game vs MadBot
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:406: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001E825285128>
+
+02-10-2019 15-55-46: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:406: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x00000205EFC82F60>
+
+02-10-2019 15-58-44: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:406: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000024664B42F98>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+02-10-2019 16-01-46: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:406: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000025A397F2F98>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+02-10-2019 16-04-42: Starting game vs MicroMachine
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:406: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x00000223D8A3D048>
+
+02-10-2019 16-08-45: Starting game vs OneTrickPony
+
+02-10-2019 16-09-50: Starting game vs Tyrr
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:406: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x000001F4B55B2EB8>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined
+
+02-10-2019 16-11-30: Starting game vs Tyrr
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\strategy_manager.py:406: RuntimeWarning: coroutine 'BotAI.can_place' was never awaited
+  if self.game.can_afford(building[0]) and self.game.can_place(building[0], building[1]):
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client.py:300: ResourceWarning: Unclosed client session <aiohttp.client.ClientSession object at 0x0000022AFFB72F28>
+  **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py:85: RuntimeWarning: coroutine 'ClientWebSocketResponse.close' was never awaited
+  ws_connection.close()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 43, in __request
+    response_bytes = await self._ws.receive_bytes()
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\site-packages\aiohttp\client_ws.py", line 283, in receive_bytes
+    msg.data))
+TypeError: Received message 257:None is not bytes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 76, in join_ladder_game
+    result = await sc2.main._play_game(players[0], client, realtime, portconfig, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 246, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 228, in _play_game_ai
+    await client.step()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 141, in step
+    return await self._execute(step=sc_pb.RequestStep(count=self.game_step))
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 67, in _execute
+    response = await self.__request(request)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\protocol.py", line 48, in __request
+    sys.exit(2)
+SystemExit: 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run.py", line 15, in <module>
+    result, opponentid = run_ladder_game(bot)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 67, in run_ladder_game
+    result = asyncio.get_event_loop().run_until_complete(g)
+  File "C:\Users\Manuel\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\__init__.py", line 81, in join_ladder_game
+    except ConnectionAlreadyClosed:
+NameError: name 'ConnectionAlreadyClosed' is not defined

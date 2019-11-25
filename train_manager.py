@@ -13,6 +13,7 @@ class TrainManager:
 	async def train_troops(self):
 		await self.train_observer()
 		await self.train_mothership()
+		await self.train_phoenix()
 		await self.train_voidray()
 		await self.train_zealot()
 		await self.train_probe()
@@ -34,6 +35,8 @@ class TrainManager:
 				return True
 			if self.game.structures(FLEETBEACON).amount and self.game.already_pending(MOTHERSHIP):
 				return True
+			if self.game.minerals > 650 and self.game.vespene > 550:
+				return True
 		return False
 
 	def should_train_zealot(self):
@@ -43,6 +46,11 @@ class TrainManager:
 
 	def should_train_mothership(self):
 		if self.game.can_afford(MOTHERSHIP) and not self.game.units(MOTHERSHIP).amount:
+			return True
+		return False
+
+	def should_train_phoenix(self):
+		if self.game.can_afford(PHOENIX) and self.game.units(PHOENIX).amount < 2 and self.game.strategy_manager.phoenix_harass:
 			return True
 		return False
 
@@ -56,6 +64,10 @@ class TrainManager:
 
 	# train methods
 	async def train_probe(self):
+		if(self.game.minerals > 2000 and self.max_probes == 64):
+			self.max_probes = 48
+		if(self.game.minerals < 300 and self.max_probes == 48):
+			self.max_probes = 64
 		for nexus in self.game.townhalls().ready.idle:
 			if self.should_train_probe():
 				self.game.do(nexus.train(PROBE))
@@ -64,6 +76,13 @@ class TrainManager:
 		for sg in self.game.structures(STARGATE).ready.idle:
 			if self.should_train_voidray():
 				self.game.do(sg.train(VOIDRAY))
+				return
+
+	async def train_phoenix(self):
+		for sg in self.game.structures(STARGATE).ready.idle:
+			if self.should_train_phoenix():
+				self.game.do(sg.train(PHOENIX))
+				return
 
 	async def train_zealot(self):
 		for gw in self.game.structures(GATEWAY).ready.idle:

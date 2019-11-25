@@ -6,7 +6,7 @@ from sc2.position import Point2, Point3
 #from sc2mav.minimap import Minimap
 
 import random
-import cv2
+#import cv2
 import numpy as np
 
 
@@ -87,7 +87,7 @@ class DebugManager:
     def debug_offesinsive_group(self):
         if self.game.units(VOIDRAY).amount > 0:
             first_unit = self.game.units(VOIDRAY).closest_to(
-                self.game.unit_manager.posicion_ofensiva
+                self.game.unit_manager.offensive_position
             )
             self.game._client.debug_sphere_out(
                 first_unit.position3d, 1, Point3((230, 30, 66))

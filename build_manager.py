@@ -11,8 +11,8 @@ class BuildManager:
 	# build priority order
 	async def build(self):
 		await self.build_pylon()
-		#await self.build_forge()
-		#await self.build_cannon()
+		await self.build_forge()
+		await self.build_cannon()
 		await self.build_roboticsfacility()
 		await self.build_fleetbeacon()
 		await self.build_gateway()
@@ -23,17 +23,18 @@ class BuildManager:
 
 	# build conditions
 	def should_build_forge(self):
-		if self.game.structures(PYLON).ready.amount > 0 and self.game.can_afford(FORGE) and self.game.structures(FORGE).amount < 1 and not self.game.already_pending(FORGE):
+		if self.game.strategy_manager.build_cannons and self.game.structures(PYLON).ready.amount and self.game.structures(GATEWAY).amount and self.game.can_afford(FORGE) and self.game.structures(FORGE).amount < 1 and not self.game.already_pending(FORGE):
 			return True
 		return False
 
 	def should_build_cannon(self):
-		if self.game.structures(PYLON).ready.amount > 0 and self.game.can_afford(PHOTONCANNON) and not self.game.already_pending(PHOTONCANNON):
-			return True
+		if self.game.strategy_manager.build_cannons:
+			if self.game.structures(PYLON).ready.amount > 0 and self.game.can_afford(PHOTONCANNON) and not self.game.already_pending(PHOTONCANNON):
+				return True
 		return False
 
-	def should_build_pylon(self):
-		if self.game.townhalls().amount > 0 and self.game.can_afford(PYLON) and not self.game.already_pending(PYLON):
+	def should_build_pylon(self): # todo: remove fix
+		if self.game.townhalls().amount > 0 and (self.game.can_afford(PYLON) or self.game.supply_left<0) and not self.game.already_pending(PYLON):
 			if self.game.supply_left < 2 and self.game.structures(PYLON).amount == 0:
 				return True
 			elif self.game.supply_left < 4:
@@ -70,7 +71,7 @@ class BuildManager:
 
 	async def should_build_nexus(self):
 		# TODO: clean expansion first
-		if self.game.can_afford(NEXUS) and ((not self.game.already_pending(NEXUS) and (self.game.townhalls().amount - 1) * 2 <= self.game.units(VOIDRAY).amount) or self.game.minerals > 1500 and await self.game.get_next_expansion()):
+		if self.game.can_afford(NEXUS) and ((not self.game.already_pending(NEXUS) and (self.game.townhalls().amount - 1) * 2 <= self.game.units(VOIDRAY).amount) or (self.game.minerals > 1500 and not self.game.already_pending(NEXUS)) and await self.game.get_next_expansion()):
 			return True
 		return False
 
@@ -88,37 +89,61 @@ class BuildManager:
 	# build methods
 	async def build_forge(self):
 		if self.should_build_forge():
-			await self.game.build(FORGE, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 4))
+			pylons = self.game.structures(PYLON).ready.closer_than(20, self.game.start_location)
+			if not pylons:
+				pylons = self.game.structures(PYLON).ready
+			await self.game.build(FORGE, near=pylons.random.position.towards(self.game.game_info.map_center, 4))
 
 	async def build_cannon(self):
 		if self.should_build_cannon():
 			for n in self.game.townhalls():
-				if self.game.structures(PHOTONCANNON).closer_than(4, n).amount < 1:
-					await self.game.build(PHOTONCANNON, near=n.position.towards(self.game.game_info.map_center, -2))
+				if self.game.structures(PYLON).ready.closer_than(8, n.position.towards(self.game.game_info.map_center, -5.5)).amount:
+					if not self.game.structures(PHOTONCANNON) or self.game.structures(PHOTONCANNON).closer_than(8, n.position.towards(self.game.game_info.map_center, -5.5)).amount < 1:
+						await self.game.build(PHOTONCANNON, near=n.position.towards(self.game.game_info.map_center, -5.5))
 
 	async def build_pylon(self):
 		if self.should_build_pylon():
+			if self.game.structures(PYLON).amount:
+				for n in self.game.townhalls():
+					if not self.game.structures(PYLON).closer_than(8, n.position.towards(self.game.game_info.map_center, -8)).amount:
+						await self.game.build(PYLON, near=n.position.towards(self.game.game_info.map_center, -8))
+						return
 			await self.game.build(PYLON, near=self.game.townhalls().first.position.towards(self.game.game_info.map_center, 7))
 	
 	async def build_gateway(self):
 		if self.should_build_gateway():
-			await self.game.build(GATEWAY, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 4))
+			pylons = self.game.structures(PYLON).ready.closer_than(20, self.game.start_location)
+			if not pylons:
+				pylons = self.game.structures(PYLON).ready
+			await self.game.build(GATEWAY, near=pylons.random.position.towards(self.game.game_info.map_center, 4))
 
 	async def build_cyberneticscore(self):
 		if self.should_build_cyberneticscore():
-			await self.game.build(CYBERNETICSCORE, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 4))
+			pylons = self.game.structures(PYLON).ready.closer_than(20, self.game.start_location)
+			if not pylons:
+				pylons = self.game.structures(PYLON).ready
+			await self.game.build(CYBERNETICSCORE, near=pylons.random.position.towards(self.game.game_info.map_center, 4))
 
 	async def build_stargate(self):
 		if self.should_build_stargate():
-			await self.game.build(STARGATE, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 4))
+			pylons = self.game.structures(PYLON).ready.closer_than(20, self.game.start_location)
+			if not pylons:
+				pylons = self.game.structures(PYLON).ready
+			await self.game.build(STARGATE, near=pylons.random.position.towards(self.game.game_info.map_center, 4))
 
 	async def build_roboticsfacility(self):
 		if self.should_build_roboticsfacility():
-			await self.game.build(ROBOTICSFACILITY, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 4))
+			pylons = self.game.structures(PYLON).ready.closer_than(20, self.game.start_location)
+			if not pylons:
+				pylons = self.game.structures(PYLON).ready
+			await self.game.build(ROBOTICSFACILITY, near=pylons.random.position.towards(self.game.game_info.map_center, 4))
 
 	async def build_fleetbeacon(self):
 		if self.should_build_fleetbeacon():
-			await self.game.build(FLEETBEACON, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 1))
+			pylons = self.game.structures(PYLON).ready.closer_than(20, self.game.start_location)
+			if not pylons:
+				pylons = self.game.structures(PYLON).ready
+			await self.game.build(FLEETBEACON, near=pylons.random.position.towards(self.game.game_info.map_center, 1))
 
 	async def build_nexus(self):
 		if await self.should_build_nexus():
