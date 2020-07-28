@@ -859,7 +859,7 @@ class BotAI(DistanceCalculation):
             near = near.position
         near = near.to2
 
-        if not self.can_afford(building):
+        if not self.can_afford(building, False):
             return False
 
         p = await self.find_placement(building, near, max_distance, random_alternative, placement_step)

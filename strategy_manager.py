@@ -4,189 +4,66 @@ from sc2.cache import property_cache_forever, property_cache_once_per_frame
 from sc2.position import Point2, Point3
 from sc2.data import Race
 
+from constants import *
+
 import math
 import random
-"""     
-    EphemeronLE.SC2Map
-        [PYLON, Point2((130.0, 50.0))],
-        [PHOTONCANNON, Point2((130.0, 48.0))],
-        [PHOTONCANNON, Point2((128.0, 48.0))],
-        [PHOTONCANNON, Point2((132.0, 47.0))],
-        [PHOTONCANNON, Point2((126.0, 48.0))],
-        [PHOTONCANNON, Point2((134.0, 46.0))],
-        [PHOTONCANNON, Point2((132.0, 49.0))],
-        [PHOTONCANNON, Point2((128.0, 50.0))],
-        [PHOTONCANNON, Point2((126.0, 50.0))],
-        [PHOTONCANNON, Point2((134.0, 48.0))],
+import json
 
-        [PYLON, Point2((30.0, 119.0))],
-        [PHOTONCANNON, Point2((30.0, 111.0))],
-        [PHOTONCANNON, Point2((32.0, 111.0))],
-        [PHOTONCANNON, Point2((28.0, 112.0))],
-        [PHOTONCANNON, Point2((26.0, 113.0))],
-        [PHOTONCANNON, Point2((34.0, 111.0))],
-        [PHOTONCANNON, Point2((28.0, 110.0))],
-        [PHOTONCANNON, Point2((26.0, 111.0))],
-        [PHOTONCANNON, Point2((32.0, 109.0))],
-        [PHOTONCANNON, Point2((34.0, 109.0))],
-    AcropolisLE.SC2Map
-        [PYLON, Point2((35.0, 112.0))],
-        [PHOTONCANNON, Point2((35.0, 114.0))],
-        [PHOTONCANNON, Point2((33.0, 115.0))],
-        [PHOTONCANNON, Point2((37.0, 114.0))],
-        [PHOTONCANNON, Point2((39.0, 114.0))],
-        [PHOTONCANNON, Point2((31.0, 116.0))],
-        [PHOTONCANNON, Point2((37.0, 112.0))],
-        [PHOTONCANNON, Point2((33.0, 113.0))],
-        [PHOTONCANNON, Point2((39.0, 112.0))],
-        [PHOTONCANNON, Point2((31.0, 114.0))],
-
-        [PYLON, Point2((141.0, 61.0))],
-        [PHOTONCANNON, Point2((141.0, 59.0))],
-        [PHOTONCANNON, Point2((143.0, 58.0))],
-        [PHOTONCANNON, Point2((145.0, 58.0))],
-        [PHOTONCANNON, Point2((139.0, 59.0))],
-        [PHOTONCANNON, Point2((137.0, 59.0))],
-        [PHOTONCANNON, Point2((143.0, 60.0))],
-        [PHOTONCANNON, Point2((139.0, 61.0))],
-        [PHOTONCANNON, Point2((145.0, 60.0))],
-        [PHOTONCANNON, Point2((137.0, 61.0))],
-    ThunderbirdLE.SC2Map
-        [PYLON, Point2((46.0, 105.0))],
-        [PHOTONCANNON, Point2((46.0, 107.0))],
-        [PHOTONCANNON, Point2((44.0, 107.0))],
-        [PHOTONCANNON, Point2((48.0, 108.0))],
-        [PHOTONCANNON, Point2((50.0, 109.0))],
-        [PHOTONCANNON, Point2((42.0, 107.0))],
-        [PHOTONCANNON, Point2((48.0, 106.0))],
-        [PHOTONCANNON, Point2((44.0, 105.0))],
-        [PHOTONCANNON, Point2((50.0, 107.0))],
-        [PHOTONCANNON, Point2((42.0, 105.0))],
-
-        [PYLON, Point2((144.0, 51.0))],
-        [PHOTONCANNON, Point2((144.0, 49.0))],
-        [PHOTONCANNON, Point2((146.0, 50.0))],
-        [PHOTONCANNON, Point2((148.0, 51.0))],
-        [PHOTONCANNON, Point2((150.0, 51.0))],
-        [PHOTONCANNON, Point2((142.0, 48.0))],
-        [PHOTONCANNON, Point2((142.0, 50.0))],
-        [PHOTONCANNON, Point2((146.0, 52.0))],
-        [PHOTONCANNON, Point2((148.0, 53.0))],
-        [PHOTONCANNON, Point2((150.0, 53.0))],
-    DiscoBloodbathLE.SC2Map
-        [PYLON, Point2((49.0, 140.0))],
-        [PHOTONCANNON, Point2((47.0, 139.0))],
-        [PHOTONCANNON, Point2((49.0, 138.0))],
-        [PHOTONCANNON, Point2((45.0, 140.0))],
-        [PHOTONCANNON, Point2((47.0, 141.0))],
-        [PHOTONCANNON, Point2((45.0, 142.0))],
-
-        [PYLON, Point2((150.0, 40.0))],
-        [PHOTONCANNON, Point2((152.0, 42.0))],
-        [PHOTONCANNON, Point2((154.0, 41.0))],
-        [PHOTONCANNON, Point2((150.0, 43.0))],
-        [PHOTONCANNON, Point2((152.0, 40.0))],
-        [PHOTONCANNON, Point2((154.0, 39.0))],
-    TritonLE.SC2Map
-        [PYLON, Point2((84.0, 158.0))],
-        [PHOTONCANNON, Point2((82.0, 158.0))],
-        [PHOTONCANNON, Point2((81.0, 160.0))],
-        [PHOTONCANNON, Point2((83.0, 156.0))],
-        [PHOTONCANNON, Point2((80.0, 162.0))],
-        [PHOTONCANNON, Point2((84.0, 154.0))],
-        [PHOTONCANNON, Point2((85.0, 156.0))],
-        [PHOTONCANNON, Point2((83.0, 160.0))],
-        [PHOTONCANNON, Point2((82.0, 162.0))],
-        [PHOTONCANNON, Point2((86.0, 154.0))],
-
-        [PYLON, Point2((131.0, 46.0))],
-        [PHOTONCANNON, Point2((133.0, 46.0))],
-        [PHOTONCANNON, Point2((132.0, 48.0))],
-        [PHOTONCANNON, Point2((134.0, 44.0))],
-        [PHOTONCANNON, Point2((135.0, 42.0))],
-        [PHOTONCANNON, Point2((131.0, 50.0))],
-        [PHOTONCANNON, Point2((132.0, 44.0))],
-        [PHOTONCANNON, Point2((133.0, 42.0))],
-        [PHOTONCANNON, Point2((130.0, 48.0))],
-        [PHOTONCANNON, Point2((129.0, 50.0))],
-    WintersGateLE.SC2Map
-        [PYLON, Point2((45.0, 109.0))],
-        [PHOTONCANNON, Point2((45.0, 111.0))],
-        [PHOTONCANNON, Point2((47.0, 110.0))],
-        [PHOTONCANNON, Point2((49.0, 109.0))],
-        [PHOTONCANNON, Point2((43.0, 113.0))],
-        [PHOTONCANNON, Point2((41.0, 114.0))],
-        [PHOTONCANNON, Point2((43.0, 111.0))],
-        [PHOTONCANNON, Point2((47.0, 108.0))],
-        [PHOTONCANNON, Point2((49.0, 107.0))],
-        [PHOTONCANNON, Point2((41.0, 112.0))],
-
-        [PYLON, Point2((147.0, 56.0))],
-        [PHOTONCANNON, Point2((146.0, 54.0))],
-        [PHOTONCANNON, Point2((144.0, 55.0))],
-        [PHOTONCANNON, Point2((142.0, 56.0))],
-        [PHOTONCANNON, Point2((148.0, 53.0))],
-        [PHOTONCANNON, Point2((150.0, 52.0))],
-        [PHOTONCANNON, Point2((145.0, 57.0))],
-        [PHOTONCANNON, Point2((149.0, 55.0))],
-        [PHOTONCANNON, Point2((143.0, 58.0))],
-        [PHOTONCANNON, Point2((151.0, 54.0))],
-    WorldofSleepersLE.SC2Map
-        [PYLON, Point2((138.0, 116.0))],
-        [PHOTONCANNON, Point2((139.0, 118.0))],
-        [PHOTONCANNON, Point2((140.0, 116.0))],
-        [PHOTONCANNON, Point2((142.0, 116.0))],
-        [PHOTONCANNON, Point2((144.0, 115.0))],
-        [PHOTONCANNON, Point2((138.0, 120.0))],
-        [PHOTONCANNON, Point2((137.0, 118.0))],
-        [PHOTONCANNON, Point2((136.0, 120.0))],
-        [PHOTONCANNON, Point2((142.0, 114.0))],
-
-        [PYLON, Point2((45.0, 52.0))],
-        [PHOTONCANNON, Point2((43.0, 51.0))],
-        [PHOTONCANNON, Point2((45.0, 50.0))],
-        [PHOTONCANNON, Point2((47.0, 49.0))],
-        [PHOTONCANNON, Point2((41.0, 52.0))],
-        [PHOTONCANNON, Point2((39.0, 53.0))],
-        [PHOTONCANNON, Point2((47.0, 51.0))],
-        [PHOTONCANNON, Point2((43.0, 53.0))],
-        [PHOTONCANNON, Point2((41.0, 54.0))],
-        [PHOTONCANNON, Point2((49.0, 50.0))],
-"""
 class StrategyManager:
     def __init__(self, game):
         self.game = game
 
-        # ingame vars
-        self.initialized = False
-        self.cloack_units_detected = False
-        self.under_attack = False # to do
+        # STRATEGY CONFIG
+        self.wall = 0 # in progress
+        self.worker_rush = False # to do
+        self.cannon_rush = False # in progress
+        self.dark_templar_rush = False # to do
+        self.voidray_ball = True # to do
 
-        # enemy/map/race depending vars
-        self.build_cannons = True
+        # GENERAL STRATEGY CONFIG
+        self.probe_scout = False # to do
+        self.build_cannons = False
+        self.panic_deff = False
+        self.build_shields = False
         self.build_ramp1_cannon = False # to do
         self.build_ramp2_cannon = False # to do
-        self.build_wall = False # to do
-        self.observer_rush = False # to do
-        self.ground_defenses_list = [2, 0, 0, 0] # to do
-        self.worker_rush = False # to do
+        self.observer_delay = 10
+        self.observer_amount = [2, 4]
+        self.ground_defenses_list = [1, 0, 0, 0, 0]
         self.oracle_harass = False # to do
         self.adept_harass = False # to do
         self.phoenix_harass = False # in progress
         self.allucination_bait = False # to do
-        self.probe_scout = True
 
+        # SPECIFIC CONFIGURATION
+        # voidray ball
+        self.min_off_vr_rush = 4
+        self.min_off_vr = 12
+        self.build_mothership = False
+        self.rush_complete = False
+        # cannon rush
+        self.start_hidden = True
+        # phoenix harass
+        self.phoenix_amount = 3
+
+        # INGAME VARS
+        self.initialized = False
+        self.main_ramp = None
+        self.wall_completed = False
+        self.cloack_units_detected = False
+        self.worker_rush_detected = False # to do
+        self.cannon_rush_detected = False # to do
+        self.under_attack = False # to do
+        # phoenix harass vars
+        self.phoenix_objetive = None
         # probe scout vars
         self.scout_worker = None
-
         # cannon rush vars
-        self.cannon_rush = True # in progress
-        self.cannon_rush_failed = False # to do
-        self.cannon_rush_complete = False
         self.cannon_rush_worker = None
         self.cannon_rush_worker_position = Point2()
+        self.cannon_rush_complete = False
         self.building_positions = None
-        self.start_hidden = True
         self.visible_complete = False
         self.ladder_maps_building_position = { # in progress
             "AcropolisLE.SC2Map": [
@@ -331,43 +208,98 @@ class StrategyManager:
             ]
         }
 
-        # phoenix harass vars
-        self.phoenix_objetive = None
-
     def prepare_strat(self):
         if not self.initialized:
             self.initialized = True
+            # load config
+            
             # cannon rush
             actual_map = self.game.game_info.local_map_path
             if actual_map in self.ladder_maps_building_position:
                 pos = 0 if self.game.start_location.distance_to(Point2((0,0))) > self.game.enemy_start_locations[0].distance_to(Point2((0,0))) else 1
                 self.building_positions = self.ladder_maps_building_position[actual_map][pos]
-                #a = self.enemy_natural()
-                #b = self.enemy_ramp()
-                #self.building_positions = [[PYLON, self.get_intersections(a, b, 11, self.game.game_info.map_center)]]
                 if self.building_positions:
                     self.cannon_rush_worker_position = self.building_positions[0][1].towards(self.game.game_info.map_center, 5)
                 else:
                     self.cannon_rush_worker_position = self.game.game_info.map_center
             else:
-                print("fail")
                 self.cannon_rush = False
-            #if True or self.game._game_info.player_races[3 - self.game.player_id] == 1: # terran
-            #    self.building_positions.reverse()
 
     async def do_strat(self):
         self.prepare_strat()
         self.check_cloacked()    
+        await self.build_wall()
         await self.do_cannon_rush()
         self.do_phoenix_harass()
+        self.do_worker_rush()
 
     def doing_strat(self):
-        #return True
         """ Returns true if an actual strategy should override general bot decision making """
         if self.cannon_rush and not self.cannon_rush_complete:
             return True
+        if self.worker_rush:
+            return True
+        if self.wall != 0:
+            return True
         return False
 
+    def do_worker_rush(self):
+        if self.worker_rush:
+            n = self.game.townhalls().first
+            for worker in self.game.workers:
+                if worker.shield > 1 or self.game.workers.amount > 8 or worker.distance_to(n.position) < 1:
+                    self.game.combined_actions.append(worker.attack(self.game.enemy_start_locations[0]))
+                else:
+                    self.game.combined_actions.append(worker.move(n))
+
+    async def build_wall(self):
+        if self.wall == 1:
+            if not self.main_ramp:
+                dist = 9999
+                dist2 = 0
+                for ramp in self.game.game_info.map_ramps:
+                    if ramp.top_center.distance_to(self.game.start_location) < dist:
+                        dist = ramp.top_center.distance_to(self.game.start_location)
+                        self.main_ramp = ramp
+                    if ramp.top_center.distance_to(self.game.start_location) + ramp.top_center.distance_to(self.game.enemy_start_locations[0]) > dist2:
+                        dist2 = ramp.top_center.distance_to(self.game.start_location) + ramp.top_center.distance_to(self.game.enemy_start_locations[0])
+                        self.evasive_position = ramp.top_center
+            if self.game.units(PROBE).amount:
+                # choose scout
+                worker = self.game.units(PROBE).find_by_tag(self.scout_worker)
+                if not worker:
+                    self.scout_worker = self.game.units(PROBE).random.tag
+                    worker = self.game.units(PROBE).find_by_tag(self.scout_worker)
+                # move scout
+                to_go = self.game.enemy_start_locations[0]
+                enemies = self.game.enemy_units
+                if enemies:
+                    enemy = enemies.furthest_to(worker.position)
+                    enemies = enemies.closer_than(2, worker.position)
+                    if enemies.amount > 1:
+                        to_go = self.evasive_position
+                        self.scout_worker = None
+                    else:
+                        to_go = enemy.position
+                self.game.combined_actions.append(worker.move(to_go))
+            # build first pylon
+            if self.game.can_afford(PYLON) and not self.game.already_pending(PYLON) and self.game.structures(PYLON).amount < 1:
+                await self.game.build(PYLON, near=self.game.townhalls().first.position.towards(self.game.game_info.map_center, 4))
+            # build forge
+            if self.game.structures(PYLON).ready.amount and self.game.can_afford(FORGE) and self.game.structures(FORGE).amount < 1 and not self.game.already_pending(FORGE):
+                #await self.game.build(FORGE, self.main_ramp.barracks_in_middle)
+                await self.game.build(FORGE, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 4))
+            # build cannon1
+            #if self.game.structures(FORGE).ready.amount and self.game.can_afford(PHOTONCANNON) and not self.game.already_pending(PHOTONCANNON):
+            #    await self.game.build(PHOTONCANNON, list(self.main_ramp.corner_depots)[0])
+            # build cannon2
+            #if self.game.structures(FORGE).ready.amount and self.game.can_afford(PHOTONCANNON) and self.game.already_pending(PHOTONCANNON):
+            #    await self.game.build(PHOTONCANNON, list(self.main_ramp.corner_depots)[1])
+            # finish
+            if self.game.structures(PHOTONCANNON).amount >= 2:
+                self.wall = 0
+            elif self.game.structures(FORGE).ready.amount and self.game.can_afford(PHOTONCANNON):
+                await self.game.build(PHOTONCANNON, near=self.game.structures(PYLON).ready.random.position.towards(self.game.start_location, 2))
     async def do_cannon_rush(self):
         if self.cannon_rush:
             # train probes
@@ -441,10 +373,11 @@ class StrategyManager:
     @property
     def ground_defenses(self):
         return {
-            ZEALOT: self.ground_defenses_array[0],
-            STALKER: self.ground_defenses_array[1],
-            SENTRY: self.ground_defenses_array[2],
-            IMMORTAL: self.ground_defenses_array[3],
+            ZEALOT: self.ground_defenses_list[0],
+            STALKER: self.ground_defenses_list[1],
+            SENTRY: self.ground_defenses_list[2],
+            IMMORTAL: self.ground_defenses_list[3],
+            COLOSSUS: self.ground_defenses_list[4],
         }
 
     def find_phoenix_objetive(self):
@@ -454,42 +387,46 @@ class StrategyManager:
         return self.game.enemy_start_locations[0].position.towards(self.game.game_info.map_center, -10)
 
     def do_phoenix_harass(self):
+        """
+        to do:  it does not detect turrets
+                it does not select objective properly
+                it uses multiple beams at time
+        """
+        SAFE_DIST = 4
+        DETECT_DIST = 10
         if self.phoenix_harass:
             # go in
             if self.game.units(PHOENIX).amount >= 2 and (self.game.units(PHOENIX).filter(lambda unit: unit.energy > 50).amount or self.game.enemy_units.filter(lambda unit: unit.has_buff(GRAVITONBEAM))):
                 if not self.phoenix_objetive:
                     self.phoenix_objetive = self.find_phoenix_objetive()
                 first_phoenix = self.game.units(PHOENIX).closest_to(self.phoenix_objetive)
-                near_enemies = self.game.enemy_units.filter(lambda unit: unit.can_attack_air and unit.distance_to(first_phoenix) < unit.air_range + 2)
+                near_enemies = self.game.enemy_units.filter(lambda unit: unit.can_attack_air and unit.distance_to(first_phoenix) < unit.air_range + SAFE_DIST)
+                close_enemies = self.game.enemy_units.filter(lambda unit: unit.can_attack_air and unit.distance_to(first_phoenix) < unit.air_range + DETECT_DIST)
+                near_objetives = self.game.enemy_units.filter(lambda unit: unit.type_id in {PROBE, DRONE, SCV, OVERLORD})
+                focused_objetives = self.game.enemy_units.filter(lambda unit: unit.has_buff(GRAVITONBEAM))
+                turrets = self.game.enemy_units.filter(lambda unit: unit.type_id in {SPORECRAWLER, MISSILETURRET, PHOTONCANNON})
                 for p in self.game.units(PHOENIX):
                     if p.is_using_ability(GRAVITONBEAM_GRAVITONBEAM):
+                        # todo: check cancel
                         continue
-                    turrets = self.game.enemy_structures.filter(lambda unit: unit.type_id in {SPORECRAWLER, MISSILETURRET, PHOTONCANNON})
+                    if focused_objetives.amount:
+                        objetive = focused_objetives.closest_to(p)
+                        self.game.combined_actions.append(p.attack(objetive))
+                        continue
                     for t in turrets:
-                        if p.distance_to(t) < t.air_range + 2:
-                            self.game.combined_actions.append(p.move(t.position.towards(p, -t.air_range-2)))
+                        if p.distance_to(t) < t.air_range + SAFE_DIST:
+                            self.game.combined_actions.append(p.move(t.position.towards(p, -t.air_range - SAFE_DIST)))
                             continue
-                    if not near_enemies.amount:
-                        if p.distance_to(self.phoenix_objetive) > 5:
-                            if p.distance_to(self.game.units(PHOENIX).center) > 2:
-                                self.game.combined_actions.append(p.move(self.game.units(PHOENIX).center))
-                            else:
-                                self.game.combined_actions.append(p.move(self.phoenix_objetive))
-                        else:
-                            enemy_workers = self.game.enemy_units.filter(lambda unit: unit.type_id in {PROBE, DRONE, SCV})
-                            if enemy_workers:
-                                floating_worker = enemy_workers.filter(lambda unit: unit.has_buff(GRAVITONBEAM))
-                                if floating_worker:
-                                    self.game.combined_actions.append(p.attack(floating_worker.first))
-                                else:
-                                    self.game.do(p(AbilityId.GRAVITONBEAM_GRAVITONBEAM, enemy_workers.closest_to(p)))
-                                    break
-                    if near_enemies.amount == 1:
-                        # todo: attack it
+                    if near_enemies.amount > 1:
+                        closest = near_enemies.closest_to(p)
+                        self.game.combined_actions.append(p.move(p.position.towards(closest.position, -closest.air_range-SAFE_DIST)))
+                    if near_enemies.amount == 1 and close_enemies.amount == 1:
                         if near_enemies.first.has_buff(GRAVITONBEAM):
                             self.game.combined_actions.append(p.attack(near_enemies.first))
+                            continue
                         elif near_enemies.first.is_flying and near_enemies.first.is_visible:
                             self.game.combined_actions.append(p.attack(near_enemies.first))
+                            continue
                         elif not near_enemies.first.is_massive and near_enemies.first.is_visible:
                             if p.distance_to(near_enemies.first) > 5:
                                 self.game.combined_actions.append(p.move(near_enemies.first.position.towards(p.position, 4.5)))
@@ -498,15 +435,27 @@ class StrategyManager:
                                 break
                         else:
                             self.game.combined_actions.append(p.move(self.phoenix_objetive))
-                    if near_enemies.amount > 1:
-                        closest = near_enemies.closest_to(p)
-                        self.game.combined_actions.append(p.move(p.position.towards(closest.position, -9.5)))
-                        # run away kitting air units
+                    if not near_enemies.amount:
+                        if near_objetives.amount:
+                            if not near_objetives.closest_to(p).is_massive and near_objetives.closest_to(p).is_visible:
+                                if p.distance_to(near_objetives.closest_to(p)) > 5:
+                                    self.game.combined_actions.append(p.move(near_objetives.closest_to(p).position.towards(p.position, 4.5)))
+                                else:
+                                    self.game.do(p(AbilityId.GRAVITONBEAM_GRAVITONBEAM, near_objetives.closest_to(p)))
+                                    pass
+                            else:
+                                if p.distance_to(self.phoenix_objetive) < 2:
+                                    self.phoenix_objetive = None
+                        if p.distance_to(self.phoenix_objetive) > 5:
+                            if p.distance_to(self.game.units(PHOENIX).center) > 2:
+                                self.game.combined_actions.append(p.move(self.game.units(PHOENIX).center))
+                            else:
+                                self.game.combined_actions.append(p.move(self.phoenix_objetive))                    
             else:
                 self.phoenix_objetive = None
                 # go back
                 for p in self.game.units(PHOENIX):
-                    if p.distance_to(self.game.start_location.position) > 20:
+                    if p.distance_to(self.game.start_location.position) > 10:
                         self.game.combined_actions.append(p.move(self.game.start_location.position))
 
     def enemy_ramp(self):

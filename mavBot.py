@@ -1,4 +1,9 @@
 import sc2, random
+import argparse
+import json
+from datetime import datetime
+
+from WorkerRushBot import WorkerRushBot
 
 from sc2 import run_game, maps, Race, Difficulty, position
 from sc2.player import Bot, Computer
@@ -18,7 +23,8 @@ from strategy_manager import StrategyManager
 
 class MavBot(sc2.BotAI):
     def __init__(self):
-        self.version = "1.2.3"
+        self.version = "1.3.1"
+        self.opp_id = self.find_opp_id()
         self.unit_manager = UnitManager(self)
         self.upgrade_manager = UpgradeManager(self)
         self.build_manager = BuildManager(self)
@@ -28,6 +34,7 @@ class MavBot(sc2.BotAI):
         #self.debug_manager = DebugManager(self)
         self.strategy_manager = StrategyManager(self)
         self.debug = False
+        self.load_config()
         self.combined_actions = [];
 
     async def on_step(self, iteration):
@@ -35,6 +42,8 @@ class MavBot(sc2.BotAI):
             await self.on_1st_step()
         if iteration % 10 == 0:
             await self.on_10_step()
+        if iteration < 500:
+            self.check_worker_rush()
         self.cancel_buildings()
         await self.strategy_manager.do_strat()
         if not self.strategy_manager.doing_strat():
@@ -49,12 +58,9 @@ class MavBot(sc2.BotAI):
 
     async def on_1st_step(self):
         await self._client.chat_send(self.version, team_only=False)
-        pass
-        print(self.start_location)
-        print(self.enemy_start_locations[0])
-        p1 = self.start_location.towards(self.game_info.map_center, 5)
-        p2 = self.start_location.towards(self.game_info.map_center, 25)
-        print(await self.unit_manager.terrain_adventage(p1, p2))
+        print(datetime.now())
+        print(self.opp_id)
+        print("----------")
 
     async def on_10_step(self):
         await self.worker_manager.manage_workers()
@@ -69,112 +75,62 @@ class MavBot(sc2.BotAI):
             if unit_tag in self.unit_manager.cachedUnits[unitType]:
                 self.unit_manager.cachedUnits[unitType].remove(unit_tag)
 
-    async def on_building_construction_started(self, unit):
-        if(unit.type_id in [PYLON, PHOTONCANNON, NEXUS]):
-            print(unit.type_id)
-            print(unit.position)
-            print("---------")
+    #async def on_building_construction_started(self, unit):
+    #    pass
+    #    if(unit.type_id in [PYLON, PHOTONCANNON, NEXUS]):
+    #        print(unit.type_id)
+    #        print(unit.position)
+    #        print("---------")
 
     def on_end(self, game_result):
         print(game_result)
         print(self.state.score.score)
 
-    async def distribute_workers(self, resource_ratio: float = 2):
-        if not self.mineral_field or not self.workers or not self.townhalls.ready:
-            return
-        worker_pool = [worker for worker in self.workers.idle]
-        bases = self.townhalls.ready
-        gas_buildings = self.gas_buildings.ready
-
-        # list of places that need more workers
-        deficit_mining_places = []
-
-        for mining_place in bases | gas_buildings:
-            difference = mining_place.surplus_harvesters
-            # perfect amount of workers, skip mining place
-            if not difference:
-                continue
-            if mining_place.has_vespene:
-                # get all workers that target the gas extraction site
-                # or are on their way back from it
-                local_workers = self.workers.filter(
-                    lambda unit: unit.order_target == mining_place.tag
-                    or (unit.is_carrying_vespene and unit.order_target == bases.closest_to(mining_place).tag)
-                )
-            else:
-                # get tags of minerals around expansion
-                local_minerals_tags = {
-                    mineral.tag for mineral in self.mineral_field if mineral.distance_to(mining_place) <= 8
-                }
-                # get all target tags a worker can have
-                # tags of the minerals he could mine at that base
-                # get workers that work at that gather site
-                local_workers = self.workers.filter(
-                    lambda unit: unit.order_target in local_minerals_tags
-                    or (unit.is_carrying_minerals and unit.order_target == mining_place.tag)
-                )
-            # too many workers
-            if difference > 0:
-                for worker in local_workers[:difference]:
-                    worker_pool.append(worker)
-            # too few workers
-            # add mining place to deficit bases for every missing worker
-            else:
-                deficit_mining_places += [mining_place for _ in range(-difference)]
-
-        # prepare all minerals near a base if we have too many workers
-        # and need to send them to the closest patch
-        if len(worker_pool) > len(deficit_mining_places):
-            all_minerals_near_base = [
-                mineral
-                for mineral in self.mineral_field
-                if any(mineral.distance_to(base) <= 8 for base in self.townhalls.ready)
-            ]
-        # distribute every worker in the pool
-        for worker in worker_pool:
-            if worker.tag == self.strategy_manager.cannon_rush_worker:
-                continue
-            # as long as have workers and mining places
-            if deficit_mining_places:
-                # choose only mineral fields first if current mineral to gas ratio is less than target ratio
-                if self.vespene and self.minerals / self.vespene < resource_ratio:
-                    possible_mining_places = [place for place in deficit_mining_places if not place.vespene_contents]
-                # else prefer gas
-                else:
-                    possible_mining_places = [place for place in deficit_mining_places if place.vespene_contents]
-                # if preferred type is not available any more, get all other places
-                if not possible_mining_places:
-                    possible_mining_places = deficit_mining_places
-                # find closest mining place
-                current_place = min(deficit_mining_places, key=lambda place: place.distance_to(worker))
-                # remove it from the list
-                deficit_mining_places.remove(current_place)
-                # if current place is a gas extraction site, go there
-                if current_place.vespene_contents:
-                    self.do(worker.gather(current_place))
-                # if current place is a gas extraction site,
-                # go to the mineral field that is near and has the most minerals left
-                else:
-                    local_minerals = (
-                        mineral for mineral in self.mineral_field if mineral.distance_to(current_place) <= 8
-                    )
-                    # local_minerals can be empty if townhall is misplaced
-                    target_mineral = max(local_minerals, key=lambda mineral: mineral.mineral_contents, default=None)
-                    if target_mineral:
-                        self.do(worker.gather(target_mineral))
-            # more workers to distribute than free mining spots
-            # send to closest if worker is doing nothing
-            elif worker.is_idle and all_minerals_near_base:
-                target_mineral = min(all_minerals_near_base, key=lambda mineral: mineral.distance_to(worker))
-                self.do(worker.gather(target_mineral))
-            else:
-                # there are no deficit mining places and worker is not idle
-                # so dont move him
-                pass
     def cancel_buildings(self):
         #find the buildings that are building, and have low health.
         for building in self.units.filter(lambda b: b.build_progress < 1 and b.health + b.shield < 21 and b.shield < b.health):
             self.combined_actions.append(building(CANCEL))
+
+    def find_opp_id(self):
+        parser = argparse.ArgumentParser()
+        parser.add_argument('--OpponentId', type=str, nargs="?", help='Opponent Id')
+        args, unknown = parser.parse_known_args()
+        if args.OpponentId:
+            return args.OpponentId
+        return None
+
+    def check_worker_rush(self):
+        if self.enemy_units.filter(lambda u: u.type_id in {PROBE, DRONE, SCV}).amount > 2:
+            if self.enemy_units.filter(lambda u: u.type_id in {PROBE, DRONE, SCV}).closer_than(8, self.start_location).amount > 2:
+                self.strategy_manager.worker_rush = True
+
+    def load_config(self):
+        opp_id = self.opp_id #"d563cb5d-2794-449c-8587-3673bb96f6f3"
+        conf_file = 'data/conf.json'
+        config = None
+        # load conf
+        with open(conf_file) as json_file:
+            config_all = json.load(json_file)
+            # debug 
+            if opp_id in config_all:
+                print("found")
+                config = config_all[opp_id]
+            else:
+                config = config_all["default"]
+                #if opp_id:
+                #    config_all[opp_id] = config
+                #    with open(conf_file, 'w') as outfile:
+                #        json.dump(config_all, outfile)
+        if config:
+            self.strategy_manager.wall = config["wall"]
+            self.strategy_manager.ground_defenses_list = config["ground_defenses"]
+            self.strategy_manager.phoenix_harass = config["phoenix_rush_vulnerable"]
+            self.strategy_manager.min_off_vr_rush = config["void_rush"]
+            self.strategy_manager.min_off_vr = config["void_off"]
+            self.strategy_manager.observer_delay = config["observer_delay"]
+            self.strategy_manager.panic_deff = config["panic_deff"]
+            self.strategy_manager.build_mothership = config["mothership"]
+            self.strategy_manager.worker_rush = config["worker_rush_vulnerable"]
 
 if __name__ == "__main__":
     mapsS8 = [
@@ -190,9 +146,10 @@ if __name__ == "__main__":
         maps.get("WorldofSleepersLE"),
         [  # random.choice(mapsS8)), [
             Bot(Race.Protoss, MavBot()),
+            #Bot(Race.Protoss, WorkerRushBot()),
             Computer(
-                Race.Terran, Difficulty.VeryEasy
+                Race.Zerg, Difficulty.VeryEasy
             ),  # VeryHard CheatVision CheatMoney CheatInsane
         ],
-        realtime=True,
+        realtime=False,
     )

@@ -5,7 +5,7 @@ from sc2.player import Bot, Computer
 
 # Load bot
 from mavBot import MavBot
-bot = Bot(Race.Protoss, MavBot())
+bot = Bot(Race.Protoss, MavBot(), "MavBot")
 
 # Start game
 if __name__ == '__main__':
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     else:
         # Local game
         print("Starting local game...")
-        sc2.run_game(sc2.maps.get("Abyssal Reef LE"), [
+        sc2.run_game(sc2.maps.get("WorldofSleepersLE"), [
             bot,
             Computer(Race.Protoss, Difficulty.VeryHard)
         ], realtime=True)
