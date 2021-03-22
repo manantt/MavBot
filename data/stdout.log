@@ -1,5 +1,6 @@
 Starting ladder game...
 INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+<<<<<<< HEAD
 INFO:root:Player 1 - Bot MavBot(Protoss)
 None
 UnitTypeId.PYLON
@@ -150,10 +151,27 @@ UnitTypeId.PYLON
 UnitTypeId.PYLON
 (139.0, 38.0)
 ---------
+=======
+INFO:root:Player 1 - MavBot
+2020-05-29 13:37:51.082205
+93e41c6e20911b9
+----------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+7554
+INFO:root:Result for player 1 - MavBot: Victory
+Result.Victory  against opponent  93e41c6e20911b9
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0B138E30>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - MavBot
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b
 ERROR:sc2.main:AI step threw an error
 Traceback (most recent call last):
   File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\main.py", line 160, in _play_game_ai
     await ai.on_step(iteration)
+<<<<<<< HEAD
   File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 43, in on_step
     await self.unit_manager.move_troops()
   File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\unit_manager.py", line 202, in move_troops
@@ -959,3 +977,49 @@ INFO:root:Result for player 1 - Bot MavBot(Protoss): Victory
 Result.Victory  against opponent  072b12621d1bfa0
 ERROR:asyncio:Unclosed client session
 client_session: <aiohttp.client.ClientSession object at 0x17126A30>
+=======
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\mavBot.py", line 52, in on_step
+    await self._client.chat_send(iteration, team_only=True)
+  File "C:\Users\Manuel\Desktop\Ladder\Bots\MavBot\sc2\client.py", line 299, in chat_send
+    actions=[sc_pb.Action(action_chat=sc_pb.ActionChat(channel=ch.value, message=message))]
+TypeError: 0 has type int, but expected one of: bytes, unicode
+ERROR:sc2.main:Error: 0 has type int, but expected one of: bytes, unicode
+ERROR:sc2.main:Resigning due to previous error
+Result.Defeat
+1050
+INFO:root:Result for player 1 - MavBot: Defeat
+Result.Defeat  against opponent  072b12621d1bfa0
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x031C7090>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - MavBot
+2020-05-29 18:20:19.611116
+072b12621d1bfa0
+----------
+INFO:sc2.protocol:Client status changed to Status.ended (was Status.in_game)
+Result.Victory
+4270
+INFO:root:Result for player 1 - MavBot: Victory
+Result.Victory  against opponent  072b12621d1bfa0
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0B45AE10>
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - MavBot
+2020-05-29 18:22:05.720222
+072b12621d1bfa0
+----------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0B529E50>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+Starting ladder game...
+INFO:sc2.protocol:Client status changed to Status.in_game (was None)
+INFO:root:Player 1 - MavBot
+2020-05-29 18:24:09.883992
+072b12621d1bfa0
+----------
+ERROR:asyncio:Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0B469E30>
+INFO:sc2.protocol:Cannot receive: Connection already closed.
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b

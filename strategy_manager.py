@@ -8,12 +8,20 @@ from constants import *
 
 import math
 import random
+<<<<<<< HEAD
+=======
+import json
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b
 
 class StrategyManager:
     def __init__(self, game):
         self.game = game
 
         # STRATEGY CONFIG
+<<<<<<< HEAD
+=======
+        self.wall = 0 # in progress
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b
         self.worker_rush = False # to do
         self.cannon_rush = False # in progress
         self.dark_templar_rush = False # to do
@@ -21,6 +29,7 @@ class StrategyManager:
 
         # GENERAL STRATEGY CONFIG
         self.probe_scout = False # to do
+<<<<<<< HEAD
         self.build_wall = False # to do
         self.build_cannons = False
         self.build_ramp1_cannon = False # to do
@@ -28,6 +37,16 @@ class StrategyManager:
         self.observer_stretegy = OBSERVER_NORMAL # to do
         self.observer_amount = [2, 4]
         self.ground_defenses_list = [1, 0, 0, 0] # in progress
+=======
+        self.build_cannons = False
+        self.panic_deff = False
+        self.build_shields = False
+        self.build_ramp1_cannon = False # to do
+        self.build_ramp2_cannon = False # to do
+        self.observer_delay = 10
+        self.observer_amount = [2, 4]
+        self.ground_defenses_list = [1, 0, 0, 0, 0]
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b
         self.oracle_harass = False # to do
         self.adept_harass = False # to do
         self.phoenix_harass = False # in progress
@@ -46,7 +65,15 @@ class StrategyManager:
 
         # INGAME VARS
         self.initialized = False
+<<<<<<< HEAD
         self.cloack_units_detected = False
+=======
+        self.main_ramp = None
+        self.wall_completed = False
+        self.cloack_units_detected = False
+        self.worker_rush_detected = False # to do
+        self.cannon_rush_detected = False # to do
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b
         self.under_attack = False # to do
         # phoenix harass vars
         self.phoenix_objetive = None
@@ -204,6 +231,8 @@ class StrategyManager:
     def prepare_strat(self):
         if not self.initialized:
             self.initialized = True
+            # load config
+            
             # cannon rush
             actual_map = self.game.game_info.local_map_path
             if actual_map in self.ladder_maps_building_position:
@@ -219,15 +248,78 @@ class StrategyManager:
     async def do_strat(self):
         self.prepare_strat()
         self.check_cloacked()    
+        await self.build_wall()
         await self.do_cannon_rush()
         self.do_phoenix_harass()
+        self.do_worker_rush()
 
     def doing_strat(self):
         """ Returns true if an actual strategy should override general bot decision making """
         if self.cannon_rush and not self.cannon_rush_complete:
             return True
+        if self.worker_rush:
+            return True
+        if self.wall != 0:
+            return True
         return False
 
+    def do_worker_rush(self):
+        if self.worker_rush:
+            n = self.game.townhalls().first
+            for worker in self.game.workers:
+                if worker.shield > 1 or self.game.workers.amount > 8 or worker.distance_to(n.position) < 1:
+                    self.game.combined_actions.append(worker.attack(self.game.enemy_start_locations[0]))
+                else:
+                    self.game.combined_actions.append(worker.move(n))
+
+    async def build_wall(self):
+        if self.wall == 1:
+            if not self.main_ramp:
+                dist = 9999
+                dist2 = 0
+                for ramp in self.game.game_info.map_ramps:
+                    if ramp.top_center.distance_to(self.game.start_location) < dist:
+                        dist = ramp.top_center.distance_to(self.game.start_location)
+                        self.main_ramp = ramp
+                    if ramp.top_center.distance_to(self.game.start_location) + ramp.top_center.distance_to(self.game.enemy_start_locations[0]) > dist2:
+                        dist2 = ramp.top_center.distance_to(self.game.start_location) + ramp.top_center.distance_to(self.game.enemy_start_locations[0])
+                        self.evasive_position = ramp.top_center
+            if self.game.units(PROBE).amount:
+                # choose scout
+                worker = self.game.units(PROBE).find_by_tag(self.scout_worker)
+                if not worker:
+                    self.scout_worker = self.game.units(PROBE).random.tag
+                    worker = self.game.units(PROBE).find_by_tag(self.scout_worker)
+                # move scout
+                to_go = self.game.enemy_start_locations[0]
+                enemies = self.game.enemy_units
+                if enemies:
+                    enemy = enemies.furthest_to(worker.position)
+                    enemies = enemies.closer_than(2, worker.position)
+                    if enemies.amount > 1:
+                        to_go = self.evasive_position
+                        self.scout_worker = None
+                    else:
+                        to_go = enemy.position
+                self.game.combined_actions.append(worker.move(to_go))
+            # build first pylon
+            if self.game.can_afford(PYLON) and not self.game.already_pending(PYLON) and self.game.structures(PYLON).amount < 1:
+                await self.game.build(PYLON, near=self.game.townhalls().first.position.towards(self.game.game_info.map_center, 4))
+            # build forge
+            if self.game.structures(PYLON).ready.amount and self.game.can_afford(FORGE) and self.game.structures(FORGE).amount < 1 and not self.game.already_pending(FORGE):
+                #await self.game.build(FORGE, self.main_ramp.barracks_in_middle)
+                await self.game.build(FORGE, near=self.game.structures(PYLON).ready.random.position.towards(self.game.game_info.map_center, 4))
+            # build cannon1
+            #if self.game.structures(FORGE).ready.amount and self.game.can_afford(PHOTONCANNON) and not self.game.already_pending(PHOTONCANNON):
+            #    await self.game.build(PHOTONCANNON, list(self.main_ramp.corner_depots)[0])
+            # build cannon2
+            #if self.game.structures(FORGE).ready.amount and self.game.can_afford(PHOTONCANNON) and self.game.already_pending(PHOTONCANNON):
+            #    await self.game.build(PHOTONCANNON, list(self.main_ramp.corner_depots)[1])
+            # finish
+            if self.game.structures(PHOTONCANNON).amount >= 2:
+                self.wall = 0
+            elif self.game.structures(FORGE).ready.amount and self.game.can_afford(PHOTONCANNON):
+                await self.game.build(PHOTONCANNON, near=self.game.structures(PYLON).ready.random.position.towards(self.game.start_location, 2))
     async def do_cannon_rush(self):
         if self.cannon_rush:
             # train probes
@@ -305,6 +397,10 @@ class StrategyManager:
             STALKER: self.ground_defenses_list[1],
             SENTRY: self.ground_defenses_list[2],
             IMMORTAL: self.ground_defenses_list[3],
+<<<<<<< HEAD
+=======
+            COLOSSUS: self.ground_defenses_list[4],
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b
         }
 
     def find_phoenix_objetive(self):
@@ -328,7 +424,11 @@ class StrategyManager:
                 first_phoenix = self.game.units(PHOENIX).closest_to(self.phoenix_objetive)
                 near_enemies = self.game.enemy_units.filter(lambda unit: unit.can_attack_air and unit.distance_to(first_phoenix) < unit.air_range + SAFE_DIST)
                 close_enemies = self.game.enemy_units.filter(lambda unit: unit.can_attack_air and unit.distance_to(first_phoenix) < unit.air_range + DETECT_DIST)
+<<<<<<< HEAD
                 near_objetives = self.game.enemy_units.filter(lambda unit: unit.type_id in {PROBE, DRONE, SCV})
+=======
+                near_objetives = self.game.enemy_units.filter(lambda unit: unit.type_id in {PROBE, DRONE, SCV, OVERLORD})
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b
                 focused_objetives = self.game.enemy_units.filter(lambda unit: unit.has_buff(GRAVITONBEAM))
                 turrets = self.game.enemy_units.filter(lambda unit: unit.type_id in {SPORECRAWLER, MISSILETURRET, PHOTONCANNON})
                 for p in self.game.units(PHOENIX):
@@ -369,6 +469,12 @@ class StrategyManager:
                                 else:
                                     self.game.do(p(AbilityId.GRAVITONBEAM_GRAVITONBEAM, near_objetives.closest_to(p)))
                                     pass
+<<<<<<< HEAD
+=======
+                            else:
+                                if p.distance_to(self.phoenix_objetive) < 2:
+                                    self.phoenix_objetive = None
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b
                         if p.distance_to(self.phoenix_objetive) > 5:
                             if p.distance_to(self.game.units(PHOENIX).center) > 2:
                                 self.game.combined_actions.append(p.move(self.game.units(PHOENIX).center))

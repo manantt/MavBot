@@ -44,3 +44,26 @@ class AbilityManager:
 			abilities = await self.game.get_available_abilities(vr)
 			if vr.weapon_cooldown > 0 and AbilityId.EFFECT_VOIDRAYPRISMATICALIGNMENT in abilities:
 				self.game.combined_actions.append(vr(AbilityId.EFFECT_VOIDRAYPRISMATICALIGNMENT))
+
+	def should_use_forcefield(self):
+		if self.game.enemy_units and self.game.enemy_units.closer_than(1, self.game.main_base_ramp.bottom_center).amount:
+			return True
+		return False
+
+	async def use_forcefield(self):
+		if self.should_use_forcefield():
+			for sentry in self.game.units(SENTRY):
+				abilities = await self.game.get_available_abilities(sentry)
+				if AbilityId.FORCEFIELD_FORCEFIELD in abilities:
+					self.game.combined_actions.append(sentry(AbilityId.FORCEFIELD_FORCEFIELD, self.game.main_base_ramp.bottom_center))
+					return
+
+	async def use_hallucination(self):
+		for sentry in self.game.units(SENTRY):
+			if self.game.enemy_units.amount and self.game.enemy_units.closer_than(7, sentry).amount:
+				print("1")
+				abilities = await self.game.get_available_abilities(sentry)
+				if AbilityId.HALLUCINATION_ARCHON in abilities:
+					print("2")
+					self.game.combined_actions.append(sentry(AbilityId.HALLUCINATION_ARCHON))
+					return

@@ -54,8 +54,8 @@ class UnitManager:
 				{'unitid':PHOENIX, 'range':20}, 
 				{'unitid':CARRIER, 'range':20}, 
 				{'unitid':HIGHTEMPLAR, 'range':20}, 
-				{'unitid':ARCHON, 'range':20}, 
 				{'unitid':PHOTONCANNON, 'range':20}, 
+				{'unitid':ARCHON, 'range':20}, 
 				{'unitid':SENTRY, 'range':20}, 
 				{'unitid':TEMPEST, 'range':20}, # too much range
 				# cannot attack air
@@ -81,13 +81,13 @@ class UnitManager:
 				{'unitid':BATTLECRUISER, 'range':10, 'hp':0.5}, 
 				{'unitid':WIDOWMINE, 'range':10, 'hp':0.5}, 
 				{'unitid':WIDOWMINEBURROWED, 'range':10, 'hp':0.5}, 
+				{'unitid':CYCLONE, 'range':10, 'hp':0.5}, 
 				{'unitid':THORAP, 'range':10, 'hp':0.5}, 
 				{'unitid':THOR, 'range':10, 'hp':0.5}, 
 				{'unitid':MARINE, 'range':10, 'hp':0.5},
 				{'unitid':VIKINGFIGHTER, 'range':10, 'hp':0.5}, 
 				{'unitid':AUTOTURRET, 'range':10, 'hp':0.5}, 
 				{'unitid':GHOST, 'range':10, 'hp':0.5}, 
-				{'unitid':CYCLONE, 'range':10, 'hp':0.5}, 
 				{'unitid':MEDIVAC, 'range':8, 'hp':0.5}, # closer
 				{'unitid':LIBERATOR, 'range':10, 'hp':0.5}, 
 				# full hp, in range
@@ -118,6 +118,7 @@ class UnitManager:
 				{'unitid':CYCLONE, 'range':20}, 
 				{'unitid':LIBERATOR, 'range':20}, 
 				{'unitid':MEDIVAC, 'range':20}, # closer
+				{'unitid':BUNKER, 'range':20},
 				# cannot attack air
 				{'unitid':RAVEN, 'range':20},
 				{'unitid':SCV, 'range':20},
@@ -131,7 +132,6 @@ class UnitManager:
 				{'unitid':HELLIONTANK, 'range':20},
 				{'unitid':SIEGETANK, 'range':20},
 				{'unitid':BANSHEE, 'range':20},
-				{'unitid':BUNKER, 'range':20},
 				{'unitid':ORBITALCOMMAND, 'range':20},
 				{'unitid':PLANETARYFORTRESS, 'range':20},
 
@@ -238,16 +238,35 @@ class UnitManager:
 	# posición hacia la que se quiere atacar
 	@property#_cache_once_per_frame
 	def offensive_position(self):
-		if len(self.game.enemy_structures.exclude_type(CREEPTUMOR).exclude_type(CREEPTUMORQUEEN).exclude_type(CREEPTUMORMISSILE).exclude_type(CREEPTUMORBURROWED)) > 0 :
-			return self.game.enemy_structures.exclude_type(CREEPTUMOR).exclude_type(CREEPTUMORQUEEN).exclude_type(CREEPTUMORMISSILE).exclude_type(CREEPTUMORBURROWED).closest_to(self.game.start_location).position
+		enemy_buildings = self.game.enemy_structures.exclude_type(CREEPTUMOR).exclude_type(CREEPTUMORQUEEN).exclude_type(CREEPTUMORMISSILE).exclude_type(CREEPTUMORBURROWED)
+		if len(enemy_buildings) > 0 :
+			if len(self.off_group):
+				center = self.game.units.tags_in(self.off_group).center
+				return enemy_buildings.closest_to(center).position
+			else:
+				return enemy_buildings.closest_to(self.game.start_location).position
 		else:
 			return self.game.enemy_start_locations[0]
 
 	# send idle units to deffend
 	async def deff(self):
-		#deff_group = Units([], )
-		deff_group = self.game.units.filter(lambda unit: unit.type_id in {ZEALOT, VOIDRAY, MOTHERSHIP}).tags_not_in(self.off_group)
-		await self.attack_move(deff_group, self.deffensive_position, self.game.start_location)
+		deff_units = {ZEALOT, STALKER, SENTRY, ARCHON, COLOSSUS, VOIDRAY, MOTHERSHIP}
+		deff_group = self.game.units.filter(lambda unit: unit.type_id in deff_units).tags_not_in(self.off_group).tags_not_in(self.off_group2)
+		if self.game.strategy_manager.panic_deff:
+			for unit in deff_group:
+				if unit.distance_to(self.game.start_location) > 5 or unit.type_id == MOTHERSHIP:
+					self.game.combined_actions.append(unit.move(self.deffensive_position))
+				else:
+					self.game.combined_actions.append(unit.attack(self.deffensive_position))
+		else:
+			await self.attack_move(deff_group, self.deffensive_position, self.game.start_location)
+			#await self.sentry_deff()
+			await self.game.ability_manager.use_hallucination()
+
+	async def sentry_deff(self):
+		sentrys = self.game.units.filter(lambda unit: unit.type_id in {SENTRY})
+		for sentry in sentrys:
+			self.game.combined_actions.append(sentry.attack(self.game.main_base_ramp.top_center.towards(self.game.start_location, 2)))
 
 	async def att(self):
 		off_group = self.game.units.tags_in(self.off_group)
@@ -286,7 +305,13 @@ class UnitManager:
 						unit_type = priority['unitid']
 						attrange = priority['range']
 						minhp = priority['hp'] if 'hp' in priority else 1
+<<<<<<< HEAD
 						enemies = self.game.enemy_units.closer_than(attrange, ball_center.position).filter(lambda u: u.can_be_attacked)
+=======
+						enemies = self.game.enemy_units
+						if enemies:
+							enemies = enemies.closer_than(attrange, ball_center.position).filter(lambda u: u.can_be_attacked)
+>>>>>>> b5b0ae38d6eef772219f122e463df6c48f9e7c4b
 						if self.game.enemy_structures:
 							enemies.extend(self.game.enemy_structures.closer_than(attrange, ball_center.position))
 						enemies = enemies.filter(lambda u: u.type_id in {unit_type})
@@ -294,9 +319,13 @@ class UnitManager:
 						if enemies:
 							closest = enemies.closest_to(ball_center)
 							for unit in combatients:
-								self.game.combined_actions.append(unit.attack(closest))
-								if unit.type_id in {VOIDRAY} and closest.is_armored and unit.distance_to(closest) <= 6:
-									self.game.combined_actions.append(unit(AbilityId.EFFECT_VOIDRAYPRISMATICALIGNMENT))
+								if unit.type_id in {STALKER} and unit.weapon_cooldown > 1:
+									self.game.combined_actions.append(unit.move(retreat_position))
+								else:
+									self.game.combined_actions.append(unit.attack(closest))
+									if unit.type_id in {VOIDRAY} and closest.is_armored and unit.distance_to(closest) <= 6:
+										self.game.combined_actions.append(unit(AbilityId.EFFECT_VOIDRAYPRISMATICALIGNMENT))
+
 							return
 			else:
 				# regroup ball
@@ -332,14 +361,16 @@ class UnitManager:
 			self.game.strategy_manager.rush_complete = True
 			for vr in self.game.units(VOIDRAY).tags_not_in(self.off_group2):
 				self.off_group.append(vr.tag)
-			for ms in self.game.units(MOTHERSHIP).tags_not_in(self.off_group2):
-				self.off_group.append(ms.tag)
+			if not self.game.strategy_manager.panic_deff:
+				for ms in self.game.units(MOTHERSHIP).tags_not_in(self.off_group2):
+					self.off_group.append(ms.tag)
 		#group 2
 		if len(self.off_group2) == 0 and self.game.units(VOIDRAY).tags_not_in(self.off_group).tags_not_in(self.off_group2).amount >= self.game.strategy_manager.min_off_vr:
 			for vr in self.game.units(VOIDRAY).tags_not_in(self.off_group):
 				self.off_group2.append(vr.tag)
-			for ms in self.game.units(MOTHERSHIP).tags_not_in(self.off_group):
-				self.off_group2.append(ms.tag)
+			if not self.game.strategy_manager.panic_deff:
+				for ms in self.game.units(MOTHERSHIP).tags_not_in(self.off_group):
+					self.off_group2.append(ms.tag)
 
 	# moves observers
 	async def scout(self):
