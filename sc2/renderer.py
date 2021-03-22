@@ -5,9 +5,8 @@ from s2clientprotocol import score_pb2 as score_pb
 from .position import Point2
 
 
-class Renderer(object):
-
-    def __init__(self, client, map_size, minimap_size) -> None:
+class Renderer:
+    def __init__(self, client, map_size, minimap_size):
         self._client = client
 
         self._window = None
@@ -40,6 +39,7 @@ class Renderer(object):
             from pyglet.window import Window
             from pyglet.image import ImageData
             from pyglet.text import Label
+
             self._window = Window(width=map_width, height=map_height)
             self._window.on_mouse_press = self._on_mouse_press
             self._window.on_mouse_release = self._on_mouse_release

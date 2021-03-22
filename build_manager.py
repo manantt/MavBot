@@ -81,7 +81,7 @@ class BuildManager:
 		return False
 
 	def should_build_fleetbeacon(self):
-		if self.game.structures(PYLON).ready.exists and self.game.structures(STARGATE).ready.exists and self.game.units(VOIDRAY).amount >= 3:
+		if self.game.strategy_manager.build_mothership and self.game.structures(PYLON).ready.exists and self.game.structures(STARGATE).ready.exists and self.game.units(VOIDRAY).amount >= 3:
 			if self.game.can_afford(FLEETBEACON) and not self.game.already_pending(FLEETBEACON) and not self.game.structures(FLEETBEACON).amount:
 				return True
 		return False

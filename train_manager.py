@@ -29,9 +29,9 @@ class TrainManager:
 
 	def should_train_voidray(self):
 		if self.game.can_afford(VOIDRAY):
-			if self.game.units(VOIDRAY).amount < 3:
+			if self.game.units(VOIDRAY).amount < self.game.strategy_manager.min_off_vr_rush:
 				return True
-			if self.game.units(MOTHERSHIP).amount:
+			if self.game.units(MOTHERSHIP).amount or not self.game.strategy_manager.build_mothership:
 				return True
 			if self.game.structures(FLEETBEACON).amount and self.game.already_pending(MOTHERSHIP):
 				return True
@@ -40,25 +40,25 @@ class TrainManager:
 		return False
 
 	def should_train_zealot(self):
-		if self.game.can_afford(ZEALOT) and self.game.units(ZEALOT).amount < 2 and not self.game.already_pending(ZEALOT):
+		if self.game.can_afford(ZEALOT) and self.game.units(ZEALOT).amount < self.game.strategy_manager.ground_defenses[ZEALOT] and not self.game.already_pending(ZEALOT):
 			return True
 		return False
 
 	def should_train_mothership(self):
-		if self.game.can_afford(MOTHERSHIP) and not self.game.units(MOTHERSHIP).amount:
+		if self.game.strategy_manager.build_mothership and self.game.can_afford(MOTHERSHIP) and not self.game.units(MOTHERSHIP).amount:
 			return True
 		return False
 
 	def should_train_phoenix(self):
-		if self.game.can_afford(PHOENIX) and self.game.units(PHOENIX).amount < 2 and self.game.strategy_manager.phoenix_harass:
+		if self.game.can_afford(PHOENIX) and self.game.units(PHOENIX).amount < self.game.strategy_manager.phoenix_amount and not self.game.already_pending(PHOENIX) and self.game.strategy_manager.phoenix_harass:
 			return True
 		return False
 
 	def should_train_observer(self):
 		if self.game.can_afford(OBSERVER) and self.game.structures(ROBOTICSFACILITY).ready.idle.amount > 0:
-			if self.game.units(OBSERVER).amount < 2:
+			if self.game.units(OBSERVER).amount < self.game.strategy_manager.observer_amount[0]:
 				return True
-			if self.game.strategy_manager.cloack_units_detected and self.game.units(OBSERVER).amount < 4:
+			if self.game.strategy_manager.cloack_units_detected and self.game.units(OBSERVER).amount < self.game.strategy_manager.observer_amount[1]:
 				return True
 		return False
 

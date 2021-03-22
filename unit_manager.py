@@ -286,7 +286,7 @@ class UnitManager:
 						unit_type = priority['unitid']
 						attrange = priority['range']
 						minhp = priority['hp'] if 'hp' in priority else 1
-						enemies = self.game.enemy_units.closer_than(attrange, ball_center.position)
+						enemies = self.game.enemy_units.closer_than(attrange, ball_center.position).filter(lambda u: u.can_be_attacked)
 						if self.game.enemy_structures:
 							enemies.extend(self.game.enemy_structures.closer_than(attrange, ball_center.position))
 						enemies = enemies.filter(lambda u: u.type_id in {unit_type})
@@ -328,13 +328,14 @@ class UnitManager:
 	# new offensive group conditions
 	async def set_off(self):
 		# group 1
-		if len(self.off_group) == 0 and self.game.units(VOIDRAY).tags_not_in(self.off_group2).tags_not_in(self.off_group).amount >= 12:
+		if len(self.off_group) == 0 and (self.game.units(VOIDRAY).tags_not_in(self.off_group2).tags_not_in(self.off_group).amount >= self.game.strategy_manager.min_off_vr or (not self.game.strategy_manager.rush_complete and self.game.units(VOIDRAY).tags_not_in(self.off_group2).tags_not_in(self.off_group).amount >= self.game.strategy_manager.min_off_vr_rush)):
+			self.game.strategy_manager.rush_complete = True
 			for vr in self.game.units(VOIDRAY).tags_not_in(self.off_group2):
 				self.off_group.append(vr.tag)
 			for ms in self.game.units(MOTHERSHIP).tags_not_in(self.off_group2):
 				self.off_group.append(ms.tag)
 		#group 2
-		if len(self.off_group2) == 0 and self.game.units(VOIDRAY).tags_not_in(self.off_group).tags_not_in(self.off_group2).amount >= 12:
+		if len(self.off_group2) == 0 and self.game.units(VOIDRAY).tags_not_in(self.off_group).tags_not_in(self.off_group2).amount >= self.game.strategy_manager.min_off_vr:
 			for vr in self.game.units(VOIDRAY).tags_not_in(self.off_group):
 				self.off_group2.append(vr.tag)
 			for ms in self.game.units(MOTHERSHIP).tags_not_in(self.off_group):
