@@ -1,0 +1,14 @@
+{
+	"troops": {
+		"VOIDRAY": {
+			"max_amount": 100,
+			"min_to_rush": 4,
+			"min_to_attack": 10
+		},
+		"MOTHERSHIP": {
+			"max_amount": 1,
+			"min_to_rush": 1,
+			"min_to_attack": 0
+		}
+	}
+}

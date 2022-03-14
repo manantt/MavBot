@@ -1,11 +1,13 @@
 {
-  "Bots": {
-    "MavBot": {
-      "Race": "Protoss",
-      "Type": "Python",
-      "RootPath": "./",
-      "FileName": "run.py",
-	  "Debug": true
+    "Bots": {
+        "BoundByTheKhala": {
+            "Race": "Protoss",
+            "Type": "Python",
+            "RootPath": "./",
+            "FileName": "run.py",
+            "Args": "-O",
+            "Debug": true,
+            "SurrenderPhrase": "(pineapple)"
+        }
     }
-  }
 }

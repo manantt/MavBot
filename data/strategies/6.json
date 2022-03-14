@@ -1,0 +1,19 @@
+{
+	"troops": {
+        "ZEALOT": {
+            "max_amount": 10,
+            "min_to_rush": -1,
+            "min_to_attack": -1
+        },
+        "STALKER": {
+            "max_amount": 5,
+            "min_to_rush": -1,
+            "min_to_attack": -1
+        },
+        "VOIDRAY": {
+            "max_amount": 100,
+            "min_to_rush": 4,
+            "min_to_attack": 10
+        }
+	}
+}

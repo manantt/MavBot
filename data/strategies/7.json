@@ -1,0 +1,9 @@
+{
+	"troops": {
+        "STALKER": {
+            "max_amount": 100,
+            "min_to_rush": 1,
+            "min_to_attack": 1
+        }
+	}
+}
