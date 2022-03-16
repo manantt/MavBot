@@ -14,3 +14,9 @@
 **ProbeRush**
 - Cancel inprogress buildings
 - Train zealots if gw available
+
+**CannonRush**
+- Update cannon rush bot
+
+**4Gates**
+- Update 4gates bot
