@@ -9,8 +9,10 @@ class WorkerRushBot():
     async def on_step(self, iteration):
         # probe attack
         n = self.bot.townhalls()
+        if n:
+            n = n.first
         for worker in self.bot.workers:
-            if worker.shield > 1 or self.bot.workers.amount > 8 or worker.distance_to(n.position) < 5:
+            if worker.shield > 1 or self.bot.workers.amount > 8 or (n and worker.distance_to(n.position) < 5):
                 worker.attack(self.bot.enemy_start_locations[0])
             else:
                 enemy = self.bot.enemy_units
@@ -19,7 +21,7 @@ class WorkerRushBot():
                     worker.move(worker.position.towards(closest_enemy.position, -3))
                 else:    
                     if n:
-                        worker.move(n.first)
+                        worker.move(n)
         # train probes
         for nexus in self.bot.townhalls().ready.idle:
             if self.bot.can_afford(UnitTypeId.PROBE):

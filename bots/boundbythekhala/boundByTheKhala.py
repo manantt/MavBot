@@ -1,24 +1,20 @@
-import sc2, random
-import argparse
-import json
+import sc2, random, math, argparse, json
 from datetime import datetime
-from sc2.bot_ai import BotAI
+
 from sc2.player import Bot, Computer
 from sc2.constants import *
 from sc2.position import Point2, Point3
 from sc2.ids.ability_id import AbilityId
 from sc2.ids.upgrade_id import UpgradeId
-from sc2.ids.unit_typeid import UnitTypeId
+from sc2.units import Units
 
-from bots.flyingball.unit_manager import UnitManager
-from bots.flyingball.upgrade_manager import UpgradeManager
-from bots.flyingball.build_manager import BuildManager
-from bots.flyingball.train_manager import TrainManager
-from bots.flyingball.ability_manager import AbilityManager
-from bots.flyingball.worker_manager import WorkerManager
-#from bots.flyingball.debug_manager import DebugManager
-from bots.flyingball.strategy_manager import StrategyManager
-from bots.flyingball.base_manager import BaseManager
+from bots.boundbythekhala.unit_manager import UnitManager
+from bots.boundbythekhala.upgrade_manager import UpgradeManager
+from bots.boundbythekhala.build_manager import BuildManager
+from bots.boundbythekhala.ability_manager import AbilityManager
+from bots.boundbythekhala.base_manager import BaseManager
+from bots.boundbythekhala.train_manager import TrainManager
+from bots.boundbythekhala.strategy_manager import StrategyManager
 
 # TODO
 """
@@ -26,42 +22,42 @@ deff worker rush
 deff cannon rush
 salir del rango de ciclones
 no perseguir phoenix
+cambiar already_pending por placeholder (múltiples edificios a la vez)
+habilidades mothership
+prioridades de ataque por tipo de unidad
+lógica scout utilizando basemanager
+lógica de dónde atacar utilizando basemanager
+bug offgroups se agrupan? 
 """
 
-class FlyingBall():
+class BoundByTheKhala():
     def __init__(self, bot, strat):
-        self.version = "1.5.0"
         self.bot = bot
-        self.unit_manager = UnitManager(bot)
+        self.initialized = False
+        self.unit_manager = UnitManager(bot) #act
         self.upgrade_manager = UpgradeManager(bot)
         self.build_manager = BuildManager(bot)
-        self.train_manager = TrainManager(bot)
         self.ability_manager = AbilityManager(bot)
-        self.worker_manager = WorkerManager(bot)
-        #self.debug_manager = DebugManager(bot)
-        self.strategy_manager = StrategyManager(bot)
         self.base_manager = BaseManager(bot)
+        self.train_manager = TrainManager(bot)
+        self.strategy_manager = StrategyManager(bot)
         self.load_config(strat)
-        #self.load_config("test")
-        self.debug = False
 
     async def on_step(self, iteration):
-        if iteration % 10 == 0:
-            await self.on_10_step()
-        await self.strategy_manager.do_strat()
-        if not self.strategy_manager.doing_strat():
-            await self.train_manager.train_troops()
-            await self.build_manager.build()
-            await self.unit_manager.move_troops()
-            await self.ability_manager.use_abilities()
-            self.upgrade_manager.research_upgrades()
-        #await self.debug_manager.draw_debug()
-
-    async def on_10_step(self):
-        await self.worker_manager.manage_workers()
+        await self.base_manager.update_bases()
+        await self.train_manager.train_troops()
+        await self.build_manager.build()
+        await self.unit_manager.move_troops()
+        await self.ability_manager.use_abilities()
+        self.upgrade_manager.research_upgrades()
 
     async def on_unit_created(self, unit):
-        pass
+        # build order probes
+        if not self.build_manager.first_pylon_probe and unit.type_id == UnitTypeId.PROBE and not self.bot.structures(UnitTypeId.PYLON) and self.bot.workers.amount == 13:
+            self.build_manager.first_pylon_probe = unit.tag
+        elif not self.build_manager.cc_probe and unit.type_id == UnitTypeId.PROBE and self.bot.supply_used == 19:
+            self.build_manager.cc_probe = unit.tag
+            self.base_manager.bussy_probes.append(unit.tag)
 
     async def on_unit_destroyed(self, unit_tag):
         # removes units from offensive groups when destroyed
@@ -78,10 +74,20 @@ class FlyingBall():
         pass
 
     async def on_building_construction_complete(self, structure):
-        pass
+        # init vespene workers list
+        if structure.type_id == UnitTypeId.ASSIMILATOR:
+            for base in self.base_manager.bases:
+                if structure.distance_to(base.position) < 13:
+                    base.vespene_worker_tags[structure.tag] = []
+                    if self.bot.workers:
+                        w = self.bot.workers.closest_to(structure)
+                        self.base_manager.release_worker(w) # releases closest worker to start gas extraction
+                    return
+
+    # TODO: on nexus destroyed release workers
 
     def on_end(self, game_result):
-        pass
+        print(game_result)
 
     def load_config(self, strat):
         config = None

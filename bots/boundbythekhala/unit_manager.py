@@ -217,7 +217,26 @@ class UnitManager:
                 if enemy.tag not in self.cachedUnits[enemy.name]:
                     self.cachedUnits[enemy.name].append(enemy.tag)
 
-    # deffensive position
+    def worker_is_building(self, worker) -> bool:
+        #Checks if the unit is an probe that is currently building.
+        return worker.is_using_ability(AbilityId.PROTOSSBUILD_NEXUS) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_PYLON) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_ASSIMILATOR) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_GATEWAY) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_FORGE) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_FLEETBEACON) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_TWILIGHTCOUNCIL) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_PHOTONCANNON) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_STARGATE) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_TEMPLARARCHIVE) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_DARKSHRINE) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_ROBOTICSBAY) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_ROBOTICSFACILITY) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_CYBERNETICSCORE) or \
+            worker.is_using_ability(AbilityId.BUILD_SHIELDBATTERY) or \
+            worker.is_using_ability(AbilityId.PROTOSSBUILD_CANCEL)
+
+        # deffensive position
     @property#_cache_once_per_frame
     def deffensive_position(self):
         # deffend enemy attack
@@ -259,16 +278,9 @@ class UnitManager:
     # send idle units to deffend
     async def deff(self):
         deff_group = self.units_not_in_squad.filter(lambda unit: unit.type_id in self.fighter_units)
-        if self.game.bot.strategy_manager.panic_deff:
-            for unit in deff_group:
-                if unit.distance_to(self.game.start_location) > 5 or unit.type_id == UnitTypeId.MOTHERSHIP:
-                    unit.move(self.deffensive_position)
-                else:
-                    unit.attack(self.deffensive_position)
-        else:
-            await self.attack_move(deff_group, self.deffensive_position, self.game.start_location)
-            #await self.sentry_deff()
-            await self.game.bot.ability_manager.use_hallucination()
+        await self.attack_move(deff_group, self.deffensive_position, self.game.start_location)
+        #await self.sentry_deff()
+        await self.game.bot.ability_manager.use_hallucination()
 
     async def sentry_deff(self):
         sentrys = self.game.units.filter(lambda unit: unit.type_id in {UnitTypeId.SENTRY})
@@ -468,49 +480,3 @@ class UnitManager:
                     if positions_to_scout:
                         move_to = random.choice(positions_to_scout).position
                         scout.move(move_to)
-
-    # returns how much does a enemy ground unit have to surround a wall to reach the ally unit position
-    # for example, it returns 2 if the path it must walk is the double of the straight line distance between them
-    async def terrain_adventage(self, ally_unit: Union[Unit, Point2], enemy_unit: Union[Unit, Point2]) -> float:
-        startp = enemy_unit
-        if isinstance(startp, Unit):
-            startp = startp.position
-        finp = ally_unit
-        if isinstance(finp, Unit):
-            finp = finp.position
-        path_distance = await self.game._client.query_pathing(startp, finp)
-        if path_distance is None:
-            path_distance = float('inf')
-        distance = startp.distance_to_point2(finp)
-        return path_distance / distance - 1
-
-    # closest position where ally unit have an advantage over the enemy due to terrain limitations
-    def closest_advantaged_terrain(
-        self, ally_unit: Unit, enemy_unit: Unit, min_terrain_advantage=1.5, advantage_type=1, 
-        walk_throug_enemie=False, max_distance=15
-    ) -> Optional[Point2]:
-        """
-        ally_unit: the ally unit that will be positioned
-        enemy_unit: the enemy unit we want to gain advantage over
-        min_terrain advantage: refers to terrain_advantage() function
-        advantage_type: 1=enemy can not attack, 2=only enemy first line can attack, 3=enemy is just in range, only enemy first unit can attack
-        walk_throug_enemie: if False the returned position wont make the unit pass across the enemy
-        max_distance: from the ally unit to the returned point
-        """
-        if ally_unit.ground_range < enemy_unit.range or enemy_unit.is_flying:
-            return None
-        # 1- find closest terrain wall that is closer to ally unit than to enemy unit
-        # 2- move the point terrain-perpendicularly backwards a distance equals to enemy range
-        return Point2([100, 100])
-
-    def load_unit(self, unit):
-        if unit.name == 'VoidRay':
-            obj = voidray(unit)
-
-class ProUnit(Unit):
-    def __init__(self):
-        self.SHIELD_TO_ADVANCE = 0.01
-        self.HP_TO_RETREAT = 0.33
-        self.HIT_AND_RUN = True
-        self.WEAPON_COOLDOWN_TO_REATTACK = 3
-        self.TARGET_PRIORITY = {}

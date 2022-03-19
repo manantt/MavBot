@@ -9,26 +9,31 @@ from constants import *
 
 from bots.prismbeams.prismBeams import PrismBeams
 from bots.flyingball.flyingBall import FlyingBall
+from bots.boundbythekhala.boundByTheKhala import BoundByTheKhala
 from bots.proberush.WorkerRushBot import WorkerRushBot
 
 class MavBot(BotAI):
     def __init__(self):
-        self.version = "v2.0.1"
+        self.version = "v2_1_2"
         self.worker_rush = False
         self.opp_id = self.find_opp_id()
         self.bots = [
             PrismBeams(self), 
-            FlyingBall(self, ZEALOT1_DEFF),
-            FlyingBall(self, ZEALOT1_DEFF_PH),
-            FlyingBall(self, STALKER1_DEFF_PH),
-            FlyingBall(self, STALKER4_DEFF),
-            FlyingBall(self, MOTHERSHIP),
-            FlyingBall(self, ZEALOT10_STALKER5_DEFF),
-            FlyingBall(self, STALKER_PUSH),
-            WorkerRushBot(self), 
+            BoundByTheKhala(self, ZEALOT1_DEFF),
+            BoundByTheKhala(self, ZEALOT1_DEFF_PH),
+            BoundByTheKhala(self, STALKER1_DEFF_PH),
+            BoundByTheKhala(self, STALKER4_DEFF),
+            BoundByTheKhala(self, MOTHERSHIP),
+            BoundByTheKhala(self, ZEALOT10_STALKER5_DEFF),
+            BoundByTheKhala(self, STALKER_PUSH),
+            WorkerRushBot(self)
         ]
-        self.strat = None
-        self.bot = self.bots[0]
+        # if strat is None it will choose the best one for this matchup
+        self.strat = None 
+        if self.strat == None:
+            self.bot = self.bots[0]
+        else:
+            self.bot = self.bots[self.strat]
 
     ## EVENTS ########################################################    
     async def on_step(self, iteration):
@@ -36,12 +41,13 @@ class MavBot(BotAI):
             self.check_worker_rush()
         self.choose_bot(iteration)
         self.cancel_buildings()
-        if iteration == 1:
+        if iteration == 10:
             await self.on_1st_step()
         await self.bot.on_step(iteration)
         
     async def on_1st_step(self):
-        await self._client.chat_send(self.version, team_only=False)
+        await self._client.chat_send("Tag:" + self.version, team_only=False)
+        await self._client.chat_send("Tag:strat_" + str(self.strat), team_only=True)
 
     async def on_unit_created(self, unit):
         await self.bot.on_unit_created(unit)

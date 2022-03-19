@@ -13,8 +13,6 @@ from sc2.player import Bot, Computer
 
 bot = Bot(Race.Protoss, MavBot())
 class WorkerRushBot(BotAI):
-    def __init__(self):
-        self.combined_actions = [];
     async def on_step(self, iteration):
         for worker in self.workers:
             worker.attack(self.enemy_start_locations[0])

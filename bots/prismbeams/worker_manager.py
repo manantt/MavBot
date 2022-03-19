@@ -132,7 +132,8 @@ class WorkerManager:
                 self.release_worker(worker.tag)
                 self.gas_fields[gas_tag].append(worker.tag)
             elif assimilator.surplus_harvesters > 0:
-                del self.gas_fields[gas_tag][-1]
+                if self.gas_fields[gas_tag]:
+                    del self.gas_fields[gas_tag][-1]
 
     def get_next_mining_field(self):
         min_workers_per_field = math.inf
