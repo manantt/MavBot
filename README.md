@@ -1,3 +1,3 @@
 # MavBot
-Bot for StarCraft 2
-It competes in sc2ai.net artificial intelligence tournaments.
+Bot for StarCraft 2 artificial intelligence tournaments
+It competes in sc2ai.net.
